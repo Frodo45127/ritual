@@ -8,8 +8,6 @@
 #![deny(missing_docs)]
 
 use proc_macro::TokenStream;
-use proc_macro_hack::proc_macro_hack;
-
 mod q_init_resource;
 mod slot;
 mod ui_form;
@@ -92,7 +90,7 @@ pub fn ui_form(attrs: TokenStream, input: TokenStream) -> TokenStream {
 
 // This is an implementation detail of the `qt_core::q_init_resource` macro.
 #[doc(hidden)]
-#[proc_macro_hack]
+#[proc_macro]
 pub fn q_init_resource(input: TokenStream) -> TokenStream {
     crate::q_init_resource::q_init_resource(input)
 }

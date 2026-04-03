@@ -308,7 +308,7 @@ fn run_clang<R, F: FnMut(Entity<'_>) -> Result<R>>(
         .parser(&tmp_cpp_path)
         .arguments(&args)
         .parse()
-        .with_context(|_| "clang parse failed")?;
+        .with_context(|| "clang parse failed")?;
     let translation_unit = tu.get_entity();
     assert_eq!(translation_unit.get_kind(), EntityKind::TranslationUnit);
     {
@@ -512,10 +512,10 @@ impl CppParser<'_, '_> {
                 bail!("invalid matches len in regexp");
             }
             return Ok(CppType::TemplateParameter(CppTemplateParameter {
-                nested_level: matches[1].parse::<usize>().with_context(|_| {
+                nested_level: matches[1].parse::<usize>().with_context(|| {
                     "encountered not a number while parsing type-parameter-X-X"
                 })?,
-                index: matches[2].parse::<usize>().with_context(|_| {
+                index: matches[2].parse::<usize>().with_context(|| {
                     "encountered not a number while parsing type-parameter-X-X"
                 })?,
                 name: name.clone(),
@@ -864,7 +864,7 @@ impl CppParser<'_, '_> {
                                 )
                             }) {
                                 if let Ok(CppType::Class(path)) = &mut parsed_canonical {
-                                    let mut last_item = path.last_mut();
+                                    let last_item = path.last_mut();
                                     if last_item.template_arguments.is_some() {
                                         last_item.template_arguments =
                                             Some(template_arguments_unexposed.clone());
@@ -1034,7 +1034,7 @@ impl CppParser<'_, '_> {
             }
             let argument_type = self
                 .parse_type(clang_type, &context_template_args)
-                .with_context(|_| {
+                .with_context(|| {
                     format!(
                         "Can't parse argument type: {}: {}",
                         name,
@@ -1166,7 +1166,7 @@ impl CppParser<'_, '_> {
             let range_col1 = (start.column - 1) as usize;
             let range_col2 = (end.column - 1) as usize;
             for (line_num, line) in file.lines().enumerate() {
-                let line = line.with_context(|_| {
+                let line = line.with_context(|| {
                     format!("failed while reading lines from {}", file_path.display())
                 })?;
                 if line_num >= range_line1 && line_num <= range_line2 {
@@ -1260,7 +1260,7 @@ impl CppParser<'_, '_> {
 
     /// Parses an enum `entity`.
     fn parse_enum(&mut self, entity: Entity<'_>) -> Result<()> {
-        let include_file = self.entity_include_file(entity).with_context(|_| {
+        let include_file = self.entity_include_file(entity).with_context(|| {
             format!(
                 "Origin of type is unknown: {}; entity: {:?}",
                 get_full_name_display(entity),
@@ -1302,7 +1302,7 @@ impl CppParser<'_, '_> {
     fn parse_class_field(&mut self, entity: Entity<'_>, class_type: &CppPath) -> Result<()> {
         let include_file = self
             .entity_include_file(entity)
-            .with_context(|_| err_msg("Origin of class field is unknown"))?;
+            .with_context(|| err_msg("Origin of class field is unknown"))?;
         let field_name = entity
             .get_name()
             .ok_or_else(|| err_msg("failed to get field name"))?;
@@ -1311,7 +1311,7 @@ impl CppParser<'_, '_> {
             .ok_or_else(|| err_msg("failed to get field type"))?;
         let field_type = self
             .parse_type(field_clang_type, &get_context_template_args(entity))
-            .with_context(|_| err_msg("failed to parse field type"))?;
+            .with_context(|| err_msg("failed to parse field type"))?;
         self.add_output(
             include_file,
             get_origin_location(entity)?,
@@ -1343,7 +1343,7 @@ impl CppParser<'_, '_> {
                 entity.get_type().unwrap(),
                 &get_context_template_args(parent),
             )
-            .with_context(|_| "Can't parse base class type")?;
+            .with_context(|| "Can't parse base class type")?;
         if let CppType::Class(base_type) = &base_type {
             self.add_output(
                 self.entity_include_file(entity)?,
@@ -1368,7 +1368,7 @@ impl CppParser<'_, '_> {
 
     /// Parses a class or a struct `entity`.
     fn parse_class(&mut self, entity: Entity<'_>) -> Result<()> {
-        let include_file = self.entity_include_file(entity).with_context(|_| {
+        let include_file = self.entity_include_file(entity).with_context(|| {
             format!(
                 "Origin of type is unknown: {}; entity: {:?}",
                 get_full_name_display(entity),

@@ -12,13 +12,12 @@ ritual = { version = "0.0.0", path = "../ritual" }
 qt_ritual_common = { version = "0.4.0", path = "../qt_ritual_common" }
 ritual_common = { version = "0.4.0", path = "../ritual_common" }
 
-regex = "1.1.0"
-rusqlite = "0.16.0"
-compress = "0.1.2"
-select = "0.4.2"   # html parsing
-itertools = "0.8.0"
-flexi_logger = "0.10.3"
-log = "0.4.6"
-structopt = "0.2.14"
-tempdir = "0.3.7"
-semver = "0.9.0"
+regex = "1"
+rusqlite = "0.39"
+compress = "0.2.1"
+select = "0.6"   # html parsing
+itertools = "0.14"
+flexi_logger = "0.31"
+log = "0.4"
+tempfile = "3.20"
+semver = "1"

@@ -16,7 +16,7 @@ use std::path::{Path, PathBuf};
 
 #[derive(Debug)]
 pub enum TempTestDir {
-    System(::tempdir::TempDir),
+    System(::tempfile::TempDir),
     Custom(PathBuf),
 }
 
@@ -29,7 +29,7 @@ impl TempTestDir {
             create_dir_all(&path).unwrap();
             TempTestDir::Custom(path)
         } else {
-            TempTestDir::System(::tempdir::TempDir::new(name).unwrap())
+            TempTestDir::System(::tempfile::TempDir::with_prefix(name).unwrap())
         }
     }
 

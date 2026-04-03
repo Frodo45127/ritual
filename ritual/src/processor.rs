@@ -376,7 +376,7 @@ pub fn process(
             allow_load,
             true,
         )
-        .with_context(|_| "failed to load current crate data")?;
+        .with_context(|| "failed to load current crate data")?;
 
     db_client.set_crate_version(config.crate_properties().version().to_string());
 

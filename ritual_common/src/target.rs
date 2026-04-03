@@ -184,11 +184,6 @@ pub fn current_os() -> OS {
 pub fn current_os() -> OS {
     OS::DragonFly
 }
-#[cfg(target_os = "bitrig")]
-/// Returns current operating system
-pub fn current_os() -> OS {
-    OS::Bitrig
-}
 #[cfg(target_os = "openbsd")]
 /// Returns current operating system
 pub fn current_os() -> OS {

@@ -20,7 +20,7 @@ struct ParserCppData {
 }
 
 fn run_parser(code: &'static str) -> ParserCppData {
-    let dir = tempdir::TempDir::new("test_cpp_parser_run").unwrap();
+    let dir = tempfile::TempDir::with_prefix("test_cpp_parser_run").unwrap();
 
     let mut workspace = Workspace::new(dir.path().into()).unwrap();
 

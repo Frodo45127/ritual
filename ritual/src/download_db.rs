@@ -4,7 +4,7 @@ use crate::database::CRATE_DB_FILE_NAME;
 use log::{info, trace};
 use reqwest::header::CONTENT_LENGTH;
 use ritual_common::errors::{bail, Result};
-use std::io::Read;
+
 use std::path::Path;
 
 const CRATES_API_ROOT: &str = "https://crates.io/api/v1/crates";
@@ -18,7 +18,7 @@ pub fn download_db(crate_name: &str, crate_version: &str, path: impl AsRef<Path>
         "Downloading crate {} v{} from {}",
         crate_name, crate_version, download_url
     );
-    let mut response = reqwest::get(&download_url)?;
+    let response = reqwest::blocking::get(&download_url)?;
 
     let content_length: Option<usize> = response
         .headers()
@@ -29,11 +29,7 @@ pub fn download_db(crate_name: &str, crate_version: &str, path: impl AsRef<Path>
         "download size: {}",
         content_length.map_or("<unknown>".into(), |cl| format!("{} bytes", cl))
     );
-    let mut bytes = match content_length {
-        Some(cl) => Vec::with_capacity(cl),
-        None => Vec::new(),
-    };
-    response.read_to_end(&mut bytes)?;
+    let bytes = response.bytes()?.to_vec();
 
     info!("Crate {} v{} downloaded", crate_name, crate_version);
 

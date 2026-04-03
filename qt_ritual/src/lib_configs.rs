@@ -99,7 +99,7 @@ pub fn create_config(
     let mut config = if crate_name.starts_with("moqt_") {
         let mut config = Config::new(crate_properties);
         let moqt_path =
-            PathBuf::from(env::var(MOQT_INSTALL_DIR_ENV_VAR_NAME).with_context(|_| {
+            PathBuf::from(env::var(MOQT_INSTALL_DIR_ENV_VAR_NAME).with_context(|| {
                 format_err!("{} env var is missing", MOQT_INSTALL_DIR_ENV_VAR_NAME)
             })?);
 
@@ -154,7 +154,7 @@ pub fn create_config(
         }
 
         let template_path =
-            PathBuf::from(env::var(MOQT_TEMPLATE_DIR_ENV_VAR_NAME).with_context(|_| {
+            PathBuf::from(env::var(MOQT_TEMPLATE_DIR_ENV_VAR_NAME).with_context(|| {
                 format_err!("{} env var is missing", MOQT_TEMPLATE_DIR_ENV_VAR_NAME)
             })?);
         config.set_crate_template_path(template_path.join(&crate_name));

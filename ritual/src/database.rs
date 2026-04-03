@@ -664,7 +664,7 @@ impl DatabaseClient {
     pub fn rust_children<'a>(
         &'a self,
         path: &'a RustPath,
-    ) -> impl Iterator<Item = DbItem<&RustItem>> {
+    ) -> impl Iterator<Item = DbItem<&'a RustItem>> {
         self.rust_items()
             .filter(move |item| item.item.is_child_of(path))
     }

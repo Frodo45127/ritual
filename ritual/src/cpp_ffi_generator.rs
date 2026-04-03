@@ -96,7 +96,7 @@ pub fn ffi_type(original_type: &CppType, role: CppTypeRole) -> Result<CppFfiType
         };
         CppFfiType::new(original_type.clone(), conversion)
     };
-    Ok(inner().with_context(|_| format!("Can't express type to FFI: {:?}", original_type))?)
+    Ok(inner().with_context(|| format!("Can't express type to FFI: {:?}", original_type))?)
 }
 
 pub struct FfiNameProvider {

@@ -50,7 +50,7 @@ pub fn run_command(command: &mut Command) -> Result<()> {
     trace!("Executing command: {:?}", command);
     let status = command
         .status()
-        .with_context(|_| format!("failed to run command: {:?}", command))?;
+        .with_context(|| format!("failed to run command: {:?}", command))?;
     if status.success() {
         Ok(())
     } else {
@@ -79,7 +79,7 @@ pub fn run_command_and_capture_output(command: &mut Command) -> Result<CommandOu
     command.stderr(process::Stdio::piped());
     let output = command
         .output()
-        .with_context(|_| format!("failed to run command: {:?}", command))?;
+        .with_context(|| format!("failed to run command: {:?}", command))?;
     Ok(CommandOutput {
         stdout: String::from_utf8_lossy(&output.stdout).to_string(),
         stderr: String::from_utf8_lossy(&output.stderr).to_string(),
@@ -94,20 +94,20 @@ pub fn get_command_output(command: &mut Command) -> Result<String> {
     command.stderr(process::Stdio::piped());
     let output = command
         .output()
-        .with_context(|_| format!("failed to run command: {:?}", command))?;
+        .with_context(|| format!("failed to run command: {:?}", command))?;
     if output.status.success() {
         Ok(String::from_utf8(output.stdout)
-            .with_context(|_| "comand output is not valid unicode")?)
+            .with_context(|| "comand output is not valid unicode")?)
     } else {
         let mut stderr = stderr();
         writeln!(stderr, "Stdout:")?;
         stderr
             .write_all(&output.stdout)
-            .with_context(|_| "output failed")?;
+            .with_context(|| "output failed")?;
         writeln!(stderr, "Stderr:")?;
         stderr
             .write_all(&output.stderr)
-            .with_context(|_| "output failed")?;
+            .with_context(|| "output failed")?;
         bail!("command failed with {}: {:?}", output.status, command);
     }
 }
@@ -141,7 +141,7 @@ pub fn add_env_path_item(env_var_name: &str, mut new_paths: Vec<PathBuf>) -> Res
             new_paths.push(path);
         }
     }
-    Ok(env::join_paths(new_paths).with_context(|_| "env::join_paths failed")?)
+    Ok(env::join_paths(new_paths).with_context(|| "env::join_paths failed")?)
 }
 
 pub trait Inspect {

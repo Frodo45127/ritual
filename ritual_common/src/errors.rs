@@ -1,12 +1,16 @@
-//! Error handling types based on `failure` crate.
+//! Error handling types based on `anyhow` crate.
 
 use itertools::Itertools;
 use log::{log, log_enabled, Level};
 use std::env;
 
-pub use failure::{bail, ensure, err_msg, format_err, Error, ResultExt};
+pub use anyhow::{bail, ensure, format_err, Error, Context as ResultExt};
 
-pub type Result<T> = std::result::Result<T, failure::Error>;
+pub fn err_msg<S: Into<String>>(msg: S) -> Error {
+    anyhow::anyhow!("{}", msg.into())
+}
+
+pub type Result<T> = std::result::Result<T, anyhow::Error>;
 
 pub trait FancyUnwrap {
     type Output;
@@ -25,9 +29,9 @@ macro_rules! log_or_print {
     };
 }
 
-pub fn print_trace(err: &failure::Error, log_level: Option<log::Level>) {
+pub fn print_trace(err: &anyhow::Error, log_level: Option<log::Level>) {
     log_or_print!(log_level, "Error:");
-    for cause in err.iter_chain() {
+    for cause in err.chain() {
         log_or_print!(log_level, "   {}", cause);
     }
     let backtrace = err.backtrace().to_string();
@@ -45,7 +49,7 @@ pub fn print_trace(err: &failure::Error, log_level: Option<log::Level>) {
             }
             if let Some(position) = lines
                 .iter()
-                .position(|line| line.contains("failure::backtrace::Backtrace::new::"))
+                .position(|line| line.contains("anyhow::"))
             {
                 lines.drain(0..position + 2);
             }

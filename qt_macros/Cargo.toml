@@ -11,7 +11,6 @@ repository = "https://github.com/rust-qt/ritual"
 proc-macro = true
 
 [dependencies]
-syn = { version = "1.0", features = ["full"] }
-quote = "1.0"
-proc-macro2 = "1.0"
-proc-macro-hack = "0.5.11"
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"

@@ -57,7 +57,7 @@ pub fn detect_signals_and_slots(
         let file = open_file(&file_path)?;
         for (line_num, line) in file.lines().enumerate() {
             let line =
-                line.with_context(|_| format!("failed while reading lines from {}", &file_path))?;
+                line.with_context(|| format!("failed while reading lines from {}", &file_path))?;
             let section_type = if re_signals.is_match(&line) {
                 Some(SectionType::Signals)
             } else if re_slots.is_match(&line) {

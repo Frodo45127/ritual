@@ -76,7 +76,7 @@ fn create_config(mut crate_properties: CrateProperties) -> Result<Config> {
 
     let include_path = PathBuf::from(
         env::var(STD_HEADERS_PATH_ENV_VAR_NAME)
-            .with_context(|_| format!("missing env var: {}", STD_HEADERS_PATH_ENV_VAR_NAME))?,
+            .with_context(|| format!("missing env var: {}", STD_HEADERS_PATH_ENV_VAR_NAME))?,
     );
     if !include_path.exists() {
         bail!("std headers path doesn't exist: {}", include_path.display());

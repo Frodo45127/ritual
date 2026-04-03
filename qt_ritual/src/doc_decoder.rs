@@ -40,13 +40,12 @@ impl DocData {
         let file_data_query = "select Data from FileDataTable where Id==?";
         let mut file_data_query = self.connection.prepare(file_data_query)?;
         let mut file_data = file_data_query.query(&[&id])?;
-        let file_data = file_data.next().ok_or_else(|| err_msg("invalid file id"))?;
-        let file_data = file_data?;
-        let file_data: Vec<u8> = file_data.get_checked(0)?;
+        let file_data = file_data.next()?.ok_or_else(|| err_msg("invalid file id"))?;
+        let file_data: Vec<u8> = file_data.get(0)?;
         let mut file_html = Vec::new();
         compress::zlib::Decoder::new(&file_data[4..])
             .read_to_end(&mut file_html)
-            .with_context(|_| "zlib decoder failed")?;
+            .with_context(|| "zlib decoder failed")?;
         let file_html = String::from_utf8_lossy(&file_html);
         Ok(Document::from(file_html.as_ref()))
     }
@@ -56,9 +55,8 @@ impl DocData {
         let query = "select Name from FileNameTable where FileId==?";
         let mut query = self.connection.prepare(query)?;
         let mut result = query.query(&[&id])?;
-        let row = result.next().ok_or_else(|| err_msg("invalid file id"))?;
-        let row = row?;
-        Ok(row.get_checked(0)?)
+        let row = result.next()?.ok_or_else(|| err_msg("invalid file id"))?;
+        Ok(row.get(0)?)
     }
 
     /// Searches for an index item by lambda condition.
@@ -104,12 +102,11 @@ impl DocData {
             let index_query = "select IndexTable.Identifier, IndexTable.FileId, IndexTable.Anchor \
                                from IndexTable";
             let mut index = connection.prepare(index_query)?;
-            let mut index_rows = index.query(rusqlite::NO_PARAMS)?;
-            while let Some(index_row) = index_rows.next() {
-                let index_row = index_row?;
-                let name: String = index_row.get_checked(0)?;
-                let file_id: i32 = index_row.get_checked(1)?;
-                let anchor: Option<String> = index_row.get_checked(2)?;
+            let mut index_rows = index.query([])?;
+            while let Some(index_row) = index_rows.next()? {
+                let name: String = index_row.get(0)?;
+                let file_id: i32 = index_row.get(1)?;
+                let anchor: Option<String> = index_row.get(2)?;
                 index_data.push(DocIndexItem {
                     name,
                     document_id: file_id,

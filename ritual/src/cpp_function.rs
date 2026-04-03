@@ -186,7 +186,7 @@ impl CppFunction {
 
     pub fn class_path(&self) -> Result<CppPath> {
         if self.member.is_some() {
-            Ok(self.path.parent().with_context(|_| {
+            Ok(self.path.parent().with_context(|| {
                 err_msg("CppFunction is a class member but its path is not nested.")
             })?)
         } else {
@@ -196,7 +196,7 @@ impl CppFunction {
 
     pub fn class_path_parts(&self) -> Result<&[CppPathItem]> {
         if self.member.is_some() {
-            Ok(self.path.parent_parts().with_context(|_| {
+            Ok(self.path.parent_parts().with_context(|| {
                 err_msg("CppFunction is a class member but its path is not nested.")
             })?)
         } else {

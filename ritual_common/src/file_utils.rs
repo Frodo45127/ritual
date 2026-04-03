@@ -45,7 +45,7 @@ pub fn move_files(src: &Path, dst: &Path) -> Result<()> {
         }
         Ok(())
     };
-    inner().with_context(|_| format!("failed: move_files({:?}, {:?})", src, dst))?;
+    inner().with_context(|| format!("failed: move_files({:?}, {:?})", src, dst))?;
     Ok(())
 }
 
@@ -67,7 +67,7 @@ pub fn copy_recursively(src: &Path, dst: &Path) -> Result<()> {
         }
         Ok(())
     };
-    inner().with_context(|_| format!("failed: copy_recursively({:?}, {:?})", src, dst))?;
+    inner().with_context(|| format!("failed: copy_recursively({:?}, {:?})", src, dst))?;
     Ok(())
 }
 
@@ -95,7 +95,7 @@ fn move_one_file(old_path: &Path, new_path: &Path) -> Result<()> {
         }
         Ok(())
     };
-    inner().with_context(|_| format!("failed: move_one_file({:?}, {:?})", old_path, new_path))?;
+    inner().with_context(|| format!("failed: move_one_file({:?}, {:?})", old_path, new_path))?;
     Ok(())
 }
 
@@ -108,7 +108,7 @@ pub struct File<F> {
 /// A wrapper over `std::fs::File::open` with better error reporting.
 pub fn open_file<P: AsRef<Path>>(path: P) -> Result<File<BufReader<fs::File>>> {
     let file = fs::File::open(path.as_ref())
-        .with_context(|_| format!("Failed to open file for reading: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to open file for reading: {:?}", path.as_ref()))?;
     Ok(File {
         file: BufReader::new(file),
         path: path.as_ref().to_path_buf(),
@@ -124,7 +124,7 @@ pub fn file_to_string<P: AsRef<Path>>(path: P) -> Result<String> {
 /// A wrapper over `std::fs::File::create` with better error reporting.
 pub fn create_file<P: AsRef<Path>>(path: P) -> Result<File<BufWriter<fs::File>>> {
     let file = fs::File::create(path.as_ref())
-        .with_context(|_| format!("Failed to create file: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to create file: {:?}", path.as_ref()))?;
     Ok(File {
         file: BufWriter::new(file),
         path: path.as_ref().to_path_buf(),
@@ -135,7 +135,7 @@ pub fn create_file_for_append<P: AsRef<Path>>(path: P) -> Result<File<BufWriter<
     let file = fs::OpenOptions::new()
         .append(true)
         .open(path.as_ref())
-        .with_context(|_| format!("Failed to open file: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to open file: {:?}", path.as_ref()))?;
     Ok(File {
         file: BufWriter::new(file),
         path: path.as_ref().to_path_buf(),
@@ -159,7 +159,7 @@ impl<F: Read> File<F> {
         let mut r = String::new();
         self.file
             .read_to_string(&mut r)
-            .with_context(|_| format!("Failed to read from file: {:?}", self.path))?;
+            .with_context(|| format!("Failed to read from file: {:?}", self.path))?;
         Ok(r)
     }
 }
@@ -197,7 +197,7 @@ impl<F: Write> Write for File<F> {
 pub fn load_json<P: AsRef<Path>, T: serde::de::DeserializeOwned>(path: P) -> Result<T> {
     let file = open_file(path.as_ref())?;
     Ok(::serde_json::from_reader(file.into_inner())
-        .with_context(|_| format!("failed to parse file as JSON: {}", path.as_ref().display()))?)
+        .with_context(|| format!("failed to parse file as JSON: {}", path.as_ref().display()))?)
 }
 
 /// Serialize `value` into JSON file `path`.
@@ -214,7 +214,7 @@ pub fn save_json<P: AsRef<Path>, T: ::serde::Serialize>(
     };
     {
         let file = create_file(&tmp_path)?;
-        ::serde_json::to_writer(&mut file.into_inner(), value).with_context(|_| {
+        ::serde_json::to_writer(&mut file.into_inner(), value).with_context(|| {
             format!(
                 "failed to serialize to JSON file: {}",
                 path.as_ref().display()
@@ -235,29 +235,29 @@ pub fn save_json<P: AsRef<Path>, T: ::serde::Serialize>(
 /// Deserialize value from binary file `path`.
 pub fn load_bincode<P: AsRef<Path>, T: serde::de::DeserializeOwned>(path: P) -> Result<T> {
     let mut file = open_file(path.as_ref())?.into_inner();
-    Ok(bincode::deserialize_from(&mut file)
-        .with_context(|_| format!("load_bincode failed: {}", path.as_ref().display()))?)
+    let mut bytes = Vec::new();
+    std::io::Read::read_to_end(&mut file, &mut bytes)
+        .with_context(|| format!("load_bincode read failed: {}", path.as_ref().display()))?;
+    Ok(bitcode::deserialize(&bytes)
+        .with_context(|| format!("load_bincode failed: {}", path.as_ref().display()))?)
 }
 
 /// Serialize `value` into binary file `path`.
 pub fn save_bincode<P: AsRef<Path>, T: ::serde::Serialize>(path: P, value: &T) -> Result<()> {
     let mut file = create_file(path.as_ref())?.into_inner();
-    bincode::serialize_into(&mut file, value)
-        .with_context(|_| format!("save_bincode failed: {}", path.as_ref().display()))?;
+    let bytes = bitcode::serialize(value)
+        .with_context(|| format!("save_bincode failed: {}", path.as_ref().display()))?;
+    std::io::Write::write_all(&mut file, &bytes)
+        .with_context(|| format!("save_bincode write failed: {}", path.as_ref().display()))?;
     Ok(())
 }
 
 /// Load data from a TOML file
 pub fn load_toml_table<P: AsRef<Path>>(path: P) -> Result<toml::value::Table> {
     let data = file_to_string(path.as_ref())?;
-    let value = data
-        .parse::<toml::Value>()
-        .with_context(|_| format!("failed to parse TOML file: {}", path.as_ref().display()))?;
-    if let toml::value::Value::Table(table) = value {
-        Ok(table)
-    } else {
-        bail!("TOML is not a table");
-    }
+    let table: toml::value::Table = toml::from_str(&data)
+        .with_context(|| format!("failed to parse TOML file: {}", path.as_ref().display()))?;
+    Ok(table)
 }
 
 pub fn crate_version(path: impl AsRef<Path>) -> Result<String> {
@@ -281,21 +281,23 @@ pub fn crate_version(path: impl AsRef<Path>) -> Result<String> {
 /// Save `data` to a TOML file
 pub fn save_toml_table<P: AsRef<Path>>(path: P, data: &toml::Value) -> Result<()> {
     let mut file = create_file(path.as_ref())?;
-    write!(file, "{}", data)
-        .with_context(|_| format!("failed to write to TOML file: {}", path.as_ref().display()))?;
+    let s = toml::to_string(data)
+        .with_context(|| format!("failed to serialize TOML: {}", path.as_ref().display()))?;
+    write!(file, "{}", s)
+        .with_context(|| format!("failed to write to TOML file: {}", path.as_ref().display()))?;
     Ok(())
 }
 
 /// A wrapper over `std::fs::create_dir` with better error reporting
 pub fn create_dir<P: AsRef<Path>>(path: P) -> Result<()> {
     fs::create_dir(path.as_ref())
-        .with_context(|_| format!("Failed to create dir: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to create dir: {:?}", path.as_ref()))?;
     Ok(())
 }
 
 /// A wrapper over `std::fs::create_dir_all` with better error reporting
 pub fn create_dir_all<P: AsRef<Path>>(path: P) -> Result<()> {
-    fs::create_dir_all(path.as_ref()).with_context(|_| {
+    fs::create_dir_all(path.as_ref()).with_context(|| {
         format!(
             "Failed to create dirs (with parent components): {:?}",
             path.as_ref()
@@ -307,27 +309,27 @@ pub fn create_dir_all<P: AsRef<Path>>(path: P) -> Result<()> {
 /// A wrapper over `std::fs::remove_dir` with better error reporting
 pub fn remove_dir<P: AsRef<Path>>(path: P) -> Result<()> {
     fs::remove_dir(path.as_ref())
-        .with_context(|_| format!("Failed to remove dir: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to remove dir: {:?}", path.as_ref()))?;
     Ok(())
 }
 
 /// A wrapper over `std::fs::remove_dir_all` with better error reporting
 pub fn remove_dir_all<P: AsRef<Path>>(path: P) -> Result<()> {
     fs::remove_dir_all(path.as_ref())
-        .with_context(|_| format!("Failed to remove dir (recursively): {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to remove dir (recursively): {:?}", path.as_ref()))?;
     Ok(())
 }
 
 /// A wrapper over `std::fs::remove_file` with better error reporting
 pub fn remove_file<P: AsRef<Path>>(path: P) -> Result<()> {
     fs::remove_file(path.as_ref())
-        .with_context(|_| format!("Failed to remove file: {:?}", path.as_ref()))?;
+        .with_context(|| format!("Failed to remove file: {:?}", path.as_ref()))?;
     Ok(())
 }
 
 /// A wrapper over `std::fs::rename` with better error reporting
 pub fn rename_file<P: AsRef<Path>, P2: AsRef<Path>>(path1: P, path2: P2) -> Result<()> {
-    fs::rename(path1.as_ref(), path2.as_ref()).with_context(|_| {
+    fs::rename(path1.as_ref(), path2.as_ref()).with_context(|| {
         format!(
             "Failed to rename file from {:?} to {:?}",
             path1.as_ref(),
@@ -341,7 +343,7 @@ pub fn rename_file<P: AsRef<Path>, P2: AsRef<Path>>(path1: P, path2: P2) -> Resu
 pub fn copy_file<P: AsRef<Path>, P2: AsRef<Path>>(path1: P, path2: P2) -> Result<()> {
     fs::copy(path1.as_ref(), path2.as_ref())
         .map(|_| ())
-        .with_context(|_| {
+        .with_context(|| {
             format!(
                 "Failed to copy file from {:?} to {:?}",
                 path1.as_ref(),
@@ -361,7 +363,7 @@ pub struct ReadDir {
 pub fn read_dir<P: AsRef<Path>>(path: P) -> Result<ReadDir> {
     Ok(ReadDir {
         read_dir: fs::read_dir(path.as_ref())
-            .with_context(|_| format!("Failed to read dir: {:?}", path.as_ref()))?,
+            .with_context(|| format!("Failed to read dir: {:?}", path.as_ref()))?,
         path: path.as_ref().to_path_buf(),
     })
 }
@@ -370,7 +372,7 @@ impl Iterator for ReadDir {
     type Item = Result<fs::DirEntry>;
     fn next(&mut self) -> Option<Result<fs::DirEntry>> {
         self.read_dir.next().map(|value| {
-            Ok(value.with_context(|_| format!("Failed to read dir (in item): {:?}", self.path))?)
+            Ok(value.with_context(|| format!("Failed to read dir (in item): {:?}", self.path))?)
         })
     }
 }
@@ -381,7 +383,7 @@ impl Iterator for ReadDir {
 /// CMake and compilers.
 pub fn canonicalize<P: AsRef<Path>>(path: P) -> Result<PathBuf> {
     Ok(dunce::canonicalize(path.as_ref())
-        .with_context(|_| format!("failed to canonicalize {}", path.as_ref().display()))?)
+        .with_context(|| format!("failed to canonicalize {}", path.as_ref().display()))?)
 }
 
 /// A wrapper over `Path::to_str` with better error reporting

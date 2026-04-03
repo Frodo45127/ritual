@@ -305,7 +305,7 @@ impl DocParser {
         {
             let file_data = self
                 .file_data(index_item.document_id)
-                .with_context(|_| "failed to get document")?;
+                .with_context(|| "failed to get document")?;
             url.push_str(&file_data.file_name);
             let doc = &file_data.document;
 
@@ -454,9 +454,9 @@ fn qt_doc_parser_test() {
 /// Returns a copy of `html` with all relative link URLs replaced with absolute URLs.
 /// Also returns the set of absolute URLs.
 fn process_html(html: &str, base_url: &str) -> Result<(String, HashSet<String>)> {
-    let bad_subfolder_regex = Regex::new(r"^\.\./qt[^/]+/").with_context(|_| "invalid regex")?;
+    let bad_subfolder_regex = Regex::new(r"^\.\./qt[^/]+/").with_context(|| "invalid regex")?;
 
-    let link_regex = Regex::new("(href|src)=\"([^\"]*)\"").with_context(|_| "invalid regex")?;
+    let link_regex = Regex::new("(href|src)=\"([^\"]*)\"").with_context(|| "invalid regex")?;
     let mut cross_references = HashSet::new();
     let html = link_regex
         .replace_all(html.trim(), |captures: &::regex::Captures<'_>| {

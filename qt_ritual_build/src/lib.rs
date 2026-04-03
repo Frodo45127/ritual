@@ -146,7 +146,7 @@ pub fn try_add_resources(path: impl AsRef<Path>) -> Result<()> {
     let project_name = format!("ritual_qt_resources_{}", escaped_base_name);
 
     let out_dir =
-        PathBuf::from(env::var("OUT_DIR").with_context(|_| "OUT_DIR env var is missing")?);
+        PathBuf::from(env::var("OUT_DIR").with_context(|| "OUT_DIR env var is missing")?);
     let dir = out_dir.join(&project_name);
     create_dir_all(&dir)?;
 

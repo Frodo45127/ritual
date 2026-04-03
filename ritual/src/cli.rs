@@ -7,44 +7,43 @@ use crate::config::{CrateProperties, GlobalConfig};
 use crate::database::ItemId;
 use crate::processor;
 use crate::workspace::Workspace;
-use flexi_logger::{Duplicate, LevelFilter, LogSpecification, Logger};
+use flexi_logger::{Duplicate, Logger};
 use itertools::Itertools;
 use log::{error, info};
 use ritual_common::errors::{bail, err_msg, Result};
 use ritual_common::file_utils::{canonicalize, create_dir, load_json, path_to_str};
 use ritual_common::target::current_target;
 use std::path::PathBuf;
-use structopt::StructOpt;
+use clap::Parser;
 
-#[derive(Debug, StructOpt)]
+#[derive(Debug, clap::Parser)]
 /// Generates rust_qt crates using ritual.
 /// See [ritual](https://github.com/rust-qt/ritual) for more details.
 pub struct Options {
-    #[structopt(parse(from_os_str))]
     /// Directory for output and temporary files
     pub workspace: PathBuf,
-    #[structopt(long = "local-paths")]
+    #[arg(long)]
     /// Write local paths to `ritual` crates in generated `Cargo.toml`
     pub local_paths: Option<bool>,
-    #[structopt(short = "c", long = "crates", required = true)]
+    #[arg(short, long, required = true)]
     /// Crates to process (e.g. `qt_core`)
     pub crates: Vec<String>,
-    #[structopt(short = "o", long = "operations", required = true)]
+    #[arg(short, long, required = true)]
     /// Operations to perform
     pub operations: Vec<String>,
-    #[structopt(short = "v", long = "version")]
+    #[arg(short = 'v', long = "version")]
     /// Version of the output crates.
     pub output_crates_version: String,
-    #[structopt(long = "cluster")]
+    #[arg(long)]
     /// Cluster configuration
     pub cluster: Option<PathBuf>,
-    #[structopt(long = "trace")]
+    #[arg(long)]
     /// ID of item to trace
     pub trace: Option<String>,
 }
 
 pub fn run_from_args(config: GlobalConfig) -> Result<()> {
-    run(Options::from_args(), config)
+    run(Options::parse(), config)
 }
 
 pub fn run(options: Options, mut config: GlobalConfig) -> Result<()> {
@@ -55,10 +54,13 @@ pub fn run(options: Options, mut config: GlobalConfig) -> Result<()> {
 
     let mut workspace = Workspace::new(workspace_path.clone())?;
 
-    Logger::with(LogSpecification::default(LevelFilter::Trace).build())
-        .log_to_file()
-        .directory(path_to_str(&workspace.log_path())?)
-        .suppress_timestamp()
+    Logger::try_with_str("trace")
+        .unwrap()
+        .log_to_file(
+            flexi_logger::FileSpec::default()
+                .directory(path_to_str(&workspace.log_path())?)
+                .suppress_timestamp(),
+        )
         .append()
         .print_message()
         .duplicate_to_stderr(Duplicate::Info)

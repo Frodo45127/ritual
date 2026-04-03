@@ -32,7 +32,7 @@ pub fn run_checks(config: &ClusterConfig, tasks: &mut [LocalSnippetTask]) -> Res
     }
 
     let mut session = Session::open_url(&config.queue_address)
-        .with_context(|_| format!("can't connect to queue at {}", config.queue_address))?;
+        .with_context(|| format!("can't connect to queue at {}", config.queue_address))?;
     let mut channel = session.open_channel(1)?;
 
     let mut grouped = HashMap::<Target, HashMap<GroupKey, Vec<GroupItem>>>::new();
@@ -51,7 +51,7 @@ pub fn run_checks(config: &ClusterConfig, tasks: &mut [LocalSnippetTask]) -> Res
         });
     }
 
-    let launch_id = Uuid::new_v4().to_simple().to_string();
+    let launch_id = Uuid::new_v4().simple().to_string();
 
     let output_queue_name = task_output_queue_name(&launch_id);
     channel.queue_declare(
@@ -146,7 +146,7 @@ pub struct Client {
 impl Client {
     pub fn new(queue_address: &str, target: &Target) -> Result<Client> {
         let mut session = Session::open_url(queue_address)
-            .with_context(|_| format!("can't connect to queue at {}", queue_address))?;
+            .with_context(|| format!("can't connect to queue at {}", queue_address))?;
         let mut channel = session.open_channel(1)?;
 
         let queue_name = task_queue_name(target);

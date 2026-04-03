@@ -47,11 +47,11 @@ pub struct Config {
 
 fn manifest_dir() -> Result<PathBuf> {
     let dir =
-        env::var("CARGO_MANIFEST_DIR").with_context(|_| "CARGO_MANIFEST_DIR env var is missing")?;
+        env::var("CARGO_MANIFEST_DIR").with_context(|| "CARGO_MANIFEST_DIR env var is missing")?;
     Ok(PathBuf::from(dir))
 }
 fn out_dir() -> Result<PathBuf> {
-    let dir = env::var("OUT_DIR").with_context(|_| "OUT_DIR env var is missing")?;
+    let dir = env::var("OUT_DIR").with_context(|| "OUT_DIR env var is missing")?;
     Ok(PathBuf::from(dir))
 }
 
@@ -140,7 +140,7 @@ impl Config {
         let out_dir = out_dir()?;
         let c_lib_install_dir = out_dir.join("c_lib_install");
         let manifest_dir = manifest_dir()?;
-        let profile = env::var("PROFILE").with_context(|_| "PROFILE env var is missing")?;
+        let profile = env::var("PROFILE").with_context(|| "PROFILE env var is missing")?;
         info!("Building C++ wrapper library");
 
         let library_type = cpp_build_config_data

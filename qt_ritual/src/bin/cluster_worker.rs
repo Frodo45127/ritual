@@ -1,6 +1,5 @@
-use flexi_logger::{LogSpecification, Logger};
+use flexi_logger::Logger;
 use itertools::Itertools;
-use log::LevelFilter;
 use log::{info, warn};
 use qt_ritual::lib_configs::{create_config, MOQT_INSTALL_DIR_ENV_VAR_NAME};
 use qt_ritual_common::all_crate_names;
@@ -12,7 +11,7 @@ use ritual_common::file_utils::create_dir;
 use ritual_common::target::current_target;
 use std::collections::HashMap;
 use std::env;
-use tempdir::TempDir;
+use tempfile::TempDir;
 
 const QUEUE_ADDRESS_VAR: &str = "QT_RITUAL_WORKER_QUEUE_ADDRESS";
 const RUN_TESTS_VAR: &str = "QT_RITUAL_WORKER_RUN_TESTS";
@@ -23,11 +22,12 @@ struct RemoteSnippetTaskData {
 }
 
 fn run() -> Result<()> {
-    Logger::with(LogSpecification::default(LevelFilter::Info).build())
+    Logger::try_with_str("info")
+        .unwrap()
         .start()
         .unwrap_or_else(|e| panic!("Logger initialization failed: {}", e));
 
-    let temp_dir = TempDir::new("qt_ritual_cluster_worker")?;
+    let temp_dir = TempDir::with_prefix("qt_ritual_cluster_worker")?;
     let moqt_present = env::var(MOQT_INSTALL_DIR_ENV_VAR_NAME).is_ok();
     let supported_moqt_libs = ["moqt_core", "moqt_gui"]
         .iter()
