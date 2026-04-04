@@ -1,5 +1,4 @@
 target
-out
 .idea
 *.bk
 *.iml
@@ -13,3 +12,4 @@ vagrant/local_settings.yml
 perf.data*
 /output/db/
 /output/tmp/
+ritual_db_v2.bin
