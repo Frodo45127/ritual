@@ -28,11 +28,9 @@ where
 ///
 /// Example:
 /// ```
-/// use qt_core::{qdbg, QVectorOfInt};
+/// use qt_core::{qdbg, QString};
 /// # unsafe {
-/// let x = QVectorOfInt::new_0a();
-/// x.append_int(&1);
-/// x.append_int(&2);
+/// let x = QString::from_std_str("hello");
 /// println!("{:?}", qdbg(x.as_ref()));
 /// # }
 /// ```

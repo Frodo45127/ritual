@@ -52,7 +52,7 @@ impl QObject {
         QObject: DynamicCast<T>,
         T: StaticUpcast<QObject>,
     {
-        let ptr = self.find_child_q_object_1a(&QString::from_std_str(name));
+        let ptr = self.find_child_q_object_q_any_string_view(&QString::from_std_str(name));
         if ptr.is_null() {
             return Err(FindChildError(FindChildErrorInner::NotFound {
                 name: name.into(),

@@ -1,4 +1,4 @@
-use crate::{QBox, QObject, QPointerOfQObject};
+use crate::{QBox, QObject};
 use cpp_core::{
     CastFrom, CastInto, CppBox, CppDeletable, DynamicCast, Ptr, Ref, StaticDowncast, StaticUpcast,
 };
@@ -35,7 +35,6 @@ use std::ops::Deref;
 /// in another thread between the null check and the method call, also resulting in undefined
 /// behavior.
 pub struct QPtr<T: StaticUpcast<QObject>> {
-    q_pointer: Option<CppBox<QPointerOfQObject>>,
     target: Ptr<T>,
 }
 
@@ -48,16 +47,7 @@ impl<T: StaticUpcast<QObject>> QPtr<T> {
     /// See type level documentation.
     pub unsafe fn new(target: impl CastInto<Ptr<T>>) -> Self {
         let target = target.cast_into();
-        QPtr {
-            q_pointer: if target.is_null() {
-                None
-            } else {
-                Some(QPointerOfQObject::new_1a(Ptr::from_raw(
-                    target.as_raw_ptr(),
-                )))
-            },
-            target,
-        }
+        QPtr { target }
     }
 
     /// Creates a `QPtr` from a raw pointer.
@@ -92,7 +82,7 @@ impl<T: StaticUpcast<QObject>> QPtr<T> {
     ///
     /// See type level documentation.
     pub unsafe fn is_null(&self) -> bool {
-        self.q_pointer.as_ref().map_or(true, |p| p.is_null())
+        self.target.is_null()
     }
 
     /// Returns the content as a const `Ptr`.

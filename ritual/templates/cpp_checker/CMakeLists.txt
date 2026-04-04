@@ -9,7 +9,7 @@ project (cpp_checker)
 
 if(RITUAL_QT)
     set(CMAKE_AUTOMOC ON)
-    find_package(Qt5Core CONFIG REQUIRED)
+    find_package(Qt6Core CONFIG REQUIRED)
 endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})

@@ -372,7 +372,7 @@ where
                 "std::os::raw::c_long",
                 "std::os::raw::c_longlong",
             ],
-            &["u8", "u16", "u32", "u64"],
+            &["i8", "i16", "i32", "i64", "u8", "u16", "u32", "u64"],
         ),
         (
             &[
@@ -383,7 +383,7 @@ where
                 "std::os::raw::c_ulong",
                 "std::os::raw::c_ulonglong",
             ],
-            &["u8", "u16", "u32", "u64"],
+            &["i8", "i16", "i32", "i64", "u8", "u16", "u32", "u64"],
         ),
         (
             &["std::os::raw::c_float", "std::os::raw::c_double"],

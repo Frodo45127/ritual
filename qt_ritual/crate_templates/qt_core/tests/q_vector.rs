@@ -1,15 +1,13 @@
-use qt_core::QVectorOfInt;
+use qt_core::QListOfInt;
 
 #[test]
-fn vector1() {
+fn list_of_int() {
     unsafe {
-        let vec = QVectorOfInt::new_0a();
-        vec.append_int(&1);
-        vec.append_int(&2);
-        vec.append_int(&4);
-        assert_eq!(vec.count_0a(), 3);
-        assert_eq!(*vec.at(0), 1);
-        assert_eq!(*vec.at(1), 2);
-        assert_eq!(*vec.at(2), 4);
+        // QList<int>::new_1a creates a list with the given number of default-constructed elements
+        let list = QListOfInt::new_1a(3);
+        assert_eq!(list.count(), 3);
+        assert_eq!(*list.at(0), 0);
+        assert_eq!(*list.at(1), 0);
+        assert_eq!(*list.at(2), 0);
     }
 }

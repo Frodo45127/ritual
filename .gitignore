@@ -11,3 +11,5 @@ Cargo.lock
 vagrant/local_settings.yml
 *.log
 perf.data*
+/output/db/
+/output/tmp/

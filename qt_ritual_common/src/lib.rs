@@ -18,7 +18,7 @@ use std::process::Command;
 
 /// Makes a query to `qmake`.
 fn run_qmake_string_query(property: &str, qmake_path: Option<&str>) -> Result<String> {
-    let command = qmake_path.unwrap_or("qmake");
+    let command = qmake_path.unwrap_or("qmake6");
     let result = get_command_output(Command::new(command).arg("-query").arg(property))?;
     Ok(result.trim().to_string())
 }
@@ -140,7 +140,7 @@ pub fn get_full_build_config(
     cpp_build_config.add(target::Condition::True, cpp_build_config_data);
     {
         let mut data = CppBuildConfigData::new();
-        data.add_compiler_flag("-std=gnu++11");
+        data.add_compiler_flag("-std=gnu++17");
         cpp_build_config.add(target::Condition::Env(target::Env::Msvc).negate(), data);
     }
     {
@@ -157,11 +157,11 @@ pub fn get_full_build_config(
 }
 
 /// Returns library name of the specified module as
-/// should be passed to the linker, e.g. `"Qt5Core"`.
+/// should be passed to the linker, e.g. `"Qt6Core"`.
 pub fn real_lib_name(crate_name: &str) -> String {
     let sublib_name = crate_name.replace("qt_", "");
     let sublib_name_capitalized = sublib_name.to_class_case();
-    format!("Qt5{}", sublib_name_capitalized)
+    format!("Qt6{}", sublib_name_capitalized)
 }
 
 /// Returns name of the module's include directory, e.g. `"QtCore"`.

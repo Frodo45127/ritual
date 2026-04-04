@@ -289,7 +289,7 @@ fn run_clang<R, F: FnMut(Entity<'_>) -> Result<R>>(
         "-detailed-preprocessing-record".to_string(),
     ];
     if current_env() != Env::Msvc {
-        args.push("-std=c++11".to_string());
+        args.push("-std=c++17".to_string());
     }
     args.extend_from_slice(config.cpp_parser_arguments());
     let mut cpp_build_paths = config.cpp_build_paths().clone();
@@ -592,6 +592,21 @@ impl CppParser<'_, '_> {
             .find(|t| t.to_cpp_pseudo_code() == name)
         {
             return Ok(arg.clone());
+        }
+
+        // Qt6's QList uses dependent type aliases like `parameter_type` and `rvalue_ref`
+        // that clang reports as unexposed types (e.g. "QArrayDataPointer<T>::parameter_type").
+        // Resolve these to the template parameter they represent.
+        if name.ends_with("::parameter_type") {
+            // parameter_type = const T& for class types, T for trivial types.
+            // Use const T& as the safe default — it works for both.
+            if let Some(arg) = context_template_args.first() {
+                return Ok(CppType::new_reference(true, arg.clone()));
+            }
+        }
+        if name.ends_with("::rvalue_ref") {
+            // rvalue_ref = T&& — rvalue references are not supported by ritual
+            bail!("rvalue references are not supported: {}", name);
         }
 
         if name.ends_with(" *") {
@@ -1142,6 +1157,10 @@ impl CppParser<'_, '_> {
         let mut name = entity
             .get_name()
             .ok_or_else(|| err_msg("failed to get function name"))?;
+        // C++ user-defined literals (e.g. operator""_ba) have no Rust equivalent
+        if name.contains("\"\"") {
+            bail!("User-defined literal operators are not supported: {}", name);
+        }
         if name.contains('<') {
             static RE_MALFORMED_NAME: once_cell::sync::Lazy<Regex> =
                 once_cell::sync::Lazy::new(|| Regex::new(r"^([\w~]+)<[^<>]+>$").unwrap());
@@ -1249,6 +1268,16 @@ impl CppParser<'_, '_> {
                     } else {
                         line.len()
                     };
+                    if start_column > end_column || end_column > line.len() {
+                        bail!(
+                            "Invalid source range for function (likely a macro expansion): \
+                             line {}, columns {}..{}, line length {}",
+                            line_num + 1,
+                            start_column,
+                            end_column,
+                            line.len()
+                        );
+                    }
                     result.push_str(&line[start_column..end_column]);
                     if line_num >= range_line2 {
                         break;

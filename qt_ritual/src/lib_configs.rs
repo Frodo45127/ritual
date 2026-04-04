@@ -207,10 +207,8 @@ pub fn create_config(
         config
     };
 
-    if target::current_env() == target::Env::Msvc {
-        config.add_cpp_parser_argument("-std=c++14");
-    } else {
-        config.add_cpp_parser_argument("-std=gnu++11");
+    if target::current_env() != target::Env::Msvc {
+        config.add_cpp_parser_argument("-std=gnu++17");
     }
 
     config.add_after_cpp_parser_hook(detect_signals_and_slots);

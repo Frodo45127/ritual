@@ -174,7 +174,7 @@ pub fn try_add_resources(path: impl AsRef<Path>) -> Result<()> {
     )?;
     drop(cpp_file);
 
-    run_command(Command::new("qmake").arg(pro_file_path).current_dir(&dir))?;
+    run_command(Command::new("qmake6").arg(pro_file_path).current_dir(&dir))?;
     let make_command = if target::current_env() == target::Env::Msvc {
         "nmake"
     } else {

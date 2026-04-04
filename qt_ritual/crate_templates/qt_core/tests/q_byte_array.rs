@@ -13,7 +13,7 @@ fn qrect() {
         slice[1] = 47;
         let _ = slice;
 
-        assert_eq!(array.index_int(0), 42);
-        assert_eq!(array.index_int(1), 47);
+        assert_eq!(array.index(0), 42);
+        assert_eq!(array.index(1), 47);
     }
 }
