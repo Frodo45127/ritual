@@ -93,6 +93,7 @@ pub struct CppLibBuilder {
     pub capture_output: bool,
     pub skip_cmake: bool,
     pub skip_cmake_after_first_run: bool,
+    pub skip_clean: bool,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -173,26 +174,28 @@ impl CppLibBuilder {
             self.skip_cmake = true;
         }
 
-        if target::current_env() == target::Env::Msvc && self.capture_output {
-            let path = self.build_dir.join("nmake_output.txt");
-            run_command(
-                Command::new("cmd")
-                    .arg("/C")
-                    .arg(format!(
-                        "cmake --build . -- clean > {} 2>&1",
-                        path_to_str(&path)?
-                    ))
-                    .current_dir(&self.build_dir),
-            )?;
-        } else {
-            run_command(
-                Command::new("cmake")
-                    .arg("--build")
-                    .arg(".")
-                    .arg("--")
-                    .arg("clean")
-                    .current_dir(&self.build_dir),
-            )?;
+        if !self.skip_clean {
+            if target::current_env() == target::Env::Msvc && self.capture_output {
+                let path = self.build_dir.join("nmake_output.txt");
+                run_command(
+                    Command::new("cmd")
+                        .arg("/C")
+                        .arg(format!(
+                            "cmake --build . -- clean > {} 2>&1",
+                            path_to_str(&path)?
+                        ))
+                        .current_dir(&self.build_dir),
+                )?;
+            } else {
+                run_command(
+                    Command::new("cmake")
+                        .arg("--build")
+                        .arg(".")
+                        .arg("--")
+                        .arg("clean")
+                        .current_dir(&self.build_dir),
+                )?;
+            }
         }
 
         let mut make_args = vec!["--build".to_string(), ".".to_string(), "--".to_string()];

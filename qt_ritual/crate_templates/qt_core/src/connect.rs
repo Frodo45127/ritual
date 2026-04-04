@@ -113,6 +113,15 @@ impl<A> Signal<A> {
     pub unsafe fn new(q_object: impl CastInto<Ref<QObject>>, receiver_id: &'static CStr) -> Self {
         Signal(Receiver::new(q_object, receiver_id))
     }
+
+    /// Creates a `Signal` from a `Receiver`.
+    ///
+    /// # Safety
+    ///
+    /// The receiver must actually represent a signal.
+    pub unsafe fn from_receiver(receiver: Receiver<A>) -> Self {
+        Signal(receiver)
+    }
 }
 
 /// Values that can be used for specifying the receiving side of a Qt signal connection.

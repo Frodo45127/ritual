@@ -1,5 +1,3 @@
-use proc_macro_hack::proc_macro_hack;
-
 mod connect;
 mod impl_arguments_compatible;
 mod impl_ptr_ops;
@@ -55,5 +53,4 @@ pub use qt_macros::slot;
 /// Q_INIT_RESOURCE(myapp);
 /// </pre>
 /// </div>
-#[proc_macro_hack]
 pub use qt_macros::q_init_resource;

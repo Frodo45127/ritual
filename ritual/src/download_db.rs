@@ -1,6 +1,6 @@
 // inspired by https://github.com/Xion/cargo-download/
 
-use crate::database::CRATE_DB_FILE_NAME;
+use crate::database::LEGACY_CRATE_DB_FILE_NAME;
 use log::{info, trace};
 use reqwest::header::CONTENT_LENGTH;
 use ritual_common::errors::{bail, Result};
@@ -40,7 +40,7 @@ pub fn download_db(crate_name: &str, crate_version: &str, path: impl AsRef<Path>
         let mut entry = entry?;
         let entry_path = entry.path()?;
         if entry_path.components().count() == 2
-            && entry_path.components().nth(1).unwrap().as_os_str() == CRATE_DB_FILE_NAME
+            && entry_path.components().nth(1).unwrap().as_os_str() == LEGACY_CRATE_DB_FILE_NAME
         {
             info!("Unpacking database file");
             entry.unpack(path)?;
@@ -51,6 +51,6 @@ pub fn download_db(crate_name: &str, crate_version: &str, path: impl AsRef<Path>
 
     bail!(
         "database file ({:?}) not found in crate tarball",
-        CRATE_DB_FILE_NAME
+        LEGACY_CRATE_DB_FILE_NAME
     );
 }

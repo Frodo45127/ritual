@@ -1856,6 +1856,12 @@ impl State<'_, '_> {
                         .item
                         .path()
                         .expect("enum rust item must have path");
+                    // Skip if the enum belongs to a dependency crate — the FlagEnum impl
+                    // was already generated when that crate was processed.
+                    let current_crate = self.data.config.crate_properties().name();
+                    if rust_type_path.crate_name() != current_crate {
+                        return Ok(Vec::new());
+                    }
                     let rust_item = RustItem::ExtraImpl(RustExtraImpl {
                         parent_path: rust_type_path.parent()?,
                         kind: RustExtraImplKind::FlagEnum(RustFlagEnumImpl {

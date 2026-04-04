@@ -26,7 +26,9 @@ use ritual_common::file_utils::{
     remove_dir_all, remove_file,
 };
 use ritual_common::target::{current_env, current_target, Env, LibraryTarget};
-use ritual_common::utils::MapIfOk;
+
+use std::cell::RefCell;
+use std::collections::HashMap;
 use std::io::Write;
 use std::mem;
 use std::path::{Path, PathBuf};
@@ -77,6 +79,7 @@ struct CppParser<'b, 'a> {
     current_target_paths: Vec<PathBuf>,
     source_id: Option<ItemId>,
     output: CppParserOutput,
+    canonicalize_cache: RefCell<HashMap<PathBuf, PathBuf>>,
 }
 
 /// Print representation of `entity` and its children to the log.
@@ -160,8 +163,21 @@ fn get_context_template_args(entity: Entity<'_>) -> Vec<CppType> {
     args
 }
 
+/// Returns true if the entity has a real (non-synthetic) name.
+/// Clang 16+ returns synthetic names like "(unnamed enum at ...)" for anonymous types.
+fn has_real_name(entity: Entity<'_>) -> bool {
+    entity
+        .get_name()
+        .map_or(false, |name| !name.starts_with('('))
+}
+
 fn get_path_item(entity: Entity<'_>) -> Result<CppPathItem> {
     let name = entity.get_name().ok_or_else(|| err_msg("Anonymous type"))?;
+    // Clang 16+ returns synthetic names like "(unnamed enum at ...)" or "(anonymous struct at ...)"
+    // for anonymous types instead of None. Treat these as anonymous.
+    if name.starts_with('(') {
+        bail!("Anonymous type: {}", name);
+    }
     let template_arguments = get_template_arguments(entity);
     Ok(CppPathItem {
         name,
@@ -339,19 +355,33 @@ fn run_clang<R, F: FnMut(Entity<'_>) -> Result<R>>(
 pub fn run(data: &mut ProcessorData<'_>) -> Result<()> {
     debug!("clang version: {}", get_version());
     debug!("Initializing clang");
+
+    // Pre-compute canonicalized target paths and seed them into the cache
+    // so that should_process_entity lookups are instant cache hits.
+    let mut cache = HashMap::new();
+    let target_paths: Vec<PathBuf> = data
+        .config
+        .target_include_paths()
+        .iter()
+        .map(|p| {
+            let canonical = canonicalize(p)?;
+            cache.insert(p.clone(), canonical.clone());
+            Ok(canonical)
+        })
+        .collect::<Result<_>>()?;
+    let tmp_extra = canonicalize(data.workspace.tmp_path())?.join("extra");
+    cache.insert(data.workspace.tmp_path(), canonicalize(data.workspace.tmp_path())?);
+
+    let mut current_target_paths = target_paths;
+    current_target_paths.push(tmp_extra);
+
     let mut parser = CppParser {
-        current_target_paths: data
-            .config
-            .target_include_paths()
-            .iter()
-            .map_if_ok(canonicalize)?,
+        current_target_paths,
         source_id: None,
         data,
         output: Default::default(),
+        canonicalize_cache: RefCell::new(cache),
     };
-    parser
-        .current_target_paths
-        .push(canonicalize(parser.data.workspace.tmp_path())?.join("extra"));
     run_clang(
         &parser.data.config,
         &parser.data.workspace.tmp_path(),
@@ -367,6 +397,14 @@ pub fn parse_generated_items(data: &mut ProcessorData<'_>) -> Result<()> {
         cpp_library_version: data.config.cpp_lib_version().map(ToString::to_string),
         target: current_target(),
     };
+
+    // Collect all source items and their code, tracking which lines belong to which source.
+    // This allows us to parse everything in a single clang invocation instead of one per item.
+    let mut combined_code = String::new();
+    let mut line_to_source: Vec<(u32, u32, ItemId)> = Vec::new(); // (start_line, end_line, source_id)
+    // Line counter starts at 2 because run_clang writes '#include "global.h"\n' as line 1
+    let mut current_line: u32 = 2;
+
     for ffi_item_id in data.db.ffi_item_ids().collect_vec() {
         let ffi_item = data.db.ffi_item(&ffi_item_id)?;
         if !ffi_item.item.is_source_item() {
@@ -380,26 +418,52 @@ pub fn parse_generated_items(data: &mut ProcessorData<'_>) -> Result<()> {
             continue;
         }
         let code = ffi_item.item.source_item_cpp_code(data.db)?;
-        let mut parser = CppParser {
-            current_target_paths: vec![canonicalize(data.workspace.tmp_path())?.join("1.cpp")],
-            source_id: Some(ffi_item_id),
-            data,
-            output: Default::default(),
-        };
-        run_clang(
-            &parser.data.config,
-            &parser.data.workspace.tmp_path(),
-            Some(code),
-            |translation_unit| {
-                parser.parse(translation_unit)?;
-                Ok(())
-            },
-        )?;
+        let line_count = code.lines().count() as u32 + 1; // +1 for trailing newline
+        let start_line = current_line;
+        combined_code.push_str(&code);
+        combined_code.push('\n');
+        current_line += line_count;
+        line_to_source.push((start_line, current_line - 1, ffi_item_id));
     }
+
+    if combined_code.is_empty() {
+        return Ok(());
+    }
+
+    let mut parser = CppParser {
+        current_target_paths: vec![canonicalize(data.workspace.tmp_path())?.join("1.cpp")],
+        source_id: None,
+        data,
+        output: Default::default(),
+        canonicalize_cache: RefCell::new(HashMap::new()),
+    };
+
+    run_clang(
+        &parser.data.config,
+        &parser.data.workspace.tmp_path(),
+        Some(combined_code),
+        |translation_unit| {
+            // Parse in a single pass, but set source_id per entity based on its location
+            parser.parse_generated_entity(translation_unit, &line_to_source)?;
+            Ok(())
+        },
+    )?;
+
     Ok(())
 }
 
 impl CppParser<'_, '_> {
+    fn cached_canonicalize(&self, path: &Path) -> Result<PathBuf> {
+        if let Some(cached) = self.canonicalize_cache.borrow().get(path) {
+            return Ok(cached.clone());
+        }
+        let result = canonicalize(path)?;
+        self.canonicalize_cache
+            .borrow_mut()
+            .insert(path.to_path_buf(), result.clone());
+        Ok(result)
+    }
+
     fn add_output(
         &mut self,
         include_file: String,
@@ -506,8 +570,9 @@ impl CppParser<'_, '_> {
         } else {
             bail!("parse_unexposed_type: either type or string must be present");
         };
-        let re = Regex::new(r"^type-parameter-(\d+)-(\d+)$")?;
-        if let Some(matches) = re.captures(name.as_ref()) {
+        static RE_TYPE_PARAM: once_cell::sync::Lazy<Regex> =
+            once_cell::sync::Lazy::new(|| Regex::new(r"^type-parameter-(\d+)-(\d+)$").unwrap());
+        if let Some(matches) = RE_TYPE_PARAM.captures(name.as_ref()) {
             if matches.len() < 3 {
                 bail!("invalid matches len in regexp");
             }
@@ -1028,7 +1093,10 @@ impl CppParser<'_, '_> {
                     argument_entity
                 )
             })?;
-            if clang_type.get_display_name().ends_with("::QPrivateSignal") {
+            let type_display_name = clang_type.get_display_name();
+            if type_display_name.ends_with("::QPrivateSignal")
+                || type_display_name == "QPrivateSignal"
+            {
                 is_signal = true;
                 continue;
             }
@@ -1075,8 +1143,9 @@ impl CppParser<'_, '_> {
             .get_name()
             .ok_or_else(|| err_msg("failed to get function name"))?;
         if name.contains('<') {
-            let regex = Regex::new(r"^([\w~]+)<[^<>]+>$")?;
-            if let Some(matches) = regex.captures(name.as_ref()) {
+            static RE_MALFORMED_NAME: once_cell::sync::Lazy<Regex> =
+                once_cell::sync::Lazy::new(|| Regex::new(r"^([\w~]+)<[^<>]+>$").unwrap());
+            if let Some(matches) = RE_MALFORMED_NAME.captures(name.as_ref()) {
                 trace!("[DebugParser] Fixing malformed method name: {}", name);
                 name = matches
                     .get(1)
@@ -1438,7 +1507,7 @@ impl CppParser<'_, '_> {
             if file_path.is_empty() {
                 bail!("empty file path")
             } else {
-                Ok(canonicalize(file_path)?)
+                self.cached_canonicalize(Path::new(&file_path))
             }
         } else {
             bail!("no location for entity")
@@ -1460,7 +1529,6 @@ impl CppParser<'_, '_> {
             return Ok(true);
         }
         if let Ok(file_path) = self.entity_include_path(entity) {
-            let file_path = canonicalize(Path::new(&file_path))?;
             if !self.current_target_paths.is_empty()
                 && !self
                     .current_target_paths
@@ -1484,7 +1552,167 @@ impl CppParser<'_, '_> {
         Ok(true)
     }
 
+    /// Variant of `add_output` that looks up the source_id from a line-number map.
+    fn add_output_with_line_map(
+        &mut self,
+        include_file: String,
+        origin_location: CppOriginLocation,
+        item: CppItem,
+        line_to_source: &[(u32, u32, ItemId)],
+    ) -> Result<()> {
+        let line = origin_location.line;
+        let source_id = line_to_source
+            .iter()
+            .find(|(start, end, _)| line >= *start && line <= *end)
+            .map(|(_, _, id)| id.clone());
+        let old_source_id = self.source_id.take();
+        self.source_id = source_id;
+        let result = self.add_output(include_file, origin_location, item);
+        self.source_id = old_source_id;
+        result
+    }
+
+    /// Parse generated items from a combined translation unit.
+    /// Uses line numbers to map entities back to their source FFI items.
+    fn parse_generated_entity(
+        &mut self,
+        entity: Entity<'_>,
+        line_to_source: &[(u32, u32, ItemId)],
+    ) -> Result<()> {
+        if !self.should_process_entity(entity)? {
+            return Ok(());
+        }
+        let kind = entity.get_kind();
+
+        match kind {
+            EntityKind::EnumDecl => {
+                if entity.get_accessibility() == Some(Accessibility::Private) {
+                    return Ok(());
+                }
+                if has_real_name(entity) && entity.is_definition() {
+                    if let Err(error) = self.parse_enum_with_line_map(entity, line_to_source) {
+                        debug!(
+                            "failed to parse enum: {}: {}",
+                            get_full_name_display(entity),
+                            error
+                        );
+                    }
+                }
+            }
+            EntityKind::ClassDecl | EntityKind::ClassTemplate | EntityKind::StructDecl => {
+                if entity.get_accessibility() == Some(Accessibility::Private) {
+                    return Ok(());
+                }
+                let ok = entity.get_name().is_some()
+                    && entity.is_definition()
+                    && entity.get_template().is_none();
+                if ok {
+                    if let Err(error) = self.parse_class_with_line_map(entity, line_to_source) {
+                        debug!(
+                            "failed to parse class: {}: {}",
+                            get_full_name_display(entity),
+                            error
+                        );
+                    }
+                }
+            }
+            EntityKind::Namespace => {
+                if let Ok(path) = get_path(entity) {
+                    let _ = self.add_output_with_line_map(
+                        self.entity_include_file(entity)?,
+                        get_origin_location(entity).unwrap(),
+                        CppItem::Namespace(CppNamespace { path }),
+                        line_to_source,
+                    );
+                }
+            }
+            EntityKind::FunctionDecl
+            | EntityKind::Method
+            | EntityKind::Constructor
+            | EntityKind::Destructor
+            | EntityKind::ConversionFunction
+            | EntityKind::FunctionTemplate => {
+                if let Err(error) = self.parse_function_with_line_map(entity, line_to_source) {
+                    debug!(
+                        "failed to parse function: {}: {}",
+                        get_full_name_display(entity),
+                        error
+                    );
+                }
+            }
+            _ => {}
+        }
+
+        match kind {
+            EntityKind::TranslationUnit
+            | EntityKind::Namespace
+            | EntityKind::StructDecl
+            | EntityKind::ClassDecl
+            | EntityKind::UnexposedDecl
+            | EntityKind::ClassTemplate => {
+                for c in entity.get_children() {
+                    self.parse_generated_entity(c, line_to_source)?;
+                }
+            }
+            _ => {}
+        }
+        Ok(())
+    }
+
+    /// Like `parse_function` but uses a line map for source_id attribution.
+    fn parse_function_with_line_map(
+        &mut self,
+        entity: Entity<'_>,
+        line_to_source: &[(u32, u32, ItemId)],
+    ) -> Result<()> {
+        // Temporarily set source_id based on entity location, then delegate to parse_function
+        if let Ok(loc) = get_origin_location(entity) {
+            let source_id = line_to_source
+                .iter()
+                .find(|(start, end, _)| loc.line >= *start && loc.line <= *end)
+                .map(|(_, _, id)| id.clone());
+            self.source_id = source_id;
+        }
+        self.parse_function(entity)
+    }
+
+    /// Like `parse_enum` but uses a line map for source_id attribution.
+    fn parse_enum_with_line_map(
+        &mut self,
+        entity: Entity<'_>,
+        line_to_source: &[(u32, u32, ItemId)],
+    ) -> Result<()> {
+        if let Ok(loc) = get_origin_location(entity) {
+            let source_id = line_to_source
+                .iter()
+                .find(|(start, end, _)| loc.line >= *start && loc.line <= *end)
+                .map(|(_, _, id)| id.clone());
+            self.source_id = source_id;
+        }
+        self.parse_enum(entity)
+    }
+
+    /// Like `parse_class` but uses a line map for source_id attribution.
+    fn parse_class_with_line_map(
+        &mut self,
+        entity: Entity<'_>,
+        line_to_source: &[(u32, u32, ItemId)],
+    ) -> Result<()> {
+        if let Ok(loc) = get_origin_location(entity) {
+            let source_id = line_to_source
+                .iter()
+                .find(|(start, end, _)| loc.line >= *start && loc.line <= *end)
+                .map(|(_, _, id)| id.clone());
+            self.source_id = source_id;
+        }
+        self.parse_class(entity)
+    }
+
     fn parse(&mut self, entity: Entity<'_>) -> Result<()> {
+        // Two-pass parsing: types first, then functions.
+        // This ensures all types are in the database before any function signature
+        // is parsed, so find_type() lookups succeed for cross-class references.
+        // The canonicalize cache from pass 1 makes pass 2's should_process_entity checks fast.
         debug!("Parsing types");
         self.parse_types(entity)?;
         debug!("Parsing functions");
@@ -1495,8 +1723,7 @@ impl CppParser<'_, '_> {
         Ok(())
     }
 
-    /// Parses type declarations in translation unit `entity`
-    /// and saves them to `self`.
+    /// Pass 1: parse type declarations (enums, classes, namespaces).
     fn parse_types(&mut self, entity: Entity<'_>) -> Result<()> {
         if !self.should_process_entity(entity)? {
             return Ok(());
@@ -1504,9 +1731,9 @@ impl CppParser<'_, '_> {
         match entity.get_kind() {
             EntityKind::EnumDecl => {
                 if entity.get_accessibility() == Some(Accessibility::Private) {
-                    return Ok(()); // skipping private stuff
+                    return Ok(());
                 }
-                if entity.get_name().is_some() && entity.is_definition() {
+                if has_real_name(entity) && entity.is_definition() {
                     if let Err(error) = self.parse_enum(entity) {
                         debug!(
                             "failed to parse enum: {}: {}",
@@ -1519,11 +1746,11 @@ impl CppParser<'_, '_> {
             }
             EntityKind::ClassDecl | EntityKind::ClassTemplate | EntityKind::StructDecl => {
                 if entity.get_accessibility() == Some(Accessibility::Private) {
-                    return Ok(()); // skipping private stuff
+                    return Ok(());
                 }
-                let ok = entity.get_name().is_some() && // not an anonymous struct
-                    entity.is_definition() && // not a forward declaration
-                    entity.get_template().is_none(); // not a template specialization
+                let ok = has_real_name(entity) &&
+                    entity.is_definition() &&
+                    entity.get_template().is_none();
                 if ok {
                     if let Err(error) = self.parse_class(entity) {
                         debug!(
@@ -1563,7 +1790,8 @@ impl CppParser<'_, '_> {
         Ok(())
     }
 
-    /// Parses methods in translation unit `entity`.
+    /// Pass 2: parse functions/methods.
+    /// All types are already in the database from pass 1, so find_type() works correctly.
     fn parse_functions(&mut self, entity: Entity<'_>) -> Result<()> {
         if !self.should_process_entity(entity)? {
             return Ok(());

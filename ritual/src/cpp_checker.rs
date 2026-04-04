@@ -22,7 +22,7 @@ use ritual_common::file_utils::{
 use ritual_common::target::{current_target, LibraryTarget};
 use ritual_common::utils::ProgressBar;
 use serde_derive::{Deserialize, Serialize};
-use std::collections::{hash_map::Entry, HashMap};
+use std::collections::{hash_map::Entry, HashMap, HashSet};
 use std::io::Write;
 use std::iter::once;
 use std::path::PathBuf;
@@ -31,7 +31,17 @@ use std::thread::ThreadId;
 use std::time::Instant;
 use std::{iter, thread};
 
-pub const CHUNK_SIZE: usize = 64;
+pub const CHUNK_SIZE: usize = 256;
+
+/// Dynamically compute chunk size to ensure all CPU cores are utilized.
+/// With too-large chunks, rayon creates too few tasks and cores sit idle.
+fn chunk_size(total_items: usize) -> usize {
+    let num_cpus = num_cpus::get().max(1);
+    // Aim for at least 2x the number of cores for good load balancing,
+    // but keep chunks large enough for efficient binary search.
+    let ideal = total_items / (num_cpus * 2);
+    ideal.clamp(32, 512)
+}
 
 fn snippet_for_item(item: DbItem<&CppFfiItem>, database: &DatabaseClient) -> Result<Snippet> {
     match &item.item {
@@ -345,6 +355,7 @@ impl LocalCppChecker {
             capture_output: true,
             skip_cmake: false,
             skip_cmake_after_first_run: true,
+            skip_clean: true,
         };
 
         Ok(CppCheckerInstance {
@@ -502,9 +513,10 @@ impl CppChecker<'_, '_> {
         let progress_bar = ProgressBar::new(snippets.len() as u64, "Checking items");
 
         let instances = InstanceStorage::new(instance_provider);
+        let cs = chunk_size(snippets.len());
 
         snippets
-            .par_chunks_mut(CHUNK_SIZE)
+            .par_chunks_mut(cs)
             .map(|chunk| {
                 let progress_bar = progress_bar.clone();
                 let instance = instances.current()?;
@@ -709,11 +721,11 @@ pub fn check_cpp_parser_hook(
 
 pub fn delete_blacklisted_items(data: &mut ProcessorData<'_>) -> Result<()> {
     if let Some(hook) = data.config.cpp_parser_path_hook() {
-        let mut bad_cpp_item_ids = Vec::new();
+        let mut bad_cpp_item_ids = HashSet::new();
         for cpp_item in data.db.cpp_items() {
             if !check_cpp_parser_hook(&cpp_item.item, &hook)? {
                 info!("deleting {}: {}", cpp_item.id, cpp_item.item.short_text());
-                bad_cpp_item_ids.push(cpp_item.id);
+                bad_cpp_item_ids.insert(cpp_item.id);
             }
         }
         data.db
@@ -721,11 +733,11 @@ pub fn delete_blacklisted_items(data: &mut ProcessorData<'_>) -> Result<()> {
     }
 
     if let Some(hook) = data.config.cpp_item_filter_hook() {
-        let mut bad_cpp_item_ids = Vec::new();
+        let mut bad_cpp_item_ids = HashSet::new();
         for cpp_item in data.db.cpp_items() {
             if !hook(&cpp_item.item)? {
                 info!("deleting {}: {}", cpp_item.id, cpp_item.item.short_text());
-                bad_cpp_item_ids.push(cpp_item.id);
+                bad_cpp_item_ids.insert(cpp_item.id);
             }
         }
 

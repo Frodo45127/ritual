@@ -20,6 +20,7 @@ tempfile = "3.20"   # temporary directory creation
 itertools = "0.14"
 log = "0.4"
 rayon = "1"
+num_cpus = "1"
 flexi_logger = "0.31"
 clap = { version = "4", features = ["derive"] }
 chrono = "0.4"

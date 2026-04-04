@@ -6,7 +6,7 @@ use crate::rust_type::RustPath;
 use log::{debug, error, info, trace, warn};
 use once_cell::sync::OnceCell;
 use ritual_common::errors::{bail, err_msg, format_err, Result};
-use ritual_common::file_utils::load_json;
+use ritual_common::file_utils::{load_bincode, load_json};
 use ritual_common::string_utils::ends_with_digit;
 use ritual_common::target::LibraryTarget;
 use ritual_common::ReadOnly;
@@ -17,7 +17,8 @@ use std::path::{Path, PathBuf};
 use std::sync::{Arc, Mutex};
 use std::{fmt, mem};
 
-pub const CRATE_DB_FILE_NAME: &str = "ritual_db_v1.json";
+pub const CRATE_DB_FILE_NAME: &str = "ritual_db_v2.bin";
+pub const LEGACY_CRATE_DB_FILE_NAME: &str = "ritual_db_v1.json";
 
 pub struct DatabaseCache(HashMap<PathBuf, IndexedDatabase>);
 
@@ -41,7 +42,18 @@ impl DatabaseCache {
             }
             if path.exists() {
                 info!("Loading database for {}", crate_name);
-                let db = load_json(&path)?;
+                let db: Database = if path.extension().map_or(false, |ext| ext == "bin") {
+                    load_bincode(&path)?
+                } else {
+                    load_json(&path)?
+                };
+                return Ok(IndexedDatabase::new(db, path));
+            }
+            // Try legacy JSON path if bincode path doesn't exist
+            let legacy_path = path.with_extension("json");
+            if path.extension().map_or(false, |ext| ext == "bin") && legacy_path.exists() {
+                info!("Loading legacy JSON database for {}, will save as bincode", crate_name);
+                let db: Database = load_json(&legacy_path)?;
                 return Ok(IndexedDatabase::new(db, path));
             }
         }
@@ -625,7 +637,15 @@ impl DatabaseClient {
         source_id: Option<ItemId>,
         data: CppItem,
     ) -> Result<Option<ItemId>> {
-        if self.cpp_items().any(|item| item.item.is_same(&data)) {
+        // Use the cpp_path index to narrow duplicate search instead of scanning all items
+        let is_duplicate = if let Some(path) = data.path() {
+            self.current_database
+                .filter_by_cpp_path(path)
+                .any(|item| item.item.is_same(&data))
+        } else {
+            self.cpp_items().any(|item| item.item.is_same(&data))
+        };
+        if is_duplicate {
             self.counters.items_ignored += 1;
             return Ok(None);
         }

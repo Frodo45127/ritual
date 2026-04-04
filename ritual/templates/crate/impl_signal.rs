@@ -1,7 +1,14 @@
 impl {type_path} {{
+    /// Returns a `Signal` object for this signal wrapper.
+    {condition_attribute}
+    pub unsafe fn signal(&self) -> {qt_core}::Signal<{args}> {{
+        let receiver = {qt_core}::AsReceiver::as_receiver(self);
+        {qt_core}::Signal::from_receiver(receiver)
+    }}
+
     /// Connects this signal to another signal or slot.
     ///
-    /// This is a shortcut for `self.signal().connect(receiver)`.
+    /// This is a shortcut for `self.signal().connect_with_type(connection_type, receiver)`.
     {condition_attribute}
     pub unsafe fn connect_with_type<R>(
         &self,

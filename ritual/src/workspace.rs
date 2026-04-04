@@ -4,7 +4,7 @@ use crate::download_db::download_db;
 use log::info;
 use ritual_common::errors::{bail, Result};
 use ritual_common::file_utils::{
-    create_dir_all, load_json, os_string_into_string, read_dir, remove_file, save_json,
+    create_dir_all, load_json, os_string_into_string, read_dir, remove_file, save_bincode,
     save_toml_table,
 };
 use ritual_common::utils::MapIfOk;
@@ -33,7 +33,7 @@ fn config_path(path: &Path) -> PathBuf {
 fn database_path(workspace_path: &Path, crate_name: &str) -> PathBuf {
     workspace_path
         .join("db")
-        .join(format!("{}.json", crate_name))
+        .join(format!("{}.bin", crate_name))
 }
 
 impl Workspace {
@@ -127,23 +127,12 @@ impl Workspace {
         ))
     }
 
-    fn database_backup_path(&self, crate_name: &str) -> PathBuf {
-        let date = chrono::Local::now();
-        self.path.join("backup").join(format!(
-            "db_{}_{}.json",
-            crate_name,
-            date.format("%Y-%m-%d_%H-%M-%S")
-        ))
-    }
-
     pub fn save_database(&self, database: &mut DatabaseClient) -> Result<()> {
         if database.is_modified() {
             info!("Saving data");
-            let backup_path = self.database_backup_path(database.crate_name());
-            save_json(
+            save_bincode(
                 database_path(&self.path, database.crate_name()),
                 database.data(),
-                Some(&backup_path),
             )?;
             database.set_saved();
         }

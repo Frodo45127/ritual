@@ -22,14 +22,6 @@ pub fn core_config(config: &mut Config) -> Result<()> {
             path: repo_dir_path("qt_macros")?,
         },
     )?;
-    config.crate_properties_mut().add_dependency(
-        "proc-macro-hack",
-        CrateDependencyKind::Normal,
-        CrateDependencySource::CratesIo {
-            version: "0.5.11".into(),
-        },
-    )?;
-
     let crate_name = config.crate_properties().name().to_string();
     let crate_name2 = crate_name.clone();
 

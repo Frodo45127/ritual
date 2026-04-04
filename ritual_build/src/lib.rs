@@ -169,6 +169,7 @@ impl Config {
             capture_output: false,
             skip_cmake: false,
             skip_cmake_after_first_run: false,
+            skip_clean: false,
         }
         .run()?;
         {
