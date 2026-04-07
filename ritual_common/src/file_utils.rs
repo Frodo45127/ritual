@@ -156,11 +156,11 @@ impl<F> File<F> {
 impl<F: Read> File<F> {
     /// Read content of the file to a string
     pub fn read_all(&mut self) -> Result<String> {
-        let mut r = String::new();
+        let mut bytes = Vec::new();
         self.file
-            .read_to_string(&mut r)
+            .read_to_end(&mut bytes)
             .with_context(|| format!("Failed to read from file: {:?}", self.path))?;
-        Ok(r)
+        Ok(String::from_utf8_lossy(&bytes).into_owned())
     }
 }
 
