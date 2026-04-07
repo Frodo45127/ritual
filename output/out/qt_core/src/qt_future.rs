@@ -42,7 +42,7 @@ pub unsafe fn make_exceptional_future(
     exception: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QException>>,
 ) -> ::cpp_core::CppBox<crate::QFutureOf> {
     let ffi_result = {
-        crate::__ffi::ctr_qt_core_ffi_QtFuture_makeExceptionalFuture_void(
+        crate::__ffi::ctr_qt_core_ffi_QtFuture_makeExceptionalFuture_void1(
             ::cpp_core::CastInto::<::cpp_core::Ref<crate::QException>>::cast_into(exception)
                 .as_raw_ptr(),
         )

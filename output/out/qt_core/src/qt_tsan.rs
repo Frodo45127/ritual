@@ -25,18 +25,6 @@ pub unsafe fn futex_release_1a(arg1: *mut ::std::ffi::c_void) {
     crate::__ffi::ctr_qt_core_ffi_QtTsan_futexRelease1(arg1)
 }
 
-/// Calls C++ function: <span style='color: green;'>```void QtTsan::latchCountDown(void* arg1)```</span>.
-#[inline(always)]
-pub unsafe fn latch_count_down(arg1: *mut ::std::ffi::c_void) {
-    crate::__ffi::ctr_qt_core_ffi_QtTsan_latchCountDown(arg1)
-}
-
-/// Calls C++ function: <span style='color: green;'>```void QtTsan::latchWait(const void* arg1)```</span>.
-#[inline(always)]
-pub unsafe fn latch_wait(arg1: *const ::std::ffi::c_void) {
-    crate::__ffi::ctr_qt_core_ffi_QtTsan_latchWait(arg1)
-}
-
 /// Calls C++ function: <span style='color: green;'>```void QtTsan::mutexPostLock(void* arg1, unsigned int arg2, int arg3)```</span>.
 #[inline(always)]
 pub unsafe fn mutex_post_lock(

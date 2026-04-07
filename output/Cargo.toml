@@ -1,2 +1,2 @@
 [workspace]
-members = ["out/qt_core", "out/qt_gui", "out/qt_widgets", "out/qt_ui_tools", "out/qt_charts", "out/qt_qml"]
+members = ["out/qt_core", "out/qt_gui", "out/qt_qml", "out/qt_ui_tools", "out/qt_widgets"]

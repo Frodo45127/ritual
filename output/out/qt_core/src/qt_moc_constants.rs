@@ -49,14 +49,6 @@ impl PropertyFlags {
     #[allow(non_upper_case_globals)]
     pub const Alias: crate::qt_moc_constants::PropertyFlags =
         crate::qt_moc_constants::PropertyFlags(16);
-    /// C++ enum variant: <span style='color: green;'>```Virtual = 32```</span>
-    #[allow(non_upper_case_globals)]
-    pub const Virtual: crate::qt_moc_constants::PropertyFlags =
-        crate::qt_moc_constants::PropertyFlags(32);
-    /// C++ enum variant: <span style='color: green;'>```Override = 64```</span>
-    #[allow(non_upper_case_globals)]
-    pub const Override: crate::qt_moc_constants::PropertyFlags =
-        crate::qt_moc_constants::PropertyFlags(64);
     /// C++ enum variant: <span style='color: green;'>```StdCppSet = 256```</span>
     #[allow(non_upper_case_globals)]
     pub const StdCppSet: crate::qt_moc_constants::PropertyFlags =
