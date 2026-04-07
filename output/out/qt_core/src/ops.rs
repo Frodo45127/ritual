@@ -192,7 +192,7 @@ pub unsafe fn eq_q_cbor_tag_q_cbor_known_tags(
     t: crate::QCborTag,
     kt: crate::QCborKnownTags,
 ) -> bool {
-    crate::__ffi::ctr_qt_core_ffi_operator__27(t, kt)
+    crate::__ffi::ctr_qt_core_ffi_operator__26(t, kt)
 }
 
 /// Calls C++ function: <span style='color: green;'>```bool operator==(QCborKnownTags kt, QCborTag t)```</span>.
@@ -201,7 +201,7 @@ pub unsafe fn eq_q_cbor_known_tags_q_cbor_tag(
     kt: crate::QCborKnownTags,
     t: crate::QCborTag,
 ) -> bool {
-    crate::__ffi::ctr_qt_core_ffi_operator__28(kt, t)
+    crate::__ffi::ctr_qt_core_ffi_operator__27(kt, t)
 }
 
 /// Calls C++ function: <span style='color: green;'>```QMargins operator*(int factor, const QMargins& margins)```</span>.

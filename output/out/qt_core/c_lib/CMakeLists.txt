@@ -27,9 +27,6 @@ if(NOT(("${RITUAL_LIBRARY_TYPE}" STREQUAL "SHARED") OR ("${RITUAL_LIBRARY_TYPE}"
     message(FATAL_ERROR "RITUAL_LIBRARY_TYPE must be either SHARED or STATIC." )
 endif()
 message(STATUS "RITUAL_LIBRARY_TYPE=${RITUAL_LIBRARY_TYPE}")
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 add_library(qt_core_c ${RITUAL_LIBRARY_TYPE} ${sources})
 if(RITUAL_LINKED_LIBS)
     message(STATUS "RITUAL_LINKED_LIBS=${RITUAL_LINKED_LIBS}")
@@ -76,8 +73,8 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") # GCC
         "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wno-deprecated-declarations -Werror=return-type")
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-    # don't warn about deprecated items; enable proper __cplusplus macro for Qt6
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4996 /Zc:__cplusplus /permissive-")
+    # don't warn about deprecated items
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4996")
 endif()
 
 if(RITUAL_COMPILER_FLAGS)

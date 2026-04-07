@@ -2,7 +2,7 @@
 # See the template at "ritual/templates/c_lib/CMakeLists.txt".
 
 cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
-project (qt_widgets_c)
+project (qt_charts_c)
 
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -27,10 +27,10 @@ if(NOT(("${RITUAL_LIBRARY_TYPE}" STREQUAL "SHARED") OR ("${RITUAL_LIBRARY_TYPE}"
     message(FATAL_ERROR "RITUAL_LIBRARY_TYPE must be either SHARED or STATIC." )
 endif()
 message(STATUS "RITUAL_LIBRARY_TYPE=${RITUAL_LIBRARY_TYPE}")
-add_library(qt_widgets_c ${RITUAL_LIBRARY_TYPE} ${sources})
+add_library(qt_charts_c ${RITUAL_LIBRARY_TYPE} ${sources})
 if(RITUAL_LINKED_LIBS)
     message(STATUS "RITUAL_LINKED_LIBS=${RITUAL_LINKED_LIBS}")
-    target_link_libraries(qt_widgets_c ${RITUAL_LINKED_LIBS})
+    target_link_libraries(qt_charts_c ${RITUAL_LINKED_LIBS})
 endif()
 
 macro(add_osx_framework fwname target)
@@ -53,12 +53,12 @@ endif()
 if(RITUAL_LINKED_FRAMEWORKS)
     message(STATUS "RITUAL_LINKED_FRAMEWORKS=${RITUAL_LINKED_FRAMEWORKS}")
     foreach(framework ${RITUAL_LINKED_FRAMEWORKS})
-        ADD_OSX_FRAMEWORK(${framework} qt_widgets_c)
+        ADD_OSX_FRAMEWORK(${framework} qt_charts_c)
     endforeach()
 endif()
 
 
-add_definitions(-DQT_WIDGETS_C_LIBRARY)
+add_definitions(-DQT_CHARTS_C_LIBRARY)
 
 if(RITUAL_CPP_LIB_VERSION)
     message(STATUS "RITUAL_CPP_LIB_VERSION=${RITUAL_CPP_LIB_VERSION}")
@@ -83,7 +83,7 @@ if(RITUAL_COMPILER_FLAGS)
 endif()
 
 install(
-    TARGETS qt_widgets_c
+    TARGETS qt_charts_c
     LIBRARY DESTINATION .
     ARCHIVE DESTINATION .
     RUNTIME DESTINATION .
