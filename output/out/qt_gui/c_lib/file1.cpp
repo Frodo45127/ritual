@@ -6926,9 +6926,11 @@ RITUAL_EXPORT void ctr_qt_gui_ffi_QGuiApplication_sync() {
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT unsigned int ctr_qt_gui_ffi_QNativeInterface_QWaylandApplication_lastInputSerial(QNativeInterface::QWaylandApplication const * this_ptr) {
   return this_ptr->lastInputSerial();
 }
+#endif
 
 
 RITUAL_EXPORT QMetaObject const * ctr_qt_gui_ffi_QInputDevice_metaObject(QInputDevice const * this_ptr) {
@@ -19821,6 +19823,7 @@ RITUAL_EXPORT QDebug * ctr_qt_gui_ffi_operator__71(QDebug const * debug, QOpenGL
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT QOpenGLContext * ctr_qt_gui_ffi_QNativeInterface_QEGLContext_fromNative(void * context, void * display, QOpenGLContext * shareContext) {
   return QNativeInterface::QEGLContext::fromNative(context, display, shareContext);
 }
@@ -19844,6 +19847,7 @@ RITUAL_EXPORT void * ctr_qt_gui_ffi_QNativeInterface_QEGLContext_display(QNative
 RITUAL_EXPORT void ctr_qt_gui_ffi_QNativeInterface_QEGLContext_invalidateContext(QNativeInterface::QEGLContext * this_ptr) {
   this_ptr->invalidateContext();
 }
+#endif
 
 
 RITUAL_EXPORT QOpenGLFunctions * ctr_qt_gui_ffi_QOpenGLFunctions_QOpenGLFunctions() {
@@ -20951,6 +20955,21 @@ RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glDrawElementsInstanced(
 }
 
 
+#ifdef _WIN32
+RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetInteger64v(QOpenGLExtraFunctions * this_ptr, unsigned int pname, long * data) {
+  this_ptr->glGetInteger64v(pname, reinterpret_cast<GLint64 *>(data));
+}
+
+
+RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetInteger64i_v(QOpenGLExtraFunctions * this_ptr, unsigned int target, unsigned int index, long * data) {
+  this_ptr->glGetInteger64i_v(target, index, reinterpret_cast<GLint64 *>(data));
+}
+
+
+RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetBufferParameteri64v(QOpenGLExtraFunctions * this_ptr, unsigned int target, unsigned int pname, long * params) {
+  this_ptr->glGetBufferParameteri64v(target, pname, reinterpret_cast<GLint64 *>(params));
+}
+#else
 RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetInteger64v(QOpenGLExtraFunctions * this_ptr, unsigned int pname, long * data) {
   this_ptr->glGetInteger64v(pname, data);
 }
@@ -20964,6 +20983,7 @@ RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetInteger64i_v(QOpenG
 RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetBufferParameteri64v(QOpenGLExtraFunctions * this_ptr, unsigned int target, unsigned int pname, long * params) {
   this_ptr->glGetBufferParameteri64v(target, pname, params);
 }
+#endif
 
 
 RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGenSamplers(QOpenGLExtraFunctions * this_ptr, int count, unsigned int * samplers) {
@@ -58411,9 +58431,11 @@ RITUAL_EXPORT QOffscreenSurface * ctr_qt_gui_ffi_QOffscreenSurface_QOffscreenSur
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT QOpenGLContext * ctr_qt_gui_ffi_QNativeInterface_QEGLContext_fromNative1(void * context, void * display) {
   return QNativeInterface::QEGLContext::fromNative(context, display);
 }
+#endif
 
 
 RITUAL_EXPORT QPageSize * ctr_qt_gui_ffi_QPageSize_QPageSize5(QSize const * pointSize, QString const * name) {

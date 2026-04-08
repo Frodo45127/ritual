@@ -3016,6 +3016,7 @@ RITUAL_EXPORT QMetaObject const * ctr_qt_core_ffi_QProcess_staticMetaObject() {
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT int ctr_qt_core_ffi_QProcess_UnixProcessParameters_flags(QProcess::UnixProcessParameters const * this_ptr) {
   return int(this_ptr->flags);
 }
@@ -3034,6 +3035,7 @@ RITUAL_EXPORT int ctr_qt_core_ffi_QProcess_UnixProcessParameters_lowestFileDescr
 RITUAL_EXPORT void ctr_qt_core_ffi_set_QProcess_UnixProcessParameters_lowestFileDescriptorToClose(QProcess::UnixProcessParameters * this_ptr, int value) {
   this_ptr->lowestFileDescriptorToClose = value;
 }
+#endif
 
 
 RITUAL_EXPORT QMetaObject const * ctr_qt_core_ffi_QVariantAnimation_staticMetaObject() {
@@ -8191,9 +8193,15 @@ RITUAL_EXPORT QHashSeed * ctr_qt_core_ffi_QHashSeed_QHashSeed(unsigned long d) {
 }
 
 
+#ifdef _WIN32
+RITUAL_EXPORT unsigned long ctr_qt_core_ffi_QHashSeed_operator_unsigned_long(QHashSeed const * this_ptr) {
+  return static_cast<size_t>(*this_ptr);
+}
+#else
 RITUAL_EXPORT unsigned long ctr_qt_core_ffi_QHashSeed_operator_unsigned_long(QHashSeed const * this_ptr) {
   return this_ptr->operator unsigned long();
 }
+#endif
 
 
 RITUAL_EXPORT QHashSeed * ctr_qt_core_ffi_QHashSeed_globalSeed() {
@@ -27406,6 +27414,7 @@ RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_setStandardOutputProcess(QProcess * 
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_failChildProcessModifier(QProcess * this_ptr, char const * description, int error) {
   this_ptr->failChildProcessModifier(description, error);
 }
@@ -27424,6 +27433,7 @@ RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_setUnixProcessParameters(QProcess * 
 RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_setUnixProcessParameters1(QProcess * this_ptr, int flagsOnly) {
   this_ptr->setUnixProcessParameters(QFlags< QProcess::UnixProcessFlag >(flagsOnly));
 }
+#endif
 
 
 RITUAL_EXPORT QString * ctr_qt_core_ffi_QProcess_workingDirectory(QProcess const * this_ptr) {
@@ -30311,9 +30321,11 @@ RITUAL_EXPORT QSocketDescriptor * ctr_qt_core_ffi_QSocketDescriptor_QSocketDescr
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT int ctr_qt_core_ffi_QSocketDescriptor_operator_int(QSocketDescriptor const * this_ptr) {
   return this_ptr->operator int();
 }
+#endif
 
 
 RITUAL_EXPORT bool ctr_qt_core_ffi_QSocketDescriptor_isValid(QSocketDescriptor const * this_ptr) {
@@ -34266,6 +34278,7 @@ RITUAL_EXPORT QProcess * ctr_qt_core_ffi_QProcess_QProcess1() {
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_UnixProcessParameters_dUnixProcessParameters(QProcess::UnixProcessParameters * this_ptr) {
   delete this_ptr;
 }
@@ -34284,6 +34297,7 @@ RITUAL_EXPORT QProcess::UnixProcessParameters * ctr_qt_core_ffi_QProcess_UnixPro
 RITUAL_EXPORT QProcess::UnixProcessParameters * ctr_qt_core_ffi_QProcess_UnixProcessParameters_operator_(QProcess::UnixProcessParameters * this_ptr, QProcess::UnixProcessParameters const * other) {
   return &this_ptr->operator=(*other);
 }
+#endif
 
 
 RITUAL_EXPORT QVariantAnimation * ctr_qt_core_ffi_QVariantAnimation_QVariantAnimation1() {
@@ -34696,9 +34710,11 @@ RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash57(int flags, unsigned long see
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash58(int flags, unsigned long seed) {
   return qHash(QFlags< QProcess::UnixProcessFlag >(flags), seed);
 }
+#endif
 
 
 RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash59(int flags, unsigned long seed) {
@@ -55261,9 +55277,11 @@ RITUAL_EXPORT QDataStream * ctr_qt_core_ffi_operator__127(QDataStream * s, int e
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT QDataStream * ctr_qt_core_ffi_operator__128(QDataStream * s, int e) {
   return &operator<<(*s, QFlags< QProcess::UnixProcessFlag >(e));
 }
+#endif
 
 
 RITUAL_EXPORT QDataStream * ctr_qt_core_ffi_operator__129(QDataStream * s, int e) {
@@ -64871,9 +64889,11 @@ RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_setStandardErrorFile1(QProcess * thi
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT void ctr_qt_core_ffi_QProcess_failChildProcessModifier1(QProcess * this_ptr, char const * description) {
   this_ptr->failChildProcessModifier(description);
 }
+#endif
 
 
 RITUAL_EXPORT bool ctr_qt_core_ffi_QProcess_waitForStarted1(QProcess * this_ptr) {
@@ -65591,9 +65611,11 @@ RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash206(int flags) {
 }
 
 
+#ifndef _WIN32
 RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash207(int flags) {
   return qHash(QFlags< QProcess::UnixProcessFlag >(flags));
 }
+#endif
 
 
 RITUAL_EXPORT unsigned long ctr_qt_core_ffi_qHash208(int flags) {
