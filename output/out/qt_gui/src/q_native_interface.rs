@@ -10,11 +10,7 @@ pub mod q_x11_application {
         _unused: u8,
     }
 }
-/// <p>Accessed through <a href="http://doc.qt.io/qt-5/qguiapplication.html#nativeInterface" translate="no">QGuiApplication::nativeInterface</a>().</p>
-///
 /// C++ class: <span style='color: green;'>```QNativeInterface::QX11Application```</span>.
-///
-/// <a href="http://doc.qt.io/qt-5/qnativeinterface-qx11application.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Accessed through <a href="http://doc.qt.io/qt-5/qguiapplication.html#nativeInterface" translate="no">QGuiApplication::nativeInterface</a>().</p></div>
 #[repr(C)]
 pub struct QX11Application {
     _unused: u8,
@@ -28,11 +24,7 @@ pub mod q_wayland_application {
         _unused: u8,
     }
 }
-/// <p>Accessed through <a href="http://doc.qt.io/qt-5/qguiapplication.html#nativeInterface" translate="no">QGuiApplication::nativeInterface</a>().</p>
-///
 /// C++ class: <span style='color: green;'>```QNativeInterface::QWaylandApplication```</span>.
-///
-/// <a href="http://doc.qt.io/qt-5/qnativeinterface-qwaylandapplication.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Accessed through <a href="http://doc.qt.io/qt-5/qguiapplication.html#nativeInterface" translate="no">QGuiApplication::nativeInterface</a>().</p></div>
 #[repr(C)]
 pub struct QWaylandApplication {
     _unused: u8,
@@ -56,11 +48,7 @@ pub mod q_wayland_screen {
         _unused: u8,
     }
 }
-/// <p>Accessed through <a href="http://doc.qt.io/qt-5/qscreen.html#nativeInterface" translate="no">QScreen::nativeInterface</a>().</p>
-///
 /// C++ class: <span style='color: green;'>```QNativeInterface::QWaylandScreen```</span>.
-///
-/// <a href="http://doc.qt.io/qt-5/qnativeinterface-qwaylandscreen.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Accessed through <a href="http://doc.qt.io/qt-5/qscreen.html#nativeInterface" translate="no">QScreen::nativeInterface</a>().</p></div>
 #[repr(C)]
 pub struct QWaylandScreen {
     _unused: u8,
@@ -74,11 +62,7 @@ pub mod q_g_l_x_context {
         _unused: u8,
     }
 }
-/// <p>Accessed through <a href="http://doc.qt.io/qt-5/qopenglcontext.html#nativeInterface" translate="no">QOpenGLContext::nativeInterface</a>().</p>
-///
 /// C++ class: <span style='color: green;'>```QNativeInterface::QGLXContext```</span>.
-///
-/// <a href="http://doc.qt.io/qt-5/qnativeinterface-qglxcontext.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Accessed through <a href="http://doc.qt.io/qt-5/qopenglcontext.html#nativeInterface" translate="no">QOpenGLContext::nativeInterface</a>().</p></div>
 #[repr(C)]
 pub struct QGLXContext {
     _unused: u8,
@@ -92,11 +76,7 @@ pub mod q_e_g_l_context {
         _unused: u8,
     }
 }
-/// <p>Accessed through <a href="http://doc.qt.io/qt-5/qopenglcontext.html#nativeInterface" translate="no">QOpenGLContext::nativeInterface</a>().</p>
-///
 /// C++ class: <span style='color: green;'>```QNativeInterface::QEGLContext```</span>.
-///
-/// <a href="http://doc.qt.io/qt-5/qnativeinterface-qeglcontext.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Accessed through <a href="http://doc.qt.io/qt-5/qopenglcontext.html#nativeInterface" translate="no">QOpenGLContext::nativeInterface</a>().</p></div>
 #[repr(C)]
 pub struct QEGLContext {
     _unused: u8,

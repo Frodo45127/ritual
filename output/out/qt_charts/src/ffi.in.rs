@@ -4865,245 +4865,71 @@ extern "C" {
         this_ptr: *mut crate::QXYLegendMarker,
     ) -> *mut crate::QXYSeries;
 
-    /// <p>An area series is used to show quantitative data. It is based on a line series, in the way that the area between the boundary lines is emphasized with color. Since the area series is based on the line series, the QAreaSeries constructor needs a <a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a> instance, which defines the <i>upper</i> boundary of the area. The area chart is drawn using the bottom of the plot area as the <i>lower</i> boundary by default. Instead of the bottom of the plot area, the lower boundary can be specified by another line. In that case, QAreaSeries should be initialized with two <a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a> instances.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qareaseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>An area series is used to show quantitative data. It is based on a line series, in the way that the area between the boundary lines is emphasized with color. Since the area series is based on the line series, the QAreaSeries constructor needs a <a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a> instance, which defines the <i>upper</i> boundary of the area. The area chart is drawn using the bottom of the plot area as the <i>lower</i> boundary by default. Instead of the bottom of the plot area, the lower boundary can be specified by another line. In that case, QAreaSeries should be initialized with two <a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a> instances.</p>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>The terms <i>upper</i> and <i>lower</i> boundary can be misleading in cases where the value of the lower boundary is greater than that of the upper boundary. The main point is that the area between these two boundary lines will be filled.</p>
-    /// </div>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a simple area chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_areachart.png" alt="Screenshot of an areachart example"></p></div>
     pub fn ctr_qt_charts_ffi_QAreaSeries_QAreaSeries2() -> *mut crate::QAreaSeries;
 
-    /// <p>QBarCategoryAxis can be set up to show an axis line with tick marks, grid lines, and shades. Categories are drawn between the ticks. It can be used also with a line series, as demonstrated by the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QBarCategoryAxis can be set up to show an axis line with tick marks, grid lines, and shades. Categories are drawn between the ticks. It can be used also with a line series, as demonstrated by the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a>.</p>
-    /// <p>The following code illustrates how to use QBarCategoryAxis:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span> <span class="operator">*</span>chartView <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span>;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qbarseries-qtcharts.html" translate="no">QBarSeries</a></span> <span class="operator">*</span>series <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qbarseries-qtcharts.html" translate="no">QBarSeries</a></span>;
-    ///  <span class="comment">// ...</span>
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>addSeries(series);
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>createDefaultAxes();
-    ///
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a></span> <span class="operator">*</span>axisX <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a></span>;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html" translate="no">QStringList</a></span> categories;
-    ///  categories <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Jan"</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Feb"</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Mar"</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Apr"</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"May"</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Jun"</span>;
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>append(categories);
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>setRange(<span class="string">"Feb"</span><span class="operator">,</span> <span class="string">"May"</span>);
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>setAxisX(axisX<span class="operator">,</span> series);
-    /// </pre></div>
     pub fn ctr_qt_charts_ffi_QBarCategoryAxis_QBarCategoryAxis1() -> *mut crate::QBarCategoryAxis;
 
     pub fn ctr_qt_charts_ffi_QBarModelMapper_dQBarModelMapper(
         this_ptr: *mut crate::QBarModelMapper,
     );
 
-    /// <p>This class draws data as a series of vertical bars grouped by category, with one bar per category from each bar set added to the series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class draws data as a series of vertical bars grouped by category, with one bar per category from each bar set added to the series.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-barchart-example.html">bar chart example</a> to learn how to create a grouped bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_barchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QBarSeries_QBarSeries1() -> *mut crate::QBarSeries;
 
-    /// <p>A box-and-whiskers item is a graphical representation of a range and three median values that is constructed from five different values. There are two ways to specify the values. The first one is by using a constructor or stream operator (&lt;&lt;). The values have to be specified in the following order: lower extreme, lower quartile, median, upper quartile, and upper extreme.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qboxset-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A box-and-whiskers item is a graphical representation of a range and three median values that is constructed from five different values. There are two ways to specify the values. The first one is by using a constructor or stream operator (&lt;&lt;). The values have to be specified in the following order: lower extreme, lower quartile, median, upper quartile, and upper extreme.</p>
-    /// <p>The second way is to create an empty QBoxSet instance and specify the values using the <a href="http://doc.qt.io/qt-5/qboxset-qtcharts.html#setValue" translate="no">setValue</a>() method.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a box-and-whiskers chart.</p></div>
     pub fn ctr_qt_charts_ffi_QBoxSet_QBoxSet2() -> *mut crate::QBoxSet;
 
-    /// <p>A box plot series acts as a container for box-and-whiskers items. Items from multiple series are grouped into categories according to their index value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A box plot series acts as a container for box-and-whiskers items. Items from multiple series are grouped into categories according to their index value.</p>
-    /// <p>The <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a> class is used to add the categories to the chart's axis. Category labels have to be unique. If the same category label is defined for several box-and-whiskers items, only the first one is drawn.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a box-and-whiskers chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_boxplotchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QBoxPlotSeries_QBoxPlotSeries1() -> *mut crate::QBoxPlotSeries;
 
     pub fn ctr_qt_charts_ffi_QBoxPlotModelMapper_dQBoxPlotModelMapper(
         this_ptr: *mut crate::QBoxPlotModelMapper,
     );
 
-    /// <p>This class acts as a container for single candlestick items. Each item is drawn to its own category when using <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>. <a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html" translate="no">QDateTimeAxis</a> and <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a> can be used as alternatives to <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>. In this case, each candlestick item is drawn according to its timestamp value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class acts as a container for single candlestick items. Each item is drawn to its own category when using <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>. <a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html" translate="no">QDateTimeAxis</a> and <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a> can be used as alternatives to <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>. In this case, each candlestick item is drawn according to its timestamp value.</p>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>The timestamps must be unique within a QCandlestickSeries. When using <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>, only the first one of the candlestick items sharing a timestamp is drawn. If the chart includes multiple instances of QCandlestickSeries, items from different series sharing a timestamp are drawn to the same category. When using <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a> or <a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html" translate="no">QDateTimeAxis</a>, candlestick items sharing a timestamp will overlap each other.</p>
-    /// </div>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a candlestick chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_candlestickchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QCandlestickSeries_QCandlestickSeries1(
     ) -> *mut crate::QCandlestickSeries;
 
-    /// <p>Model mappers allow the use of a <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a>-derived model as a data source for a chart series, creating a connection between a <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a> and the model object. A model mapper maintains an equal size across all <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html" translate="no">QCandlestickSets</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qcandlestickmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers allow the use of a <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a>-derived model as a data source for a chart series, creating a connection between a <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a> and the model object. A model mapper maintains an equal size across all <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html" translate="no">QCandlestickSets</a>.</p>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>The model used must support adding and removing rows/columns and modifying the data of the cells.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QCandlestickModelMapper_dQCandlestickModelMapper(
         this_ptr: *mut crate::QCandlestickModelMapper,
     );
 
-    /// <p>Five values are needed to create a graphical representation of a candlestick item: <i>open</i>, <i>high</i>, <i>low</i>, <i>close</i>, and <i>timestamp</i>. These values can be either passed to a QCandlestickSet constructor or set by using <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#open-prop" translate="no">setOpen</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#high-prop" translate="no">setHigh</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#low-prop" translate="no">setLow</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#close-prop" translate="no">setClose</a>(), and <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#timestamp-prop" translate="no">setTimestamp</a>().</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Five values are needed to create a graphical representation of a candlestick item: <i>open</i>, <i>high</i>, <i>low</i>, <i>close</i>, and <i>timestamp</i>. These values can be either passed to a QCandlestickSet constructor or set by using <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#open-prop" translate="no">setOpen</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#high-prop" translate="no">setHigh</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#low-prop" translate="no">setLow</a>(), <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#close-prop" translate="no">setClose</a>(), and <a href="http://doc.qt.io/qt-5/qcandlestickset-qtcharts.html#timestamp-prop" translate="no">setTimestamp</a>().</p></div>
     pub fn ctr_qt_charts_ffi_QCandlestickSet_QCandlestickSet2() -> *mut crate::QCandlestickSet;
 
-    /// <p>A value axis can be set up to show an axis line with tick marks, grid lines, and shades. The values on the axis are drawn at the positions of tick marks.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A value axis can be set up to show an axis line with tick marks, grid lines, and shades. The values on the axis are drawn at the positions of tick marks.</p>
-    /// <p>The following example code illustrates how to use the QValueAxis class:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span> <span class="operator">*</span>chartView <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span>;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span> <span class="operator">*</span>series <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span>;
-    ///  <span class="comment">// ...</span>
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>addSeries(series);
-    ///
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a></span> <span class="operator">*</span>axisX <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a></span>;
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>setRange(<span class="number">10</span><span class="operator">,</span> <span class="number">20.5</span>);
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>setTickCount(<span class="number">10</span>);
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>setLabelFormat(<span class="string">"%.2f"</span>);
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>setAxisX(axisX<span class="operator">,</span> series);
-    /// </pre></div>
     pub fn ctr_qt_charts_ffi_QValueAxis_QValueAxis1() -> *mut crate::QValueAxis;
 
-    /// <p>This class can be used to explain the underlying data by adding labeled categories. Unlike <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>, QCategoryAxis allows the widths of the category ranges to be specified freely.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qcategoryaxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class can be used to explain the underlying data by adding labeled categories. Unlike <a href="http://doc.qt.io/qt-5/qbarcategoryaxis-qtcharts.html" translate="no">QBarCategoryAxis</a>, QCategoryAxis allows the widths of the category ranges to be specified freely.</p>
-    /// <p>Example code on how to use QCategoryAxis:</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/api_category_axis.png" alt="Screenshot cutout showing the y-axis being categorised by first, second, and third"></p><pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span> <span class="operator">*</span>chartView <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span>;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span> <span class="operator">*</span>series <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span>;
-    ///  <span class="comment">// ...</span>
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>addSeries(series);
-    ///
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qcategoryaxis-qtcharts.html" translate="no">QCategoryAxis</a></span> <span class="operator">*</span>axisY <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qcategoryaxis-qtcharts.html" translate="no">QCategoryAxis</a></span>;
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>setMin(<span class="number">0</span>);
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>setMax(<span class="number">52</span>);
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>setStartValue(<span class="number">15</span>);
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>append(<span class="string">"First"</span><span class="operator">,</span> <span class="number">20</span>);
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>append(<span class="string">"Second"</span><span class="operator">,</span> <span class="number">37</span>);
-    ///  axisY<span class="operator">-</span><span class="operator">&gt;</span>append(<span class="string">"Third"</span><span class="operator">,</span> <span class="number">52</span>);
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>setAxisY(axisY<span class="operator">,</span> series);
-    /// </pre></div>
     pub fn ctr_qt_charts_ffi_QCategoryAxis_QCategoryAxis1() -> *mut crate::QCategoryAxis;
 
-    /// <p>QChart is a <a href="http://doc.qt.io/qt-5/qgraphicswidget.html" translate="no">QGraphicsWidget</a> that you can show in a <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a>. It manages the graphical representation of different types of series and other chart related objects like legend and axes. To simply show a chart in a layout, the convenience class <a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a> can be used instead of QChart. In addition, line, spline, area, and scatter series can be presented as polar charts by using the <a href="http://doc.qt.io/qt-5/qpolarchart-qtcharts.html" translate="no">QPolarChart</a> class.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qchart-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QChart is a <a href="http://doc.qt.io/qt-5/qgraphicswidget.html" translate="no">QGraphicsWidget</a> that you can show in a <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a>. It manages the graphical representation of different types of series and other chart related objects like legend and axes. To simply show a chart in a layout, the convenience class <a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a> can be used instead of QChart. In addition, line, spline, area, and scatter series can be presented as polar charts by using the <a href="http://doc.qt.io/qt-5/qpolarchart-qtcharts.html" translate="no">QPolarChart</a> class.</p></div>
     pub fn ctr_qt_charts_ffi_QChart_QChart1() -> *mut crate::QChart;
 
-    /// <p>A chart view does not require a <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a> object to work. To display a chart in an existing <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a>, the <a href="http://doc.qt.io/qt-5/qchart-qtcharts.html" translate="no">QChart</a> or <a href="http://doc.qt.io/qt-5/qpolarchart-qtcharts.html" translate="no">QPolarChart</a> class should be used instead.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A chart view does not require a <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a> object to work. To display a chart in an existing <a href="http://doc.qt.io/qt-5/qgraphicsscene.html" translate="no">QGraphicsScene</a>, the <a href="http://doc.qt.io/qt-5/qchart-qtcharts.html" translate="no">QChart</a> or <a href="http://doc.qt.io/qt-5/qpolarchart-qtcharts.html" translate="no">QPolarChart</a> class should be used instead.</p></div>
     pub fn ctr_qt_charts_ffi_QChartView_QChartView2() -> *mut crate::QChartView;
 
-    /// <p>A color axis can be set up to show a color scale based on the passed gradient. The scale has tick marks with labels based on data passed in QXYSeries::colorby method.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qcoloraxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A color axis can be set up to show a color scale based on the passed gradient. The scale has tick marks with labels based on data passed in QXYSeries::colorby method.</p></div>
     pub fn ctr_qt_charts_ffi_QColorAxis_QColorAxis1() -> *mut crate::QColorAxis;
 
-    /// <p>QDateTimeAxis can be set up to show an axis line with tick marks, grid lines, and shades. The labels can be configured by setting an appropriate DateTime format. QDateTimeAxis works correctly with dates from 4714 BCE to 287396 CE. For other limitiations related to <a href="http://doc.qt.io/qt-5/qdatetime.html" translate="no">QDateTime</a>, see <a href="http://doc.qt.io/qt-5/qdatetime.html" translate="no">QDateTime</a> documentation.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QDateTimeAxis can be set up to show an axis line with tick marks, grid lines, and shades. The labels can be configured by setting an appropriate DateTime format. QDateTimeAxis works correctly with dates from 4714 BCE to 287396 CE. For other limitiations related to <a href="http://doc.qt.io/qt-5/qdatetime.html" translate="no">QDateTime</a>, see <a href="http://doc.qt.io/qt-5/qdatetime.html" translate="no">QDateTime</a> documentation.</p>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QDateTimeAxis is disabled on platforms that define qreal as float.</p>
-    /// </div>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/api_datatime_axis.png" alt="Screenshot cutout showing the x-axis describing date times"></p><p>QDateTimeAxis can be used with any <a href="http://doc.qt.io/qt-5/qxyseries-qtcharts.html" translate="no">QXYSeries</a>. To add a data point to the series, <a href="http://doc.qt.io/qt-5/qdatetime.html#toMSecsSinceEpoch" translate="no">QDateTime::toMSecsSinceEpoch</a>() is used:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span> <span class="operator">*</span>series <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlineseries.html" translate="no">QLineSeries</a></span>;
-    ///
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qdatetime.html" translate="no">QDateTime</a></span> xValue;
-    ///  xValue<span class="operator">.</span>setDate(<span class="type"><a href="http://doc.qt.io/qt-5/qdate.html" translate="no">QDate</a></span>(<span class="number">2012</span><span class="operator">,</span> <span class="number">1</span> <span class="operator">,</span> <span class="number">18</span>));
-    ///  xValue<span class="operator">.</span>setTime(<span class="type"><a href="http://doc.qt.io/qt-5/qtime.html" translate="no">QTime</a></span>(<span class="number">9</span><span class="operator">,</span> <span class="number">34</span>));
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qttypes.html#qreal-typedef" translate="no">qreal</a></span> yValue <span class="operator">=</span> <span class="number">12</span>;
-    ///  series<span class="operator">-</span><span class="operator">&gt;</span>append(xValue<span class="operator">.</span>toMSecsSinceEpoch()<span class="operator">,</span> yValue);
-    ///
-    ///  xValue<span class="operator">.</span>setDate(<span class="type"><a href="http://doc.qt.io/qt-5/qdate.html" translate="no">QDate</a></span>(<span class="number">2013</span><span class="operator">,</span> <span class="number">5</span> <span class="operator">,</span> <span class="number">11</span>));
-    ///  xValue<span class="operator">.</span>setTime(<span class="type"><a href="http://doc.qt.io/qt-5/qtime.html" translate="no">QTime</a></span>(<span class="number">11</span><span class="operator">,</span> <span class="number">14</span>));
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qttypes.html#qreal-typedef" translate="no">qreal</a></span> yValue <span class="operator">=</span> <span class="number">22</span>;
-    ///  series<span class="operator">-</span><span class="operator">&gt;</span>append(xValue<span class="operator">.</span>toMSecsSinceEpoch()<span class="operator">,</span> yValue);
-    /// </pre>
-    /// <p>The following code snippet illustrates adding the series to the chart and setting up QDateTimeAxis:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span> <span class="operator">*</span>chartView <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qchartview-qtcharts.html" translate="no">QChartView</a></span>;
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>addSeries(series);
-    ///
-    ///  <span class="comment">// ...</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html" translate="no">QDateTimeAxis</a></span> <span class="operator">*</span>axisX <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qdatetimeaxis-qtcharts.html" translate="no">QDateTimeAxis</a></span>;
-    ///  axisX<span class="operator">-</span><span class="operator">&gt;</span>setFormat(<span class="string">"dd-MM-yyyy h:mm"</span>);
-    ///  chartView<span class="operator">-</span><span class="operator">&gt;</span>chart()<span class="operator">-</span><span class="operator">&gt;</span>setAxisX(axisX<span class="operator">,</span> series);
-    /// </pre></div>
     pub fn ctr_qt_charts_ffi_QDateTimeAxis_QDateTimeAxis1() -> *mut crate::QDateTimeAxis;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each row in the data model defines a bar set and each column maps to a category in a bar series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhbarmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each row in the data model defines a bar set and each column maps to a category in a bar series.</p>
-    /// <p>Both model and bar series properties can be used to manipulate the data. The model mapper keeps the bar series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar sets in the bar series have equal sizes. Therefore, adding or removing a value from a bar set causes the same change to be made in all the bar sets in the bar series.</p></div>
     pub fn ctr_qt_charts_ffi_QHBarModelMapper_dQHBarModelMapper(
         this_ptr: *mut crate::QHBarModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each row in the data model defines a bar set and each column maps to a category in a bar series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhbarmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each row in the data model defines a bar set and each column maps to a category in a bar series.</p>
-    /// <p>Both model and bar series properties can be used to manipulate the data. The model mapper keeps the bar series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar sets in the bar series have equal sizes. Therefore, adding or removing a value from a bar set causes the same change to be made in all the bar sets in the bar series.</p></div>
     pub fn ctr_qt_charts_ffi_QHBarModelMapper_QHBarModelMapper1() -> *mut crate::QHBarModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each row in the data model defines a box-and-whiskers item and each column maps to the range and three median values of the box-and-whiskers item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhboxplotmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each row in the data model defines a box-and-whiskers item and each column maps to the range and three median values of the box-and-whiskers item.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the box-and-whiskers items in the box plot series have equal sizes. Therefore, adding or removing a value from a box-and-whiskers item causes the same change to be made in all the box-and-whiskers items in the box plot series.</p></div>
     pub fn ctr_qt_charts_ffi_QHBoxPlotModelMapper_dQHBoxPlotModelMapper(
         this_ptr: *mut crate::QHBoxPlotModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each row in the data model defines a box-and-whiskers item and each column maps to the range and three median values of the box-and-whiskers item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhboxplotmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each row in the data model defines a box-and-whiskers item and each column maps to the range and three median values of the box-and-whiskers item.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the box-and-whiskers items in the box plot series have equal sizes. Therefore, adding or removing a value from a box-and-whiskers item causes the same change to be made in all the box-and-whiskers items in the box plot series.</p></div>
     pub fn ctr_qt_charts_ffi_QHBoxPlotModelMapper_QHBoxPlotModelMapper1(
     ) -> *mut crate::QHBoxPlotModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each row in the data model defines a candlestick item and each column maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhcandlestickmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each row in the data model defines a candlestick item and each column maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    /// <p>Both model and candlestick series properties can be used to manipulate the data. The model mapper keeps the candlestick series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the candlestick items in the candlestick series have equal sizes. Therefore, adding or removing a value from a candlestick item causes the same change to be made in all the candlestick items in the candlestick series.</p></div>
     pub fn ctr_qt_charts_ffi_QHCandlestickModelMapper_dQHCandlestickModelMapper(
         this_ptr: *mut crate::QHCandlestickModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each row in the data model defines a candlestick item and each column maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhcandlestickmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each row in the data model defines a candlestick item and each column maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    /// <p>Both model and candlestick series properties can be used to manipulate the data. The model mapper keeps the candlestick series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the candlestick items in the candlestick series have equal sizes. Therefore, adding or removing a value from a candlestick item causes the same change to be made in all the candlestick items in the candlestick series.</p></div>
     pub fn ctr_qt_charts_ffi_QHCandlestickModelMapper_QHCandlestickModelMapper1(
     ) -> *mut crate::QHCandlestickModelMapper;
 
-    /// <p>This class draws data as a series of horizontal bars grouped by category, with one bar per category from each bar set added to the series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhorizontalbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class draws data as a series of horizontal bars grouped by category, with one bar per category from each bar set added to the series.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a horizontal bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_horizontalbarchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QHorizontalBarSeries_QHorizontalBarSeries1(
     ) -> *mut crate::QHorizontalBarSeries;
 
-    /// <p>This class draws data as a series of uniformly sized horizontally stacked bars, with one bar per category. Each bar set added to the series contributes a single segment to each stacked bar. The segment size corresponds to the percentage of the segment value compared with the total value of all segments in the stack. Bars with zero value are not drawn.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhorizontalpercentbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class draws data as a series of uniformly sized horizontally stacked bars, with one bar per category. Each bar set added to the series contributes a single segment to each stacked bar. The segment size corresponds to the percentage of the segment value compared with the total value of all segments in the stack. Bars with zero value are not drawn.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a horizontal percent bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_horizontalpercentbarchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QHorizontalPercentBarSeries_QHorizontalPercentBarSeries1(
     ) -> *mut crate::QHorizontalPercentBarSeries;
 
-    /// <p>Each bar set added to the series contributes a single segment to each stacked bar.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhorizontalstackedbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Each bar set added to the series contributes a single segment to each stacked bar.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a horizontal stacked bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_horizontalstackedbarchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QHorizontalStackedBarSeries_QHorizontalStackedBarSeries1(
     ) -> *mut crate::QHorizontalStackedBarSeries;
 
@@ -5111,186 +4937,84 @@ extern "C" {
         this_ptr: *mut crate::QPieModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each column in the data model defines a pie slice and each row maps to the label or the value of the pie slice.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhpiemodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each column in the data model defines a pie slice and each row maps to the label or the value of the pie slice.</p>
-    /// <p>Both model and pie series properties can be used to manipulate the data. The model mapper keeps the pie series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QHPieModelMapper_dQHPieModelMapper(
         this_ptr: *mut crate::QHPieModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each column in the data model defines a pie slice and each row maps to the label or the value of the pie slice.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhpiemodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each column in the data model defines a pie slice and each row maps to the label or the value of the pie slice.</p>
-    /// <p>Both model and pie series properties can be used to manipulate the data. The model mapper keeps the pie series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QHPieModelMapper_QHPieModelMapper1() -> *mut crate::QHPieModelMapper;
 
     pub fn ctr_qt_charts_ffi_QXYModelMapper_dQXYModelMapper(this_ptr: *mut crate::QXYModelMapper);
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> rows for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as columns. A <i>TableModel</i> is a natural choice for the model.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhxymodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> rows for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as columns. A <i>TableModel</i> is a natural choice for the model.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QHXYModelMapper_dQHXYModelMapper(
         this_ptr: *mut crate::QHXYModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> rows for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as columns. A <i>TableModel</i> is a natural choice for the model.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhxymodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A horizontal model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> rows for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as columns. A <i>TableModel</i> is a natural choice for the model.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QHXYModelMapper_QHXYModelMapper1() -> *mut crate::QHXYModelMapper;
 
     pub fn ctr_qt_charts_ffi_QLineSeries_QLineSeries1() -> *mut crate::QLineSeries;
 
-    /// <p>A logarithmic scale is a nonlinear scale that is based on orders of magnitude, so that each tick mark on the axis is the previous tick mark multiplied by a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlogvalueaxis-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A logarithmic scale is a nonlinear scale that is based on orders of magnitude, so that each tick mark on the axis is the previous tick mark multiplied by a value.</p>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>If QLogValueAxis is attached to a series with one or more points with negative or zero values on the associated dimension, the series will not be plotted at all. This is particularly relevant when XYModelMappers are used, since empty cells in models typically contain zero values.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QLogValueAxis_QLogValueAxis1() -> *mut crate::QLogValueAxis;
 
-    /// <p>This class draws data as a series of uniformly sized vertically stacked bars, with one bar per category. Each bar set added to the series contributes a single segment to each stacked bar. The segment size corresponds to the percentage of the segment value compared with the total value of all segments in the stack. Bars with zero value are not drawn.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qpercentbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>This class draws data as a series of uniformly sized vertically stacked bars, with one bar per category. Each bar set added to the series contributes a single segment to each stacked bar. The segment size corresponds to the percentage of the segment value compared with the total value of all segments in the stack. Bars with zero value are not drawn.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a percent bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_percentbarchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QPercentBarSeries_QPercentBarSeries1() -> *mut crate::QPercentBarSeries;
 
-    /// <p>A pie slice has a value and a label. When the slice is added to a pie series, the <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a> object calculates the percentage of the slice compared with the sum of all slices in the series to determine the actual size of the slice in the chart.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qpieslice-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A pie slice has a value and a label. When the slice is added to a pie series, the <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a> object calculates the percentage of the slice compared with the sum of all slices in the series to determine the actual size of the slice in the chart.</p>
-    /// <p>By default, the label is hidden. If it is visible, it can be either located outside the slice and connected to it with an arm or centered inside the slice either horizontally or in parallel with the tangential or normal of the slice's arc.</p>
-    /// <p>By default, the visual appearance of the slice is set by a theme, but the theme can be overridden by specifying slice properties. However, if the theme is changed after the slices are customized, all customization will be lost.</p>
-    /// <p>To enable user interaction with the pie chart, some basic signals are emitted when users click pie slices or hover the mouse over them.</p></div>
     pub fn ctr_qt_charts_ffi_QPieSlice_QPieSlice2() -> *mut crate::QPieSlice;
 
-    /// <p>A pie series consists of slices that are defined as <a href="http://doc.qt.io/qt-5/qpieslice-qtcharts.html" translate="no">QPieSlice</a> objects. The slices can have any values as the QPieSeries object calculates the percentage of a slice compared with the sum of all slices in the series to determine the actual size of the slice in the chart.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>A pie series consists of slices that are defined as <a href="http://doc.qt.io/qt-5/qpieslice-qtcharts.html" translate="no">QPieSlice</a> objects. The slices can have any values as the QPieSeries object calculates the percentage of a slice compared with the sum of all slices in the series to determine the actual size of the slice in the chart.</p>
-    /// <p>Pie size and position on the chart are controlled by using relative values that range from 0.0 to 1.0. These relate to the actual chart rectangle.</p>
-    /// <p>By default, the pie is defined as a full pie. A partial pie can be created by setting a starting angle and angle span for the series. A full pie is 360 degrees, where 0 is at 12 a'clock.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to use QPieSeries.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_piechart.png" alt=""></p><p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_donutchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QPieSeries_QPieSeries1() -> *mut crate::QPieSeries;
 
-    /// <p>Polar charts present data in a circular graph, where the placement of data is based on the angle and distance from the center of the graph, the <i>pole</i>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qpolarchart-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Polar charts present data in a circular graph, where the placement of data is based on the angle and distance from the center of the graph, the <i>pole</i>.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_polarchart.png" alt=""></p><p>A polar chart is a specialization of <a href="http://doc.qt.io/qt-5/qchart-qtcharts.html" translate="no">QChart</a> that supports line, spline, area, and scatter series, and all axis types supported by them. Each axis can be used either as a radial or an angular axis.</p>
-    /// <p>The first and last tick mark on an angular <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a> are co-located at a 0/360 degree angle.</p>
-    /// <p>If the angular distance between two consecutive points in a series is more than 180 degrees, any direct line connecting the two points becomes meaningless, and will not be drawn. Instead, a line will be drawn to and from the center of the chart. Therefore, the axis ranges must be chosen accordingly when displaying line, spline, or area series.</p>
-    /// <p>Polar charts draw all axes of the same orientation in the same position, so using multiple axes of the same orientation can be confusing, unless the extra axes are only used to customize the grid. For example, you can display a highlighted range with a secondary shaded <a href="http://doc.qt.io/qt-5/qcategoryaxis-qtcharts.html" translate="no">QCategoryAxis</a> or provide unlabeled subticks with a secondary <a href="http://doc.qt.io/qt-5/qvalueaxis-qtcharts.html" translate="no">QValueAxis</a> thas has hidden labels.</p></div>
     pub fn ctr_qt_charts_ffi_QPolarChart_QPolarChart1() -> *mut crate::QPolarChart;
 
-    /// <p>The scatter data is displayed as a collection of points on the chart. For each point, two values are specified that determine its position on the horizontal axis and the vertical axis.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qscatterseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The scatter data is displayed as a collection of points on the chart. For each point, two values are specified that determine its position on the horizontal axis and the vertical axis.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_scatterchart.png" alt=""></p><p>The following code snippet illustrates how to create a basic scatter chart:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qscatterseries-qtcharts.html" translate="no">QScatterSeries</a></span><span class="operator">*</span> series <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qscatterseries-qtcharts.html" translate="no">QScatterSeries</a></span>();
-    ///  series<span class="operator">-</span><span class="operator">&gt;</span>append(<span class="number">0</span><span class="operator">,</span> <span class="number">6</span>);
-    ///  series<span class="operator">-</span><span class="operator">&gt;</span>append(<span class="number">2</span><span class="operator">,</span> <span class="number">4</span>);
-    ///  <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
-    ///  chart<span class="operator">-</span><span class="operator">&gt;</span>addSeries(series);
-    /// </pre>
-    /// <p>For more information, see <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> and <a href="http://doc.qt.io/qt-5/qtcharts-scatterchart-example.html">Creating Scatter Charts</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QScatterSeries_QScatterSeries1() -> *mut crate::QScatterSeries;
 
     pub fn ctr_qt_charts_ffi_QSplineSeries_QSplineSeries1() -> *mut crate::QSplineSeries;
 
-    /// <p>Each bar set added to the series contributes a single segment to each stacked bar.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qstackedbarseries-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Each bar set added to the series contributes a single segment to each stacked bar.</p>
-    /// <p>See the <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a> to learn how to create a stacked bar chart.</p>
-    /// <p class="centerAlign"><img src="http://doc.qt.io/qt-5/images/examples_stackedbarchart.png" alt=""></p></div>
     pub fn ctr_qt_charts_ffi_QStackedBarSeries_QStackedBarSeries1() -> *mut crate::QStackedBarSeries;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each column in the data model defines a bar set and each row maps to a category in a bar series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvbarmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each column in the data model defines a bar set and each row maps to a category in a bar series.</p>
-    /// <p>Both model and bar series properties can be used to manipulate the data. The model mapper keeps the bar series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar sets in the bar series have equal sizes. Therefore, adding or removing a value from a bar set causes the same change to be made in all the bar sets in the bar series.</p>
-    /// <p>For more information, see <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QVBarModelMapper_dQVBarModelMapper(
         this_ptr: *mut crate::QVBarModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each column in the data model defines a bar set and each row maps to a category in a bar series.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvbarmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qabstractbarseries-qtcharts.html" translate="no">QAbstractBarSeries</a>, so that each column in the data model defines a bar set and each row maps to a category in a bar series.</p>
-    /// <p>Both model and bar series properties can be used to manipulate the data. The model mapper keeps the bar series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar sets in the bar series have equal sizes. Therefore, adding or removing a value from a bar set causes the same change to be made in all the bar sets in the bar series.</p>
-    /// <p>For more information, see <a href="http://doc.qt.io/qt-5/qtcharts-chartsgallery-example.html">Charts with Widgets Gallery</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QVBarModelMapper_QVBarModelMapper1() -> *mut crate::QVBarModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and a <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each column in the data model defines a box-and-whiskers item and each row maps to the range and three median values of the box-and-whiskers item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvboxplotmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and a <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each column in the data model defines a box-and-whiskers item and each row maps to the range and three median values of the box-and-whiskers item.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar box-and-whiskers items in the box plot series have equal sizes. Therefore, adding or removing a value from a box-and-whiskers item causes the same change to be made in all the box-and-whiskers items in the box plot series.</p></div>
     pub fn ctr_qt_charts_ffi_QVBoxPlotModelMapper_dQVBoxPlotModelMapper(
         this_ptr: *mut crate::QVBoxPlotModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and a <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each column in the data model defines a box-and-whiskers item and each row maps to the range and three median values of the box-and-whiskers item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvboxplotmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and a <a href="http://doc.qt.io/qt-5/qboxplotseries-qtcharts.html" translate="no">QBoxPlotSeries</a> object, so that each column in the data model defines a box-and-whiskers item and each row maps to the range and three median values of the box-and-whiskers item.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the bar box-and-whiskers items in the box plot series have equal sizes. Therefore, adding or removing a value from a box-and-whiskers item causes the same change to be made in all the box-and-whiskers items in the box plot series.</p></div>
     pub fn ctr_qt_charts_ffi_QVBoxPlotModelMapper_QVBoxPlotModelMapper1(
     ) -> *mut crate::QVBoxPlotModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each column in the data model defines a candlestick item and each row maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvcandlestickmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each column in the data model defines a candlestick item and each row maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    /// <p>Both model and candlestick series properties can be used to manipulate the data. The model mapper keeps the candlestick series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the candlestick items in the candlestick series have equal sizes. Therefore, adding or removing a value from a candlestick item causes the same change to be made in all the candlestick items in the candlestick series.</p></div>
     pub fn ctr_qt_charts_ffi_QVCandlestickModelMapper_dQVCandlestickModelMapper(
         this_ptr: *mut crate::QVCandlestickModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each column in the data model defines a candlestick item and each row maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvcandlestickmodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qcandlestickseries-qtcharts.html" translate="no">QCandlestickSeries</a>, so that each column in the data model defines a candlestick item and each row maps to the open, high, low, close, and timestamp values of the candlestick item.</p>
-    /// <p>Both model and candlestick series properties can be used to manipulate the data. The model mapper keeps the candlestick series and the data model in sync.</p>
-    /// <p>The model mapper ensures that all the candlestick items in the candlestick series have equal sizes. Therefore, adding or removing a value from a candlestick item causes the same change to be made in all the candlestick items in the candlestick series.</p></div>
     pub fn ctr_qt_charts_ffi_QVCandlestickModelMapper_QVCandlestickModelMapper1(
     ) -> *mut crate::QVCandlestickModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each row in the data model defines a pie slice and each column maps to the label or the value of the pie slice.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvpiemodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each row in the data model defines a pie slice and each column maps to the label or the value of the pie slice.</p>
-    /// <p>Both model and pie series properties can be used to manipulate the data. The model mapper keeps the pie series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QVPieModelMapper_dQVPieModelMapper(
         this_ptr: *mut crate::QVPieModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each row in the data model defines a pie slice and each column maps to the label or the value of the pie slice.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvpiemodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a data model and <a href="http://doc.qt.io/qt-5/qpieseries-qtcharts.html" translate="no">QPieSeries</a>, so that each row in the data model defines a pie slice and each column maps to the label or the value of the pie slice.</p>
-    /// <p>Both model and pie series properties can be used to manipulate the data. The model mapper keeps the pie series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QVPieModelMapper_QVPieModelMapper1() -> *mut crate::QVPieModelMapper;
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> columns for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as rows. A <i>TableModel</i> is a natural choice for the model.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvxymodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> columns for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as rows. A <i>TableModel</i> is a natural choice for the model.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QVXYModelMapper_dQVXYModelMapper(
         this_ptr: *mut crate::QVXYModelMapper,
     );
 
-    /// <p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> columns for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as rows. A <i>TableModel</i> is a natural choice for the model.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qvxymodelmapper-qtcharts.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>Model mappers enable using a data model derived from the <a href="http://doc.qt.io/qt-5/qabstractitemmodel.html" translate="no">QAbstractItemModel</a> class as a data source for a chart. A vertical model mapper is used to create a connection between a line, spline, or scatter series and the data model that has <i>X</i> and <i>Y</i> columns for the coordinates and holds the data points for the <a href="http://doc.qt.io/qt-5/qml-qtcharts-xyseries.html" translate="no">XYSeries</a> as rows. A <i>TableModel</i> is a natural choice for the model.</p>
-    /// <p>Both model and series properties can be used to manipulate the data. The model mapper keeps the series and the data model in sync.</p></div>
     pub fn ctr_qt_charts_ffi_QVXYModelMapper_QVXYModelMapper1() -> *mut crate::QVXYModelMapper;
 
-    pub fn ctr_qt_charts_ffi_qHash(flags: ::std::os::raw::c_int, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash(
+        flags: ::std::os::raw::c_int,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash1(flags: ::std::os::raw::c_int, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash1(
+        flags: ::std::os::raw::c_int,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash2(flags: ::std::os::raw::c_int, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash2(
+        flags: ::std::os::raw::c_int,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_iterator_iterator(
     ) -> *mut crate::q_list_of_q_abstract_axis::Iterator;
@@ -9833,25 +9557,40 @@ extern "C" {
         this_ptr: *const crate::QListOfQPieSlice,
     ) -> *mut crate::QListOfQPieSlice;
 
-    pub fn ctr_qt_charts_ffi_qHash3(key: *const crate::QListOfQAbstractAxis, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash3(
+        key: *const crate::QListOfQAbstractAxis,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash4(key: *const crate::QListOfQBarSet, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash4(
+        key: *const crate::QListOfQBarSet,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash5(key: *const crate::QListOfQLegendMarker, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash5(
+        key: *const crate::QListOfQLegendMarker,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash6(key: *const crate::QListOfQBoxSet, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash6(
+        key: *const crate::QListOfQBoxSet,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_qHash7(
         key: *const crate::QListOfQCandlestickSet,
-        seed: usize,
-    ) -> usize;
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_qHash8(
         key: *const crate::QListOfQAbstractSeries,
-        seed: usize,
-    ) -> usize;
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash9(key: *const crate::QListOfQPieSlice, seed: usize) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash9(
+        key: *const crate::QListOfQPieSlice,
+        seed: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_operator__(
         s: *mut ::qt_core::QDataStream,
@@ -10475,12 +10214,12 @@ extern "C" {
         value: *const crate::QHashOfPointConfigurationQVariant,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator;
 
-    pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_insert4(
+    pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_insert1(
         this_ptr: *mut crate::QHashOfPointConfigurationQVariant,
         hash: *const crate::QHashOfPointConfigurationQVariant,
     );
 
-    pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_insert4(
+    pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_insert1(
         this_ptr: *mut crate::QHashOfIntQHashOfPointConfigurationQVariant,
         hash: *const crate::QHashOfIntQHashOfPointConfigurationQVariant,
     );
@@ -10513,16 +10252,17 @@ extern "C" {
 
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_bucket_count(
         this_ptr: *const crate::QHashOfPointConfigurationQVariant,
-    ) -> usize;
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_bucket_count(
         this_ptr: *const crate::QHashOfIntQHashOfPointConfigurationQVariant,
-    ) -> usize;
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_max_bucket_count() -> usize;
+    pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_max_bucket_count(
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_max_bucket_count(
-    ) -> usize;
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_empty(
         this_ptr: *const crate::QHashOfPointConfigurationQVariant,
@@ -10532,2323 +10272,382 @@ extern "C" {
         this_ptr: *const crate::QHashOfIntQHashOfPointConfigurationQVariant,
     ) -> bool;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_dQList(
         this_ptr: *mut crate::QListOfQAbstractAxis,
     );
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_dQList(this_ptr: *mut crate::QListOfQBarSet);
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_dQList(
         this_ptr: *mut crate::QListOfQLegendMarker,
     );
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_dQList(this_ptr: *mut crate::QListOfQBoxSet);
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_dQList(
         this_ptr: *mut crate::QListOfQCandlestickSet,
     );
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_dQList(
         this_ptr: *mut crate::QListOfQAbstractSeries,
     );
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_dQList(this_ptr: *mut crate::QListOfQPieSlice);
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_QList3(
         other: *const crate::QListOfQAbstractAxis,
     ) -> *mut crate::QListOfQAbstractAxis;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_QList3(
         other: *const crate::QListOfQBarSet,
     ) -> *mut crate::QListOfQBarSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_QList3(
         other: *const crate::QListOfQLegendMarker,
     ) -> *mut crate::QListOfQLegendMarker;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_QList3(
         other: *const crate::QListOfQBoxSet,
     ) -> *mut crate::QListOfQBoxSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_QList3(
         other: *const crate::QListOfQCandlestickSet,
     ) -> *mut crate::QListOfQCandlestickSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_QList3(
         other: *const crate::QListOfQAbstractSeries,
     ) -> *mut crate::QListOfQAbstractSeries;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_QList3(
         other: *const crate::QListOfQPieSlice,
     ) -> *mut crate::QListOfQPieSlice;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_operator_4(
         this_ptr: *mut crate::QListOfQAbstractAxis,
         other: *const crate::QListOfQAbstractAxis,
     ) -> *mut crate::QListOfQAbstractAxis;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_operator_4(
         this_ptr: *mut crate::QListOfQBarSet,
         other: *const crate::QListOfQBarSet,
     ) -> *mut crate::QListOfQBarSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_operator_4(
         this_ptr: *mut crate::QListOfQLegendMarker,
         other: *const crate::QListOfQLegendMarker,
     ) -> *mut crate::QListOfQLegendMarker;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_operator_4(
         this_ptr: *mut crate::QListOfQBoxSet,
         other: *const crate::QListOfQBoxSet,
     ) -> *mut crate::QListOfQBoxSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_operator_4(
         this_ptr: *mut crate::QListOfQCandlestickSet,
         other: *const crate::QListOfQCandlestickSet,
     ) -> *mut crate::QListOfQCandlestickSet;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_operator_4(
         this_ptr: *mut crate::QListOfQAbstractSeries,
         other: *const crate::QListOfQAbstractSeries,
     ) -> *mut crate::QListOfQAbstractSeries;
 
-    /// <p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>QList&lt;T&gt; is one of Qt's generic <a href="http://doc.qt.io/qt-5/containers.html">container classes</a>. It stores its items in adjacent memory locations and provides fast index-based access. <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a>&lt;T&gt; used to be a different class in Qt 5, but is now a simple alias to QList.</p>
-    /// <p>QList&lt;T&gt; and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>&lt;T&gt; provide similar APIs and functionality. They are often interchangeable, but there are performance consequences. Here is an overview of use cases:</p>
-    /// <ul>
-    /// <li>QList should be your default first choice.</li>
-    /// <li><a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> provides an array that reserves space on the stack, but can dynamically grow onto the heap if required. It's good to use for short lived containers that are usually small.</li>
-    /// <li>If you need a real linked list, which guarantees <a href="http://doc.qt.io/qt-5/containers.html#algorithmic-complexity">constant time</a> insertions mid-list and uses iterators to items rather than indexes, use std::list.</li>
-    /// </ul>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList and <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a> both guarantee C-compatible array layout.</p>
-    /// </div>
-    /// <div class="admonition note">
-    /// <p><b>Note: </b>QList in Qt 5 did not always have a C-compatible array layout and we often recommended to use <a href="http://doc.qt.io/qt-5/qvector.html" translate="no">QVector</a> instead for more predictable performance. This is not the case in Qt 6 anymore, where both classes now share an implementation and can be used interchangeably.</p>
-    /// </div>
-    /// <p>Here's an example of a QList that stores integers and a QList that stores <a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a> values:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> integerList;
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> stringList;
-    /// </pre>
-    /// <p>QList stores its items in an array of continuous memory. Typically, lists are created with an initial size. For example, the following code constructs a QList with 200 elements:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span>);
-    /// </pre>
-    /// <p>The elements are automatically initialized with a <a href="http://doc.qt.io/qt-5/containers.html#default-constructed-value">default-constructed value</a>. If you want to initialize the list with a different value, pass that value as the second argument to the constructor:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">&gt;</span> list(<span class="number">200</span><span class="operator">,</span> <span class="string">"Pass"</span>);
-    /// </pre>
-    /// <p>You can also call <a href="http://doc.qt.io/qt-5/qlist.html#fill" translate="no">fill</a>() at any time to fill the list with a value.</p>
-    /// <p>QList uses 0-based indexes, just like C++ arrays. To access the item at a particular index position, you can use operator[](). On non-const lists, operator[]() returns a reference to the item that can be used on the left side of an assignment:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">if</span> (list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span><span class="operator">=</span> <span class="string">"Liz"</span>)
-    /// &#32;    list<span class="operator">[</span><span class="number">0</span><span class="operator">]</span> <span class="operator">=</span> <span class="string">"Elizabeth"</span>;
-    /// </pre>
-    /// <p>For read-only access, an alternative syntax is to use <a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (qsizetype i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> list<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
-    /// &#32;    <span class="keyword">if</span> (list<span class="operator">.</span>at(i) <span class="operator">=</span><span class="operator">=</span> <span class="string">"Alfonso"</span>)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Found Alfonso at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html#at" translate="no">at</a>() can be faster than operator[](), because it never causes a <a href="http://doc.qt.io/qt-5/implicit-sharing.html#deep-copy">deep copy</a> to occur.</p>
-    /// <p>Another way to access the data stored in a QList is to call <a href="http://doc.qt.io/qt-5/qlist.html#data" translate="no">data</a>(). The function returns a pointer to the first item in the list. You can use the pointer to directly access and modify the elements stored in the list. The pointer is also useful if you need to pass a QList to a function that accepts a plain C++ array.</p>
-    /// <p>If you want to find all occurrences of a particular value in a list, use <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() or <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>(). The former searches forward starting from a given index position, the latter searches backward. Both return the index of the matching item if they found one; otherwise, they return -1. For example:</p>
-    /// <pre class="cpp" translate="no"> qsizetype i <span class="operator">=</span> list<span class="operator">.</span>indexOf(<span class="string">"Harumi"</span>);
-    ///  <span class="keyword">if</span> (i <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"First occurrence of Harumi is at position "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>If you simply want to check whether a list contains a particular value, use <a href="http://doc.qt.io/qt-5/qlist.html#contains" translate="no">contains</a>(). If you want to find out how many times a particular value occurs in the list, use <a href="http://doc.qt.io/qt-5/qlist.html#count" translate="no">count</a>().</p>
-    /// <p>QList provides these basic functions to add, move, and remove items: <a href="http://doc.qt.io/qt-5/qlist.html#insert" translate="no">insert</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#remove" translate="no">remove</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(). With the exception of <a href="http://doc.qt.io/qt-5/qlist.html#append" translate="no">append</a>(), <a href="http://doc.qt.io/qt-5/qlist.html#prepend" translate="no">prepend</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#replace" translate="no">replace</a>(), these functions can be slow (<a href="http://doc.qt.io/qt-5/containers.html#linear-time">linear time</a>) for large lists, because they require moving many items in the list by one position in memory. If you want a container class that provides fast insertion/removal in the middle, use std::list instead.</p>
-    /// <p>Unlike plain C++ arrays, QLists can be resized at any time by calling <a href="http://doc.qt.io/qt-5/qlist.html#resize" translate="no">resize</a>(). If the new size is larger than the old size, QList might need to reallocate the whole list. QList tries to reduce the number of reallocations by preallocating up to twice as much memory as the actual data needs.</p>
-    /// <p>If you're building a QList gradually and know in advance approximately how many elements it will contain, you can call <a href="http://doc.qt.io/qt-5/qlist.html#reserve" translate="no">reserve</a>(), asking QList to preallocate a certain amount of memory. You can also call <a href="http://doc.qt.io/qt-5/qlist.html#capacity" translate="no">capacity</a>() to find out how much memory the QList actually has allocated.</p>
-    /// <p>Note that using non-const operators and functions can cause QList to do a deep copy of the data, due to <a href="http://doc.qt.io/qt-5/implicit-sharing.html">implicit sharing</a>.</p>
-    /// <p>QList's value type must be an <a href="http://doc.qt.io/qt-5/containers.html#assignable-data-type">assignable data type</a>. This covers most data types that are commonly used, but the compiler won't let you, for example, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> as a value; instead, store a <a href="http://doc.qt.io/qt-5/qwidget.html" translate="no">QWidget</a> *. A few functions have additional requirements; for example, <a href="http://doc.qt.io/qt-5/qlist.html#indexOf" translate="no">indexOf</a>() and <a href="http://doc.qt.io/qt-5/qlist.html#lastIndexOf" translate="no">lastIndexOf</a>() expect the value type to support <code translate="no">operator==()</code>. These requirements are documented on a per-function basis.</p>
-    /// <p>For iterating over the items, see <a href="http://doc.qt.io/qt-5/containers.html#iterating-over-containers">Iterating over Containers</a>. For using QList with functions from <code translate="no">&lt;algorithm&gt;</code> header, such as <code translate="no">std::sort()</code>, <code translate="no">std::reverse()</code>, and <code translate="no">std::count_if()</code>, see <a href="http://doc.qt.io/qt-5/containers.html#qt-containers-and-std-algorithms">Qt containers and std algorithms</a>.</p>
-    /// <p>In addition to QList, Qt also provides <a href="http://doc.qt.io/qt-5/qvarlengtharray.html" translate="no">QVarLengthArray</a>, a very low-level class with little functionality that is optimized for speed.</p>
-    /// <h4 id="more-information-on-using-qt-containers">More Information on Using Qt Containers</h4>
-    /// <p>For a detailed discussion comparing Qt containers with each other and with STL containers, see <a href="https://marcmutz.wordpress.com/effective-qt/containers/">Understand the Qt Containers</a>.</p></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_operator_4(
         this_ptr: *mut crate::QListOfQPieSlice,
         other: *const crate::QListOfQPieSlice,
     ) -> *mut crate::QListOfQPieSlice;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_abstract_axis::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_bar_set::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_legend_marker::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_box_set::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_candlestick_set::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_abstract_series::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_iterator_diterator(
         this_ptr: *mut crate::q_list_of_q_pie_slice::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_abstract_axis::Iterator,
     ) -> *mut crate::q_list_of_q_abstract_axis::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_bar_set::Iterator,
     ) -> *mut crate::q_list_of_q_bar_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_legend_marker::Iterator,
     ) -> *mut crate::q_list_of_q_legend_marker::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_box_set::Iterator,
     ) -> *mut crate::q_list_of_q_box_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_candlestick_set::Iterator,
     ) -> *mut crate::q_list_of_q_candlestick_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_abstract_series::Iterator,
     ) -> *mut crate::q_list_of_q_abstract_series::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_iterator_iterator1(
         other: *const crate::q_list_of_q_pie_slice::Iterator,
     ) -> *mut crate::q_list_of_q_pie_slice::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_abstract_axis::Iterator,
         other: *const crate::q_list_of_q_abstract_axis::Iterator,
     ) -> *mut crate::q_list_of_q_abstract_axis::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_bar_set::Iterator,
         other: *const crate::q_list_of_q_bar_set::Iterator,
     ) -> *mut crate::q_list_of_q_bar_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_legend_marker::Iterator,
         other: *const crate::q_list_of_q_legend_marker::Iterator,
     ) -> *mut crate::q_list_of_q_legend_marker::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_box_set::Iterator,
         other: *const crate::q_list_of_q_box_set::Iterator,
     ) -> *mut crate::q_list_of_q_box_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_candlestick_set::Iterator,
         other: *const crate::q_list_of_q_candlestick_set::Iterator,
     ) -> *mut crate::q_list_of_q_candlestick_set::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_abstract_series::Iterator,
         other: *const crate::q_list_of_q_abstract_series::Iterator,
     ) -> *mut crate::q_list_of_q_abstract_series::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_pie_slice::Iterator,
         other: *const crate::q_list_of_q_pie_slice::Iterator,
     ) -> *mut crate::q_list_of_q_pie_slice::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_abstract_axis::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_bar_set::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_legend_marker::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_box_set::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_candlestick_set::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_abstract_series::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_list_of_q_pie_slice::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_abstract_axis::ConstIterator,
     ) -> *mut crate::q_list_of_q_abstract_axis::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_bar_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_bar_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_legend_marker::ConstIterator,
     ) -> *mut crate::q_list_of_q_legend_marker::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_box_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_box_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_candlestick_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_candlestick_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_abstract_series::ConstIterator,
     ) -> *mut crate::q_list_of_q_abstract_series::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_const_iterator_const_iterator2(
         other: *const crate::q_list_of_q_pie_slice::ConstIterator,
     ) -> *mut crate::q_list_of_q_pie_slice::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_abstract_axis::ConstIterator,
         other: *const crate::q_list_of_q_abstract_axis::ConstIterator,
     ) -> *mut crate::q_list_of_q_abstract_axis::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBarSet_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_bar_set::ConstIterator,
         other: *const crate::q_list_of_q_bar_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_bar_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QLegendMarker_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_legend_marker::ConstIterator,
         other: *const crate::q_list_of_q_legend_marker::ConstIterator,
     ) -> *mut crate::q_list_of_q_legend_marker::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QBoxSet_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_box_set::ConstIterator,
         other: *const crate::q_list_of_q_box_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_box_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QCandlestickSet_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_candlestick_set::ConstIterator,
         other: *const crate::q_list_of_q_candlestick_set::ConstIterator,
     ) -> *mut crate::q_list_of_q_candlestick_set::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QAbstractSeries_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_abstract_series::ConstIterator,
         other: *const crate::q_list_of_q_abstract_series::ConstIterator,
     ) -> *mut crate::q_list_of_q_abstract_series::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qlist-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> provides both <a href="http://doc.qt.io/qt-5/containers.html#stl-style-iterators">STL-style iterators</a> and <a href="http://doc.qt.io/qt-5/java-style-iterators.html#java-style-iterators">Java-style iterators</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators are invalidated when <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a> is modified. Consider that all iterators are invalidated by default. Exceptions to this rule are explicitly documented.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QList_QPieSlice_ptr_const_iterator_operator_8(
         this_ptr: *mut crate::q_list_of_q_pie_slice::ConstIterator,
         other: *const crate::q_list_of_q_pie_slice::ConstIterator,
     ) -> *mut crate::q_list_of_q_pie_slice::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_iterator_diterator(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_iterator_diterator(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_iterator_iterator1(
         other: *const crate::q_hash_of_point_configuration_q_variant::Iterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_iterator_iterator1(
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::Iterator,
         other: *const crate::q_hash_of_point_configuration_q_variant::Iterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> and to modify the value (but not the key) associated with a particular key. If you want to iterate over a const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>, you should use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a>. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#begin" translate="no">QHash::begin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#end" translate="no">QHash::end</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#find" translate="no">QHash::find</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no"> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    ///  hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    ///  hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    ///  <span class="comment">//...</span>
-    ///  hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    ///  <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order.</p>
-    /// <p>Here's an example that increments every value stored in the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> by 2:</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>begin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>end(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;    i<span class="operator">.</span>value() <span class="operator">+</span><span class="operator">=</span> <span class="number">2</span>;
-    /// </pre>
-    /// <p>To remove elements from a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> you can use <a href="http://doc.qt.io/qt-5/qhash.html#erase_if" translate="no">erase_if</a>(<a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt; &amp;map, Predicate pred):</p>
-    /// <pre class="cpp" translate="no"> erase_if(hash<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span>(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span><span class="operator">::</span>iterator it) { <span class="keyword">return</span> it<span class="operator">.</span>value() <span class="operator">&gt;</span> <span class="number">10</span>; });
-    /// </pre>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>If you need to keep iterators over a long period of time, we recommend that you use <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a> rather than <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator,
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::Iterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_dconst_iterator(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_const_iterator2(
         other: *const crate::q_hash_of_point_configuration_q_variant::ConstIterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_const_iterator2(
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::ConstIterator,
         other: *const crate::q_hash_of_point_configuration_q_variant::ConstIterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>&lt;Key, T&gt;::const_iterator allows you to iterate over a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>. If you want to modify the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as you iterate over it, you must use <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> instead. It is generally good practice to use <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> on a non-const <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> as well, unless you need to change the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> through the iterator. Const iterators are slightly faster, and can improve code readability.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#cbegin" translate="no">QHash::cbegin</a>(), <a href="http://doc.qt.io/qt-5/qhash.html#cend" translate="no">QHash::cend</a>(), or <a href="http://doc.qt.io/qt-5/qhash.html#constFind" translate="no">QHash::constFind</a>() before you can start iterating. Here's a typical loop that prints all the (key, value) pairs stored in a hash:</p>
-    /// <pre class="cpp" translate="no">     <span class="type"><a href="http://doc.qt.io/qt-5/qhash.html" translate="no">QHash</a></span><span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html" translate="no">QString</a></span><span class="operator">,</span> <span class="type">int</span><span class="operator">&gt;</span> hash;
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"January"</span><span class="operator">,</span> <span class="number">1</span>);
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"February"</span><span class="operator">,</span> <span class="number">2</span>);
-    /// &#32;    <span class="comment">//...</span>
-    /// &#32;    hash<span class="operator">.</span>insert(<span class="string">"December"</span><span class="operator">,</span> <span class="number">12</span>);
-    ///
-    /// &#32;    <span class="keyword">for</span> (<span class="keyword">auto</span> i <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); i <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>i)
-    /// &#32;   &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(i<span class="operator">.</span>key()) <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">": "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> i<span class="operator">.</span>value() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// </pre>
-    /// <p>Unlike <a href="http://doc.qt.io/qt-5/qmap.html" translate="no">QMap</a>, which orders its items by key, <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> stores its items in an arbitrary order. The only guarantee is that items that share the same key (because they were inserted using a <a href="http://doc.qt.io/qt-5/qmultihash.html" translate="no">QMultiHash</a>) will appear consecutively, from the most recently to the least recently inserted value.</p>
-    /// <p>Multiple iterators can be used on the same hash. However, be aware that any modification performed directly on the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> (inserting and removing items) can cause the iterators to become invalid.</p>
-    /// <p>Inserting items into the hash or calling methods such as <a href="http://doc.qt.io/qt-5/qhash.html#reserve" translate="no">QHash::reserve</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#squeeze" translate="no">QHash::squeeze</a>() can invalidate all iterators pointing into the hash. Iterators are guaranteed to stay valid only as long as the <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> doesn't have to grow/shrink its internal hash table. Using any iterator after a rehashing operation has occurred will lead to undefined behavior.</p>
-    /// <p>You can however safely use iterators to remove entries from the hash using the QHash::erase() method. This function can safely be called while iterating, and won't affect the order of items in the hash.</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator,
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::ConstIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_dkey_iterator(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::KeyIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_dkey_iterator(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator,
     );
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_key_iterator2(
         other: *const crate::q_hash_of_point_configuration_q_variant::KeyIterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::KeyIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_key_iterator2(
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::KeyIterator,
         other: *const crate::q_hash_of_point_configuration_q_variant::KeyIterator,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::KeyIterator;
 
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is essentially the same as <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> with the difference that operator*() and operator-&gt;() return a key instead of a value.</p>
-    /// <p>For most uses <a href="http://doc.qt.io/qt-5/qhash-iterator.html" translate="no">QHash::iterator</a> and <a href="http://doc.qt.io/qt-5/qhash-const-iterator.html" translate="no">QHash::const_iterator</a> should be used, you can easily access the key by calling <a href="http://doc.qt.io/qt-5/qhash-iterator.html#key" translate="no">QHash::iterator::key</a>():</p>
-    /// <pre class="cpp" translate="no"> <span class="keyword">for</span> (<span class="keyword">auto</span> it <span class="operator">=</span> hash<span class="operator">.</span>cbegin()<span class="operator">,</span> end <span class="operator">=</span> hash<span class="operator">.</span>cend(); it <span class="operator">!</span><span class="operator">=</span> end; <span class="operator">+</span><span class="operator">+</span>it) {
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The key: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> it<span class="operator">.</span>key() <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"The value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(it<span class="operator">.</span>value()) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    /// &#32;    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">"Also the value: "</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <a href="http://doc.qt.io/qt-5/qstring.html#qPrintable" translate="no">qPrintable</a>(<span class="operator">*</span>it) <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
-    ///  }
-    /// </pre>
-    /// <p>However, to have interoperability between <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a>'s keys and STL-style algorithms we need an iterator that dereferences to a key instead of a value. With <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> we can apply an algorithm to a range of keys without having to call <a href="http://doc.qt.io/qt-5/qhash.html#keys" translate="no">QHash::keys</a>(), which is inefficient as it costs one <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> iteration and memory allocation to create a temporary <a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a>.</p>
-    /// <pre class="cpp" translate="no"> <span class="comment">// Inefficient, keys() is expensive</span>
-    ///  <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html" translate="no">QList</a></span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> keys <span class="operator">=</span> hash<span class="operator">.</span>keys();
-    ///  <span class="type">int</span> numPrimes <span class="operator">=</span> std<span class="operator">::</span>count_if(keys<span class="operator">.</span>cbegin()<span class="operator">,</span> keys<span class="operator">.</span>cend()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keys());
-    ///
-    ///  <span class="comment">// Efficient, no memory allocation needed</span>
-    ///  <span class="type">int</span> primeNums <span class="operator">=</span> std<span class="operator">::</span>count_if(hash<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash<span class="operator">.</span>keyEnd()<span class="operator">,</span> isPrimeNumber);
-    ///  <a href="http://doc.qt.io/qt-5/qtalgorithms.html#qDeleteAll" translate="no">qDeleteAll</a>(hash2<span class="operator">.</span>keyBegin()<span class="operator">,</span> hash2<span class="operator">.</span>keyEnd());
-    /// </pre>
-    /// <p><a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> is const, it's not possible to modify the key.</p>
-    /// <p>The default <a href="http://doc.qt.io/qt-5/qhash-key-iterator.html" translate="no">QHash::key_iterator</a> constructor creates an uninitialized iterator. You must initialize it using a <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> function like <a href="http://doc.qt.io/qt-5/qhash.html#keyBegin" translate="no">QHash::keyBegin</a>() or <a href="http://doc.qt.io/qt-5/qhash.html#keyEnd" translate="no">QHash::keyEnd</a>().</p>
-    /// <div class="admonition warning">
-    /// <p><b>Warning: </b>Iterators on implicitly shared containers do not work exactly like STL-iterators. You should avoid copying a container while iterators are active on that container. For more information, read <a href="http://doc.qt.io/qt-5/containers.html#implicit-sharing-iterator-problem">Implicit sharing iterator problem</a>.</p>
-    /// </div></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_key_iterator_operator_1(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator,
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::KeyIterator;
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_dTryEmplaceResult(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     );
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_dTryEmplaceResult(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     );
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_TryEmplaceResult2(
         other: *const crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult;
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_TryEmplaceResult2(
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult;
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_operator_(
         this_ptr: *mut crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult,
         other: *const crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     ) -> *mut crate::q_hash_of_point_configuration_q_variant::TryEmplaceResult;
 
-    /// <p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p>
-    ///
-    /// <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html">C++ documentation</a>:<div style='border: 1px solid #5CFF95; background: #D6FFE4; padding: 16px;'><p>The <code translate="no">TryEmplaceResult</code> class is used in <a href="http://doc.qt.io/qt-5/qhash.html#the-hashing-function" translate="no">QHash</a> to represent the result of a <a href="http://doc.qt.io/qt-5/qhash.html#tryEmplace" translate="no">tryEmplace</a>() operation. It holds an <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#iterator-var" translate="no">iterator</a> to the newly created item, or to the pre-existing item that prevented the insertion, and a boolean, <a href="http://doc.qt.io/qt-5/qhash-tryemplaceresult.html#inserted-var" translate="no">inserted</a>, denoting whether the insertion took place.</p></div>
     pub fn ctr_qt_charts_ffi_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_TryEmplaceResult_operator_(
         this_ptr: *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult,
         other: *const crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult,
     ) -> *mut crate::q_hash_of_int_q_hash_of_point_configuration_q_variant::TryEmplaceResult;
 
-    pub fn ctr_qt_charts_ffi_qHash12(flags: ::std::os::raw::c_int) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash12(flags: ::std::os::raw::c_int) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash13(flags: ::std::os::raw::c_int) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash13(flags: ::std::os::raw::c_int) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash14(flags: ::std::os::raw::c_int) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash14(flags: ::std::os::raw::c_int) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QList_QAbstractAxis_ptr_remove1(
         this_ptr: *mut crate::QListOfQAbstractAxis,
@@ -12955,19 +10754,29 @@ extern "C" {
         pos: ::std::os::raw::c_longlong,
     ) -> *mut crate::QListOfQPieSlice;
 
-    pub fn ctr_qt_charts_ffi_qHash15(key: *const crate::QListOfQAbstractAxis) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash15(
+        key: *const crate::QListOfQAbstractAxis,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash16(key: *const crate::QListOfQBarSet) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash16(key: *const crate::QListOfQBarSet) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash17(key: *const crate::QListOfQLegendMarker) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash17(
+        key: *const crate::QListOfQLegendMarker,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash18(key: *const crate::QListOfQBoxSet) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash18(key: *const crate::QListOfQBoxSet) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash19(key: *const crate::QListOfQCandlestickSet) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash19(
+        key: *const crate::QListOfQCandlestickSet,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash20(key: *const crate::QListOfQAbstractSeries) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash20(
+        key: *const crate::QListOfQAbstractSeries,
+    ) -> ::std::os::raw::c_ulong;
 
-    pub fn ctr_qt_charts_ffi_qHash21(key: *const crate::QListOfQPieSlice) -> usize;
+    pub fn ctr_qt_charts_ffi_qHash21(
+        key: *const crate::QListOfQPieSlice,
+    ) -> ::std::os::raw::c_ulong;
 
     pub fn ctr_qt_charts_ffi_QAbstractAxis_setVisible1(this_ptr: *mut crate::QAbstractAxis);
 
@@ -14624,247 +12433,249 @@ extern "C" {
         ptr: *mut ::qt_core::QObject,
     ) -> *mut crate::QXYLegendMarker;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQPen,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQPen,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQPen,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQCandlestickSet),
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QPen),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+    ) -> *mut crate::SlotOfQPen;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_set(
-        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_set(
+        this_ptr: *mut crate::SlotOfQPen,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQCandlestickSet),
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QPen),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
-        arg0: *const crate::QListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQPen,
+        arg0: *const ::qt_gui::QPen,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQPen,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQPen,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQPen,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref(
-    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref(
+    ) -> *mut crate::SignalOfQPen;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
-        arg0: *const crate::QListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQPen,
+        arg0: *const ::qt_gui::QPen,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQListOfQBoxSet,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QImage),
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBoxSet),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQImage;
+    ) -> *mut crate::SlotOfQListOfQBoxSet;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_set(
-        this_ptr: *mut crate::SlotOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_set(
+        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QImage),
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBoxSet),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQImage,
-        arg0: *const ::qt_gui::QImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+        arg0: *const crate::QListOfQBoxSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQListOfQBoxSet,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref(
-    ) -> *mut crate::SignalOfQImage;
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref(
+    ) -> *mut crate::SignalOfQListOfQBoxSet;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQImage,
-        arg0: *const ::qt_gui::QImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
+        arg0: *const crate::QListOfQBoxSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_metaObject(
-        this_ptr: *const crate::SlotOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_metaObject(
+        this_ptr: *const crate::SlotOfBoolInt,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_qt_metacast(
-        this_ptr: *mut crate::SlotOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_qt_metacast(
+        this_ptr: *mut crate::SlotOfBoolInt,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_qt_metacall(
-        this_ptr: *mut crate::SlotOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_qt_metacall(
+        this_ptr: *mut crate::SlotOfBoolInt,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_ctr_qt_charts_ffi_slot_wrapper_bool_int(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_legend::MarkerShape),
+            extern "C" fn(*mut ::std::ffi::c_void, bool, ::std::os::raw::c_int),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfMarkerShape;
+    ) -> *mut crate::SlotOfBoolInt;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_set(
-        this_ptr: *mut crate::SlotOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_set(
+        this_ptr: *mut crate::SlotOfBoolInt,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_legend::MarkerShape),
+            extern "C" fn(*mut ::std::ffi::c_void, bool, ::std::os::raw::c_int),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_slot_(
-        this_ptr: *mut crate::SlotOfMarkerShape,
-        arg0: crate::q_legend::MarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_slot_(
+        this_ptr: *mut crate::SlotOfBoolInt,
+        arg0: bool,
+        arg1: ::std::os::raw::c_int,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_metaObject(
-        this_ptr: *const crate::SignalOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_metaObject(
+        this_ptr: *const crate::SignalOfBoolInt,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_qt_metacast(
-        this_ptr: *mut crate::SignalOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_qt_metacast(
+        this_ptr: *mut crate::SignalOfBoolInt,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_qt_metacall(
-        this_ptr: *mut crate::SignalOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_qt_metacall(
+        this_ptr: *mut crate::SignalOfBoolInt,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape(
-    ) -> *mut crate::SignalOfMarkerShape;
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_ctr_qt_charts_ffi_signal_wrapper_bool_int(
+    ) -> *mut crate::SignalOfBoolInt;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_emit_(
-        this_ptr: *mut crate::SignalOfMarkerShape,
-        arg0: crate::q_legend::MarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_emit_(
+        this_ptr: *mut crate::SignalOfBoolInt,
+        arg0: bool,
+        arg1: ::std::os::raw::c_int,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCandlestickSet_ptr_staticMetaObject(
@@ -14946,6 +12757,170 @@ extern "C" {
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCandlestickSet_ptr_emit_(
         this_ptr: *mut crate::SignalOfQCandlestickSet,
         arg0: *mut crate::QCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_metaObject(
+        this_ptr: *const crate::SlotOfBoolQCandlestickSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QCandlestickSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfBoolQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_set(
+        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QCandlestickSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_slot_(
+        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+        arg0: bool,
+        arg1: *mut crate::QCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_metaObject(
+        this_ptr: *const crate::SignalOfBoolQCandlestickSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr(
+    ) -> *mut crate::SignalOfBoolQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_emit_(
+        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+        arg0: bool,
+        arg1: *mut crate::QCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQListOfInt,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQListOfInt,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQListOfInt,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_core::QListOfInt),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_set(
+        this_ptr: *mut crate::SlotOfQListOfInt,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_core::QListOfInt),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQListOfInt,
+        arg0: *const ::qt_core::QListOfInt,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQListOfInt,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQListOfInt,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQListOfInt,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref(
+    ) -> *mut crate::SignalOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQListOfInt,
+        arg0: *const ::qt_core::QListOfInt,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_double_double_staticMetaObject(
@@ -15037,6 +13012,723 @@ extern "C" {
         this_ptr: *mut crate::SignalOfDoubleDouble,
         arg0: ::std::os::raw::c_double,
         arg1: ::std::os::raw::c_double,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_metaObject(
+        this_ptr: *const crate::SlotOfQPieSliceBool,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_qt_metacast(
+        this_ptr: *mut crate::SlotOfQPieSliceBool,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_qt_metacall(
+        this_ptr: *mut crate::SlotOfQPieSliceBool,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice, bool),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_set(
+        this_ptr: *mut crate::SlotOfQPieSliceBool,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice, bool),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_slot_(
+        this_ptr: *mut crate::SlotOfQPieSliceBool,
+        arg0: *mut crate::QPieSlice,
+        arg1: bool,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_metaObject(
+        this_ptr: *const crate::SignalOfQPieSliceBool,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_qt_metacast(
+        this_ptr: *mut crate::SignalOfQPieSliceBool,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_qt_metacall(
+        this_ptr: *mut crate::SignalOfQPieSliceBool,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool(
+    ) -> *mut crate::SignalOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_emit_(
+        this_ptr: *mut crate::SignalOfQPieSliceBool,
+        arg0: *mut crate::QPieSlice,
+        arg1: bool,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQListOfQBarSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBarSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_set(
+        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBarSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+        arg0: *const crate::QListOfQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQListOfQBarSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref(
+    ) -> *mut crate::SignalOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+        arg0: *const crate::QListOfQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQListOfQCandlestickSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQCandlestickSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_set(
+        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQCandlestickSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+        arg0: *const crate::QListOfQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQListOfQCandlestickSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref(
+    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+        arg0: *const crate::QListOfQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQListOfQPieSlice,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQPieSlice),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_set(
+        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQPieSlice),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
+        arg0: *const crate::QListOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQListOfQPieSlice,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref(
+    ) -> *mut crate::SignalOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
+        arg0: *const crate::QListOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_metaObject(
+        this_ptr: *const crate::SlotOfIntQBarSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SlotOfIntQBarSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SlotOfIntQBarSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, ::std::os::raw::c_int, *mut crate::QBarSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_set(
+        this_ptr: *mut crate::SlotOfIntQBarSet,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, ::std::os::raw::c_int, *mut crate::QBarSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_slot_(
+        this_ptr: *mut crate::SlotOfIntQBarSet,
+        arg0: ::std::os::raw::c_int,
+        arg1: *mut crate::QBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_metaObject(
+        this_ptr: *const crate::SignalOfIntQBarSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SignalOfIntQBarSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SignalOfIntQBarSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr(
+    ) -> *mut crate::SignalOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_emit_(
+        this_ptr: *mut crate::SignalOfIntQBarSet,
+        arg0: ::std::os::raw::c_int,
+        arg1: *mut crate::QBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_metaObject(
+        this_ptr: *const crate::SlotOfQPieSlice,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_qt_metacast(
+        this_ptr: *mut crate::SlotOfQPieSlice,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_qt_metacall(
+        this_ptr: *mut crate::SlotOfQPieSlice,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_set(
+        this_ptr: *mut crate::SlotOfQPieSlice,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_slot_(
+        this_ptr: *mut crate::SlotOfQPieSlice,
+        arg0: *mut crate::QPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_metaObject(
+        this_ptr: *const crate::SignalOfQPieSlice,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_qt_metacast(
+        this_ptr: *mut crate::SignalOfQPieSlice,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_qt_metacall(
+        this_ptr: *mut crate::SignalOfQPieSlice,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr(
+    ) -> *mut crate::SignalOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_emit_(
+        this_ptr: *mut crate::SignalOfQPieSlice,
+        arg0: *mut crate::QPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_metaObject(
+        this_ptr: *const crate::SlotOfQFont,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_qt_metacast(
+        this_ptr: *mut crate::SlotOfQFont,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_qt_metacall(
+        this_ptr: *mut crate::SlotOfQFont,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_slot_(
+        this_ptr: *mut crate::SlotOfQFont,
+        arg0: *const ::qt_gui::QFont,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_metaObject(
+        this_ptr: *const crate::SignalOfQFont,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_qt_metacast(
+        this_ptr: *mut crate::SignalOfQFont,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_qt_metacall(
+        this_ptr: *mut crate::SignalOfQFont,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_ctr_qt_charts_ffi_signal_wrapper_QFont(
+    ) -> *mut crate::SignalOfQFont;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_emit_(
+        this_ptr: *mut crate::SignalOfQFont,
+        arg0: *const ::qt_gui::QFont,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_metaObject(
+        this_ptr: *const crate::SlotOfBoolQBoxSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SlotOfBoolQBoxSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SlotOfBoolQBoxSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QBoxSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_set(
+        this_ptr: *mut crate::SlotOfBoolQBoxSet,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QBoxSet),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_slot_(
+        this_ptr: *mut crate::SlotOfBoolQBoxSet,
+        arg0: bool,
+        arg1: *mut crate::QBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_metaObject(
+        this_ptr: *const crate::SignalOfBoolQBoxSet,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_qt_metacast(
+        this_ptr: *mut crate::SignalOfBoolQBoxSet,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_qt_metacall(
+        this_ptr: *mut crate::SignalOfBoolQBoxSet,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr(
+    ) -> *mut crate::SignalOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_emit_(
+        this_ptr: *mut crate::SignalOfBoolQBoxSet,
+        arg0: bool,
+        arg1: *mut crate::QBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQLinearGradient,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQLinearGradient,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQLinearGradient,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QLinearGradient),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_set(
+        this_ptr: *mut crate::SlotOfQLinearGradient,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QLinearGradient),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQLinearGradient,
+        arg0: *const ::qt_gui::QLinearGradient,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQLinearGradient,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQLinearGradient,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQLinearGradient,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref(
+    ) -> *mut crate::SignalOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQLinearGradient,
+        arg0: *const ::qt_gui::QLinearGradient,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_staticMetaObject(
@@ -15185,87 +13877,6 @@ extern "C" {
         arg1: *const ::qt_core::QDateTime,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_metaObject(
-        this_ptr: *const crate::SlotOfQPieSlice,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_qt_metacast(
-        this_ptr: *mut crate::SlotOfQPieSlice,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_qt_metacall(
-        this_ptr: *mut crate::SlotOfQPieSlice,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_set(
-        this_ptr: *mut crate::SlotOfQPieSlice,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_slot_(
-        this_ptr: *mut crate::SlotOfQPieSlice,
-        arg0: *mut crate::QPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_metaObject(
-        this_ptr: *const crate::SignalOfQPieSlice,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_qt_metacast(
-        this_ptr: *mut crate::SignalOfQPieSlice,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_qt_metacall(
-        this_ptr: *mut crate::SignalOfQPieSlice,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr(
-    ) -> *mut crate::SignalOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_emit_(
-        this_ptr: *mut crate::SignalOfQPieSlice,
-        arg0: *mut crate::QPieSlice,
-    );
-
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
@@ -15347,168 +13958,85 @@ extern "C" {
         arg0: *mut crate::QBoxSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_metaObject(
+        this_ptr: *const crate::SlotOfMarkerShape,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_qt_metacast(
+        this_ptr: *mut crate::SlotOfMarkerShape,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_qt_metacall(
+        this_ptr: *mut crate::SlotOfMarkerShape,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBarSet),
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_scatter_series::MarkerShape),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQListOfQBarSet;
+    ) -> *mut crate::SlotOfMarkerShape;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_set(
-        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_set(
+        this_ptr: *mut crate::SlotOfMarkerShape,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBarSet),
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_scatter_series::MarkerShape),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQListOfQBarSet,
-        arg0: *const crate::QListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_slot_(
+        this_ptr: *mut crate::SlotOfMarkerShape,
+        arg0: crate::q_scatter_series::MarkerShape,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_metaObject(
+        this_ptr: *const crate::SignalOfMarkerShape,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_qt_metacast(
+        this_ptr: *mut crate::SignalOfMarkerShape,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_qt_metacall(
+        this_ptr: *mut crate::SignalOfMarkerShape,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref(
-    ) -> *mut crate::SignalOfQListOfQBarSet;
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape(
+    ) -> *mut crate::SignalOfMarkerShape;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQListOfQBarSet,
-        arg0: *const crate::QListOfQBarSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_metaObject(
-        this_ptr: *const crate::SlotOfQPieSliceBool,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_qt_metacast(
-        this_ptr: *mut crate::SlotOfQPieSliceBool,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_qt_metacall(
-        this_ptr: *mut crate::SlotOfQPieSliceBool,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice, bool),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_set(
-        this_ptr: *mut crate::SlotOfQPieSliceBool,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *mut crate::QPieSlice, bool),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_slot_(
-        this_ptr: *mut crate::SlotOfQPieSliceBool,
-        arg0: *mut crate::QPieSlice,
-        arg1: bool,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_metaObject(
-        this_ptr: *const crate::SignalOfQPieSliceBool,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_qt_metacast(
-        this_ptr: *mut crate::SignalOfQPieSliceBool,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_qt_metacall(
-        this_ptr: *mut crate::SignalOfQPieSliceBool,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool(
-    ) -> *mut crate::SignalOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_emit_(
-        this_ptr: *mut crate::SignalOfQPieSliceBool,
-        arg0: *mut crate::QPieSlice,
-        arg1: bool,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_emit_(
+        this_ptr: *mut crate::SignalOfMarkerShape,
+        arg0: crate::q_scatter_series::MarkerShape,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_staticMetaObject(
@@ -15606,476 +14134,6 @@ extern "C" {
         arg2: *mut crate::QBarSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_metaObject(
-        this_ptr: *const crate::SlotOfQString,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_qt_metacast(
-        this_ptr: *mut crate::SlotOfQString,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_qt_metacall(
-        this_ptr: *mut crate::SlotOfQString,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_slot_(
-        this_ptr: *mut crate::SlotOfQString,
-        arg0: *const ::qt_core::QString,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_metaObject(
-        this_ptr: *const crate::SignalOfQString,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_qt_metacast(
-        this_ptr: *mut crate::SignalOfQString,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_qt_metacall(
-        this_ptr: *mut crate::SignalOfQString,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_ctr_qt_charts_ffi_signal_wrapper_QString(
-    ) -> *mut crate::SignalOfQString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_emit_(
-        this_ptr: *mut crate::SignalOfQString,
-        arg0: *const ::qt_core::QString,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQListOfInt,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQListOfInt,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQListOfInt,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_core::QListOfInt),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_set(
-        this_ptr: *mut crate::SlotOfQListOfInt,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_core::QListOfInt),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQListOfInt,
-        arg0: *const ::qt_core::QListOfInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQListOfInt,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQListOfInt,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQListOfInt,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref(
-    ) -> *mut crate::SignalOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQListOfInt,
-        arg0: *const ::qt_core::QListOfInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_metaObject(
-        this_ptr: *const crate::SlotOfAxisLabelsPosition,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacast(
-        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacall(
-        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_category_axis::AxisLabelsPosition),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_set(
-        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_category_axis::AxisLabelsPosition),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_slot_(
-        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
-        arg0: crate::q_category_axis::AxisLabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_metaObject(
-        this_ptr: *const crate::SignalOfAxisLabelsPosition,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacast(
-        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacall(
-        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition(
-    ) -> *mut crate::SignalOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_emit_(
-        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
-        arg0: crate::q_category_axis::AxisLabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_metaObject(
-        this_ptr: *const crate::SlotOfBoolInt,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_qt_metacast(
-        this_ptr: *mut crate::SlotOfBoolInt,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_qt_metacall(
-        this_ptr: *mut crate::SlotOfBoolInt,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_ctr_qt_charts_ffi_slot_wrapper_bool_int(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, ::std::os::raw::c_int),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_set(
-        this_ptr: *mut crate::SlotOfBoolInt,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, ::std::os::raw::c_int),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_slot_(
-        this_ptr: *mut crate::SlotOfBoolInt,
-        arg0: bool,
-        arg1: ::std::os::raw::c_int,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_metaObject(
-        this_ptr: *const crate::SignalOfBoolInt,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_qt_metacast(
-        this_ptr: *mut crate::SignalOfBoolInt,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_qt_metacall(
-        this_ptr: *mut crate::SignalOfBoolInt,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_ctr_qt_charts_ffi_signal_wrapper_bool_int(
-    ) -> *mut crate::SignalOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_emit_(
-        this_ptr: *mut crate::SignalOfBoolInt,
-        arg0: bool,
-        arg1: ::std::os::raw::c_int,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_metaObject(
-        this_ptr: *const crate::SlotOfMarkerShape2,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_qt_metacast(
-        this_ptr: *mut crate::SlotOfMarkerShape2,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_qt_metacall(
-        this_ptr: *mut crate::SlotOfMarkerShape2,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_scatter_series::MarkerShape),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_set(
-        this_ptr: *mut crate::SlotOfMarkerShape2,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_scatter_series::MarkerShape),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_slot_(
-        this_ptr: *mut crate::SlotOfMarkerShape2,
-        arg0: crate::q_scatter_series::MarkerShape,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_metaObject(
-        this_ptr: *const crate::SignalOfMarkerShape2,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_qt_metacast(
-        this_ptr: *mut crate::SignalOfMarkerShape2,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_qt_metacall(
-        this_ptr: *mut crate::SignalOfMarkerShape2,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape(
-    ) -> *mut crate::SignalOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_emit_(
-        this_ptr: *mut crate::SignalOfMarkerShape2,
-        arg0: crate::q_scatter_series::MarkerShape,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_metaObject(
-        this_ptr: *const crate::SlotOfLabelsPosition,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacast(
-        this_ptr: *mut crate::SlotOfLabelsPosition,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacall(
-        this_ptr: *mut crate::SlotOfLabelsPosition,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_abstract_bar_series::LabelsPosition),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_set(
-        this_ptr: *mut crate::SlotOfLabelsPosition,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, crate::q_abstract_bar_series::LabelsPosition),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_slot_(
-        this_ptr: *mut crate::SlotOfLabelsPosition,
-        arg0: crate::q_abstract_bar_series::LabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_metaObject(
-        this_ptr: *const crate::SignalOfLabelsPosition,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacast(
-        this_ptr: *mut crate::SignalOfLabelsPosition,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacall(
-        this_ptr: *mut crate::SignalOfLabelsPosition,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition(
-    ) -> *mut crate::SignalOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_emit_(
-        this_ptr: *mut crate::SignalOfLabelsPosition,
-        arg0: crate::q_abstract_bar_series::LabelsPosition,
-    );
-
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
@@ -16159,683 +14217,85 @@ extern "C" {
         arg1: bool,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_metaObject(
+        this_ptr: *const crate::SlotOfQImage,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_qt_metacast(
+        this_ptr: *mut crate::SlotOfQImage,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_qt_metacall(
+        this_ptr: *mut crate::SlotOfQImage,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBoxSet),
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QImage),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQListOfQBoxSet;
+    ) -> *mut crate::SlotOfQImage;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_set(
-        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_set(
+        this_ptr: *mut crate::SlotOfQImage,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQBoxSet),
+            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QImage),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
-        arg0: *const crate::QListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_slot_(
+        this_ptr: *mut crate::SlotOfQImage,
+        arg0: *const ::qt_gui::QImage,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_metaObject(
+        this_ptr: *const crate::SignalOfQImage,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_qt_metacast(
+        this_ptr: *mut crate::SignalOfQImage,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_qt_metacall(
+        this_ptr: *mut crate::SignalOfQImage,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref(
-    ) -> *mut crate::SignalOfQListOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
-        arg0: *const crate::QListOfQBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQListOfQPieSlice,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQPieSlice),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_set(
-        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const crate::QListOfQPieSlice),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
-        arg0: *const crate::QListOfQPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQListOfQPieSlice,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref(
-    ) -> *mut crate::SignalOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
-        arg0: *const crate::QListOfQPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQPen,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQPen,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQPen,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QPen),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQPen;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_set(
-        this_ptr: *mut crate::SlotOfQPen,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QPen),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQPen,
-        arg0: *const ::qt_gui::QPen,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQPen,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQPen,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQPen,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref(
-    ) -> *mut crate::SignalOfQPen;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQPen,
-        arg0: *const ::qt_gui::QPen,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_metaObject(
-        this_ptr: *const crate::SlotOfBoolQBoxSet,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SlotOfBoolQBoxSet,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SlotOfBoolQBoxSet,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QBoxSet),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_set(
-        this_ptr: *mut crate::SlotOfBoolQBoxSet,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QBoxSet),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_slot_(
-        this_ptr: *mut crate::SlotOfBoolQBoxSet,
-        arg0: bool,
-        arg1: *mut crate::QBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_metaObject(
-        this_ptr: *const crate::SignalOfBoolQBoxSet,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SignalOfBoolQBoxSet,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SignalOfBoolQBoxSet,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr(
-    ) -> *mut crate::SignalOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_emit_(
-        this_ptr: *mut crate::SignalOfBoolQBoxSet,
-        arg0: bool,
-        arg1: *mut crate::QBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_metaObject(
-        this_ptr: *const crate::SlotOfQColor,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_qt_metacast(
-        this_ptr: *mut crate::SlotOfQColor,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_qt_metacall(
-        this_ptr: *mut crate::SlotOfQColor,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_slot_(
-        this_ptr: *mut crate::SlotOfQColor,
-        arg0: *const ::qt_gui::QColor,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_metaObject(
-        this_ptr: *const crate::SignalOfQColor,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_qt_metacast(
-        this_ptr: *mut crate::SignalOfQColor,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_qt_metacall(
-        this_ptr: *mut crate::SignalOfQColor,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_ctr_qt_charts_ffi_signal_wrapper_QColor(
-    ) -> *mut crate::SignalOfQColor;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_emit_(
-        this_ptr: *mut crate::SignalOfQColor,
-        arg0: *const ::qt_gui::QColor,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_metaObject(
-        this_ptr: *const crate::SlotOfQFont,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_qt_metacast(
-        this_ptr: *mut crate::SlotOfQFont,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_qt_metacall(
-        this_ptr: *mut crate::SlotOfQFont,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_slot_(
-        this_ptr: *mut crate::SlotOfQFont,
-        arg0: *const ::qt_gui::QFont,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_metaObject(
-        this_ptr: *const crate::SignalOfQFont,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_qt_metacast(
-        this_ptr: *mut crate::SignalOfQFont,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_qt_metacall(
-        this_ptr: *mut crate::SignalOfQFont,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_ctr_qt_charts_ffi_signal_wrapper_QFont(
-    ) -> *mut crate::SignalOfQFont;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_emit_(
-        this_ptr: *mut crate::SignalOfQFont,
-        arg0: *const ::qt_gui::QFont,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_metaObject(
-        this_ptr: *const crate::SlotOfQLinearGradient,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_qt_metacast(
-        this_ptr: *mut crate::SlotOfQLinearGradient,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_qt_metacall(
-        this_ptr: *mut crate::SlotOfQLinearGradient,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QLinearGradient),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_set(
-        this_ptr: *mut crate::SlotOfQLinearGradient,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, *const ::qt_gui::QLinearGradient),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_slot_(
-        this_ptr: *mut crate::SlotOfQLinearGradient,
-        arg0: *const ::qt_gui::QLinearGradient,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_metaObject(
-        this_ptr: *const crate::SignalOfQLinearGradient,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_qt_metacast(
-        this_ptr: *mut crate::SignalOfQLinearGradient,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_qt_metacall(
-        this_ptr: *mut crate::SignalOfQLinearGradient,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref(
-    ) -> *mut crate::SignalOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_emit_(
-        this_ptr: *mut crate::SignalOfQLinearGradient,
-        arg0: *const ::qt_gui::QLinearGradient,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_metaObject(
-        this_ptr: *const crate::SlotOfQDateTime,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_qt_metacast(
-        this_ptr: *mut crate::SlotOfQDateTime,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_qt_metacall(
-        this_ptr: *mut crate::SlotOfQDateTime,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_slot_(
-        this_ptr: *mut crate::SlotOfQDateTime,
-        arg0: *const ::qt_core::QDateTime,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_metaObject(
-        this_ptr: *const crate::SignalOfQDateTime,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_qt_metacast(
-        this_ptr: *mut crate::SignalOfQDateTime,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_qt_metacall(
-        this_ptr: *mut crate::SignalOfQDateTime,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ctr_qt_charts_ffi_signal_wrapper_QDateTime(
-    ) -> *mut crate::SignalOfQDateTime;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_emit_(
-        this_ptr: *mut crate::SignalOfQDateTime,
-        arg0: *const ::qt_core::QDateTime,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_metaObject(
-        this_ptr: *const crate::SlotOfIntQBarSet,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SlotOfIntQBarSet,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SlotOfIntQBarSet,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr(
-        parent: *mut ::qt_core::QObject,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, ::std::os::raw::c_int, *mut crate::QBarSet),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_set(
-        this_ptr: *mut crate::SlotOfIntQBarSet,
-        callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, ::std::os::raw::c_int, *mut crate::QBarSet),
-        >,
-        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
-        data: *mut ::std::ffi::c_void,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_slot_(
-        this_ptr: *mut crate::SlotOfIntQBarSet,
-        arg0: ::std::os::raw::c_int,
-        arg1: *mut crate::QBarSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_staticMetaObject(
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_metaObject(
-        this_ptr: *const crate::SignalOfIntQBarSet,
-    ) -> *const ::qt_core::QMetaObject;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SignalOfIntQBarSet,
-        arg1: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::ffi::c_void;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SignalOfIntQBarSet,
-        arg1: ::qt_core::q_meta_object::Call,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut *mut ::std::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_tr(
-        s: *const ::std::os::raw::c_char,
-        c: *const ::std::os::raw::c_char,
-        n: ::std::os::raw::c_int,
-    ) -> *mut ::qt_core::QString;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr(
-    ) -> *mut crate::SignalOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_emit_(
-        this_ptr: *mut crate::SignalOfIntQBarSet,
-        arg0: ::std::os::raw::c_int,
-        arg1: *mut crate::QBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref(
+    ) -> *mut crate::SignalOfQImage;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_emit_(
+        this_ptr: *mut crate::SignalOfQImage,
+        arg0: *const ::qt_gui::QImage,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_staticMetaObject(
@@ -16925,111 +14385,460 @@ extern "C" {
         arg0: *const crate::QHashOfIntQHashOfPointConfigurationQVariant,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_metaObject(
-        this_ptr: *const crate::SlotOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_metaObject(
+        this_ptr: *const crate::SlotOfMarkerShape2,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_qt_metacast(
+        this_ptr: *mut crate::SlotOfMarkerShape2,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_qt_metacall(
+        this_ptr: *mut crate::SlotOfMarkerShape2,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape(
         parent: *mut ::qt_core::QObject,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QCandlestickSet),
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_legend::MarkerShape),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
-    ) -> *mut crate::SlotOfBoolQCandlestickSet;
+    ) -> *mut crate::SlotOfMarkerShape2;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_set(
-        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_set(
+        this_ptr: *mut crate::SlotOfMarkerShape2,
         callback: ::std::option::Option<
-            extern "C" fn(*mut ::std::ffi::c_void, bool, *mut crate::QCandlestickSet),
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_legend::MarkerShape),
         >,
         deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
         data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_slot_(
-        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
-        arg0: bool,
-        arg1: *mut crate::QCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_slot_(
+        this_ptr: *mut crate::SlotOfMarkerShape2,
+        arg0: crate::q_legend::MarkerShape,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_staticMetaObject(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_staticMetaObject(
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_metaObject(
-        this_ptr: *const crate::SignalOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_metaObject(
+        this_ptr: *const crate::SignalOfMarkerShape2,
     ) -> *const ::qt_core::QMetaObject;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_qt_metacast(
-        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_qt_metacast(
+        this_ptr: *mut crate::SignalOfMarkerShape2,
         arg1: *const ::std::os::raw::c_char,
     ) -> *mut ::std::ffi::c_void;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_qt_metacall(
-        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_qt_metacall(
+        this_ptr: *mut crate::SignalOfMarkerShape2,
         arg1: ::qt_core::q_meta_object::Call,
         arg2: ::std::os::raw::c_int,
         arg3: *mut *mut ::std::ffi::c_void,
     ) -> ::std::os::raw::c_int;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_tr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_tr(
         s: *const ::std::os::raw::c_char,
         c: *const ::std::os::raw::c_char,
         n: ::std::os::raw::c_int,
     ) -> *mut ::qt_core::QString;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr(
-    ) -> *mut crate::SignalOfBoolQCandlestickSet;
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape(
+    ) -> *mut crate::SignalOfMarkerShape2;
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_emit_(
-        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
-        arg0: bool,
-        arg1: *mut crate::QCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_emit_(
+        this_ptr: *mut crate::SignalOfMarkerShape2,
+        arg0: crate::q_legend::MarkerShape,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref(
-        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_metaObject(
+        this_ptr: *const crate::SlotOfQDateTime,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_qt_metacast(
+        this_ptr: *mut crate::SlotOfQDateTime,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_qt_metacall(
+        this_ptr: *mut crate::SlotOfQDateTime,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_slot_(
+        this_ptr: *mut crate::SlotOfQDateTime,
+        arg0: *const ::qt_core::QDateTime,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref(
-        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_metaObject(
+        this_ptr: *const crate::SignalOfQDateTime,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_qt_metacast(
+        this_ptr: *mut crate::SignalOfQDateTime,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_qt_metacall(
+        this_ptr: *mut crate::SignalOfQDateTime,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ctr_qt_charts_ffi_signal_wrapper_QDateTime(
+    ) -> *mut crate::SignalOfQDateTime;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_emit_(
+        this_ptr: *mut crate::SignalOfQDateTime,
+        arg0: *const ::qt_core::QDateTime,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_dctr_qt_charts_ffi_slot_wrapper_QImage_const_ref(
-        this_ptr: *mut crate::SlotOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_metaObject(
+        this_ptr: *const crate::SlotOfQColor,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_qt_metacast(
+        this_ptr: *mut crate::SlotOfQColor,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_qt_metacall(
+        this_ptr: *mut crate::SlotOfQColor,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_slot_(
+        this_ptr: *mut crate::SlotOfQColor,
+        arg0: *const ::qt_gui::QColor,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_dctr_qt_charts_ffi_signal_wrapper_QImage_const_ref(
-        this_ptr: *mut crate::SignalOfQImage,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_metaObject(
+        this_ptr: *const crate::SignalOfQColor,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_qt_metacast(
+        this_ptr: *mut crate::SignalOfQColor,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_qt_metacall(
+        this_ptr: *mut crate::SignalOfQColor,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_ctr_qt_charts_ffi_signal_wrapper_QColor(
+    ) -> *mut crate::SignalOfQColor;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_emit_(
+        this_ptr: *mut crate::SignalOfQColor,
+        arg0: *const ::qt_gui::QColor,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_dctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape(
-        this_ptr: *mut crate::SlotOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_metaObject(
+        this_ptr: *const crate::SlotOfLabelsPosition,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacast(
+        this_ptr: *mut crate::SlotOfLabelsPosition,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacall(
+        this_ptr: *mut crate::SlotOfLabelsPosition,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_abstract_bar_series::LabelsPosition),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_set(
+        this_ptr: *mut crate::SlotOfLabelsPosition,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_abstract_bar_series::LabelsPosition),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_dctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape(
-        this_ptr: *mut crate::SignalOfMarkerShape,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_slot_(
+        this_ptr: *mut crate::SlotOfLabelsPosition,
+        arg0: crate::q_abstract_bar_series::LabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_metaObject(
+        this_ptr: *const crate::SignalOfLabelsPosition,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacast(
+        this_ptr: *mut crate::SignalOfLabelsPosition,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_qt_metacall(
+        this_ptr: *mut crate::SignalOfLabelsPosition,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition(
+    ) -> *mut crate::SignalOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_emit_(
+        this_ptr: *mut crate::SignalOfLabelsPosition,
+        arg0: crate::q_abstract_bar_series::LabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_metaObject(
+        this_ptr: *const crate::SlotOfAxisLabelsPosition,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacast(
+        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacall(
+        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition(
+        parent: *mut ::qt_core::QObject,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_category_axis::AxisLabelsPosition),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    ) -> *mut crate::SlotOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_set(
+        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
+        callback: ::std::option::Option<
+            extern "C" fn(*mut ::std::ffi::c_void, crate::q_category_axis::AxisLabelsPosition),
+        >,
+        deleter: ::std::option::Option<extern "C" fn(*mut ::std::ffi::c_void)>,
+        data: *mut ::std::ffi::c_void,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_slot_(
+        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
+        arg0: crate::q_category_axis::AxisLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_metaObject(
+        this_ptr: *const crate::SignalOfAxisLabelsPosition,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacast(
+        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_qt_metacall(
+        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition(
+    ) -> *mut crate::SignalOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_emit_(
+        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
+        arg0: crate::q_category_axis::AxisLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_metaObject(
+        this_ptr: *const crate::SlotOfQString,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_qt_metacast(
+        this_ptr: *mut crate::SlotOfQString,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_qt_metacall(
+        this_ptr: *mut crate::SlotOfQString,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_slot_(
+        this_ptr: *mut crate::SlotOfQString,
+        arg0: *const ::qt_core::QString,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_staticMetaObject(
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_metaObject(
+        this_ptr: *const crate::SignalOfQString,
+    ) -> *const ::qt_core::QMetaObject;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_qt_metacast(
+        this_ptr: *mut crate::SignalOfQString,
+        arg1: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::ffi::c_void;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_qt_metacall(
+        this_ptr: *mut crate::SignalOfQString,
+        arg1: ::qt_core::q_meta_object::Call,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut *mut ::std::ffi::c_void,
+    ) -> ::std::os::raw::c_int;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_tr(
+        s: *const ::std::os::raw::c_char,
+        c: *const ::std::os::raw::c_char,
+        n: ::std::os::raw::c_int,
+    ) -> *mut ::qt_core::QString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_ctr_qt_charts_ffi_signal_wrapper_QString(
+    ) -> *mut crate::SignalOfQString;
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_emit_(
+        this_ptr: *mut crate::SignalOfQString,
+        arg0: *const ::qt_core::QString,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_dctr_qt_charts_ffi_slot_wrapper_QPen_const_ref(
+        this_ptr: *mut crate::SlotOfQPen,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_dctr_qt_charts_ffi_signal_wrapper_QPen_const_ref(
+        this_ptr: *mut crate::SignalOfQPen,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref(
+        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref(
+        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_dctr_qt_charts_ffi_slot_wrapper_bool_int(
+        this_ptr: *mut crate::SlotOfBoolInt,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_dctr_qt_charts_ffi_signal_wrapper_bool_int(
+        this_ptr: *mut crate::SignalOfBoolInt,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCandlestickSet_ptr_dctr_qt_charts_ffi_slot_wrapper_QCandlestickSet_ptr(
@@ -17040,12 +14849,100 @@ extern "C" {
         this_ptr: *mut crate::SignalOfQCandlestickSet,
     );
 
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_dctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr(
+        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_dctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr(
+        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref(
+        this_ptr: *mut crate::SlotOfQListOfInt,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref(
+        this_ptr: *mut crate::SignalOfQListOfInt,
+    );
+
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_double_double_dctr_qt_charts_ffi_slot_wrapper_double_double(
         this_ptr: *mut crate::SlotOfDoubleDouble,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_double_double_dctr_qt_charts_ffi_signal_wrapper_double_double(
         this_ptr: *mut crate::SignalOfDoubleDouble,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_dctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool(
+        this_ptr: *mut crate::SlotOfQPieSliceBool,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_dctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool(
+        this_ptr: *mut crate::SignalOfQPieSliceBool,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref(
+        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref(
+        this_ptr: *mut crate::SignalOfQListOfQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref(
+        this_ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref(
+        this_ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref(
+        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref(
+        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_dctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr(
+        this_ptr: *mut crate::SlotOfIntQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_dctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr(
+        this_ptr: *mut crate::SignalOfIntQBarSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_dctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr(
+        this_ptr: *mut crate::SlotOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_dctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr(
+        this_ptr: *mut crate::SignalOfQPieSlice,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_dctr_qt_charts_ffi_slot_wrapper_QFont(
+        this_ptr: *mut crate::SlotOfQFont,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_dctr_qt_charts_ffi_signal_wrapper_QFont(
+        this_ptr: *mut crate::SignalOfQFont,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_dctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr(
+        this_ptr: *mut crate::SlotOfBoolQBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_dctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr(
+        this_ptr: *mut crate::SignalOfBoolQBoxSet,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_dctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref(
+        this_ptr: *mut crate::SlotOfQLinearGradient,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_dctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref(
+        this_ptr: *mut crate::SignalOfQLinearGradient,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_dctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType(
@@ -17064,14 +14961,6 @@ extern "C" {
         this_ptr: *mut crate::SignalOfQDateTimeQDateTime,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_dctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr(
-        this_ptr: *mut crate::SlotOfQPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_dctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr(
-        this_ptr: *mut crate::SignalOfQPieSlice,
-    );
-
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_dctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr(
         this_ptr: *mut crate::SlotOfQBoxSet,
     );
@@ -17080,20 +14969,12 @@ extern "C" {
         this_ptr: *mut crate::SignalOfQBoxSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref(
-        this_ptr: *mut crate::SlotOfQListOfQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_dctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape(
+        this_ptr: *mut crate::SlotOfMarkerShape,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref(
-        this_ptr: *mut crate::SignalOfQListOfQBarSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_dctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool(
-        this_ptr: *mut crate::SlotOfQPieSliceBool,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_dctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool(
-        this_ptr: *mut crate::SignalOfQPieSliceBool,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_dctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape(
+        this_ptr: *mut crate::SignalOfMarkerShape,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_dctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr(
@@ -17104,54 +14985,6 @@ extern "C" {
         this_ptr: *mut crate::SignalOfBoolIntQBarSet,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_dctr_qt_charts_ffi_slot_wrapper_QString(
-        this_ptr: *mut crate::SlotOfQString,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_dctr_qt_charts_ffi_signal_wrapper_QString(
-        this_ptr: *mut crate::SignalOfQString,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref(
-        this_ptr: *mut crate::SlotOfQListOfInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref(
-        this_ptr: *mut crate::SignalOfQListOfInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_dctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition(
-        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_dctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition(
-        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_int_dctr_qt_charts_ffi_slot_wrapper_bool_int(
-        this_ptr: *mut crate::SlotOfBoolInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_int_dctr_qt_charts_ffi_signal_wrapper_bool_int(
-        this_ptr: *mut crate::SignalOfBoolInt,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_dctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape(
-        this_ptr: *mut crate::SlotOfMarkerShape2,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_dctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape(
-        this_ptr: *mut crate::SignalOfMarkerShape2,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_dctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition(
-        this_ptr: *mut crate::SlotOfLabelsPosition,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_dctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition(
-        this_ptr: *mut crate::SignalOfLabelsPosition,
-    );
-
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_dctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool(
         this_ptr: *mut crate::SlotOfQPointFBool,
     );
@@ -17160,76 +14993,12 @@ extern "C" {
         this_ptr: *mut crate::SignalOfQPointFBool,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref(
-        this_ptr: *mut crate::SlotOfQListOfQBoxSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_dctr_qt_charts_ffi_slot_wrapper_QImage_const_ref(
+        this_ptr: *mut crate::SlotOfQImage,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref(
-        this_ptr: *mut crate::SignalOfQListOfQBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_dctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref(
-        this_ptr: *mut crate::SlotOfQListOfQPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_dctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref(
-        this_ptr: *mut crate::SignalOfQListOfQPieSlice,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_dctr_qt_charts_ffi_slot_wrapper_QPen_const_ref(
-        this_ptr: *mut crate::SlotOfQPen,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_dctr_qt_charts_ffi_signal_wrapper_QPen_const_ref(
-        this_ptr: *mut crate::SignalOfQPen,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_dctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr(
-        this_ptr: *mut crate::SlotOfBoolQBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_dctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr(
-        this_ptr: *mut crate::SignalOfBoolQBoxSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_dctr_qt_charts_ffi_slot_wrapper_QColor(
-        this_ptr: *mut crate::SlotOfQColor,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_dctr_qt_charts_ffi_signal_wrapper_QColor(
-        this_ptr: *mut crate::SignalOfQColor,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QFont_dctr_qt_charts_ffi_slot_wrapper_QFont(
-        this_ptr: *mut crate::SlotOfQFont,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QFont_dctr_qt_charts_ffi_signal_wrapper_QFont(
-        this_ptr: *mut crate::SignalOfQFont,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_dctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref(
-        this_ptr: *mut crate::SlotOfQLinearGradient,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_dctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref(
-        this_ptr: *mut crate::SignalOfQLinearGradient,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_dctr_qt_charts_ffi_slot_wrapper_QDateTime(
-        this_ptr: *mut crate::SlotOfQDateTime,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_dctr_qt_charts_ffi_signal_wrapper_QDateTime(
-        this_ptr: *mut crate::SignalOfQDateTime,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_dctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr(
-        this_ptr: *mut crate::SlotOfIntQBarSet,
-    );
-
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_dctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr(
-        this_ptr: *mut crate::SignalOfIntQBarSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_dctr_qt_charts_ffi_signal_wrapper_QImage_const_ref(
+        this_ptr: *mut crate::SignalOfQImage,
     );
 
     pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_dctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref(
@@ -17240,85 +15009,125 @@ extern "C" {
         this_ptr: *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_dctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr(
-        this_ptr: *mut crate::SlotOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_dctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape(
+        this_ptr: *mut crate::SlotOfMarkerShape2,
     );
 
-    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_dctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr(
-        this_ptr: *mut crate::SignalOfBoolQCandlestickSet,
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_dctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape(
+        this_ptr: *mut crate::SignalOfMarkerShape2,
     );
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QDateTime_dctr_qt_charts_ffi_slot_wrapper_QDateTime(
+        this_ptr: *mut crate::SlotOfQDateTime,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QDateTime_dctr_qt_charts_ffi_signal_wrapper_QDateTime(
+        this_ptr: *mut crate::SignalOfQDateTime,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QColor_dctr_qt_charts_ffi_slot_wrapper_QColor(
+        this_ptr: *mut crate::SlotOfQColor,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QColor_dctr_qt_charts_ffi_signal_wrapper_QColor(
+        this_ptr: *mut crate::SignalOfQColor,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_dctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition(
+        this_ptr: *mut crate::SlotOfLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_dctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition(
+        this_ptr: *mut crate::SignalOfLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_dctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition(
+        this_ptr: *mut crate::SlotOfAxisLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_dctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition(
+        this_ptr: *mut crate::SignalOfAxisLabelsPosition,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_slot_wrapper_QString_dctr_qt_charts_ffi_slot_wrapper_QString(
+        this_ptr: *mut crate::SlotOfQString,
+    );
+
+    pub fn ctr_qt_charts_ffi_ctr_qt_charts_ffi_signal_wrapper_QString_dctr_qt_charts_ffi_signal_wrapper_QString(
+        this_ptr: *mut crate::SignalOfQString,
+    );
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+    ) -> *mut crate::SlotOfQPen;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr106(
-        ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+        ptr: *mut crate::SlotOfQPen,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+    ) -> *mut crate::SlotOfQPen;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+    ) -> *mut crate::SignalOfQPen;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr107(
-        ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+        ptr: *mut crate::SignalOfQPen,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+    ) -> *mut crate::SignalOfQPen;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQImage;
+    ) -> *mut crate::SlotOfQListOfQBoxSet;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr108(
-        ptr: *mut crate::SlotOfQImage,
+        ptr: *mut crate::SlotOfQListOfQBoxSet,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQImage;
+    ) -> *mut crate::SlotOfQListOfQBoxSet;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQImage;
+    ) -> *mut crate::SignalOfQListOfQBoxSet;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr109(
-        ptr: *mut crate::SignalOfQImage,
+        ptr: *mut crate::SignalOfQListOfQBoxSet,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQImage;
+    ) -> *mut crate::SignalOfQListOfQBoxSet;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ptr(
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfMarkerShape;
+    ) -> *mut crate::SlotOfBoolInt;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr110(
-        ptr: *mut crate::SlotOfMarkerShape,
+        ptr: *mut crate::SlotOfBoolInt,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfMarkerShape;
+    ) -> *mut crate::SlotOfBoolInt;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ptr(
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfMarkerShape;
+    ) -> *mut crate::SignalOfBoolInt;
 
     pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr111(
-        ptr: *mut crate::SignalOfMarkerShape,
+        ptr: *mut crate::SignalOfBoolInt,
     ) -> *mut ::qt_core::QObject;
 
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ptr(
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_ptr(
         ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfMarkerShape;
+    ) -> *mut crate::SignalOfBoolInt;
 
     pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QCandlestickSet_ptr_ptr(
         ptr: *mut ::qt_core::QObject,
@@ -17344,611 +15153,11 @@ extern "C" {
         ptr: *mut ::qt_core::QObject,
     ) -> *mut crate::SignalOfQCandlestickSet;
 
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_double_double_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfDoubleDouble;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr114(
-        ptr: *mut crate::SlotOfDoubleDouble,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_double_double_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfDoubleDouble;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_double_double_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfDoubleDouble;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr115(
-        ptr: *mut crate::SignalOfDoubleDouble,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_double_double_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfDoubleDouble;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfTickType;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr116(
-        ptr: *mut crate::SlotOfTickType,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfTickType;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QValueAxis_TickType_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfTickType;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr117(
-        ptr: *mut crate::SignalOfTickType,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QValueAxis_TickType_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfTickType;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQDateTimeQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr118(
-        ptr: *mut crate::SlotOfQDateTimeQDateTime,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQDateTimeQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQDateTimeQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr119(
-        ptr: *mut crate::SignalOfQDateTimeQDateTime,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQDateTimeQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr120(
-        ptr: *mut crate::SlotOfQPieSlice,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr121(
-        ptr: *mut crate::SignalOfQPieSlice,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr122(
-        ptr: *mut crate::SlotOfQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr123(
-        ptr: *mut crate::SignalOfQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr124(
-        ptr: *mut crate::SlotOfQListOfQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr125(
-        ptr: *mut crate::SignalOfQListOfQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr126(
-        ptr: *mut crate::SlotOfQPieSliceBool,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr127(
-        ptr: *mut crate::SignalOfQPieSliceBool,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPieSliceBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr128(
-        ptr: *mut crate::SlotOfBoolIntQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr129(
-        ptr: *mut crate::SignalOfBoolIntQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QString_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQString;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr130(
-        ptr: *mut crate::SlotOfQString,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QString_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQString;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QString_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQString;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr131(
-        ptr: *mut crate::SignalOfQString,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QString_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQString;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr132(
-        ptr: *mut crate::SlotOfQListOfInt,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr133(
-        ptr: *mut crate::SignalOfQListOfInt,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr134(
-        ptr: *mut crate::SlotOfAxisLabelsPosition,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr135(
-        ptr: *mut crate::SignalOfAxisLabelsPosition,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfAxisLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr136(
-        ptr: *mut crate::SlotOfBoolInt,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr137(
-        ptr: *mut crate::SignalOfBoolInt,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolInt;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr138(
-        ptr: *mut crate::SlotOfMarkerShape2,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr139(
-        ptr: *mut crate::SignalOfMarkerShape2,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfMarkerShape2;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr140(
-        ptr: *mut crate::SlotOfLabelsPosition,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr141(
-        ptr: *mut crate::SignalOfLabelsPosition,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfLabelsPosition;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPointFBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr142(
-        ptr: *mut crate::SlotOfQPointFBool,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPointFBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPointF_const_ref_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPointFBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr143(
-        ptr: *mut crate::SignalOfQPointFBool,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPointF_const_ref_bool_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPointFBool;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr144(
-        ptr: *mut crate::SlotOfQListOfQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr145(
-        ptr: *mut crate::SignalOfQListOfQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBoxSet_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr146(
-        ptr: *mut crate::SlotOfQListOfQPieSlice,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr147(
-        ptr: *mut crate::SignalOfQListOfQPieSlice,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQListOfQPieSlice;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPen;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr148(
-        ptr: *mut crate::SlotOfQPen,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPen_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQPen;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPen;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr149(
-        ptr: *mut crate::SignalOfQPen,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPen_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQPen;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr150(
-        ptr: *mut crate::SlotOfBoolQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr151(
-        ptr: *mut crate::SignalOfBoolQBoxSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfBoolQBoxSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QColor_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQColor;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr152(
-        ptr: *mut crate::SlotOfQColor,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QColor_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQColor;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QColor_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQColor;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr153(
-        ptr: *mut crate::SignalOfQColor,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QColor_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQColor;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QFont_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQFont;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr154(
-        ptr: *mut crate::SlotOfQFont,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QFont_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQFont;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QFont_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQFont;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr155(
-        ptr: *mut crate::SignalOfQFont,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QFont_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQFont;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr156(
-        ptr: *mut crate::SlotOfQLinearGradient,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr157(
-        ptr: *mut crate::SignalOfQLinearGradient,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQLinearGradient;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr158(
-        ptr: *mut crate::SlotOfQDateTime,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr159(
-        ptr: *mut crate::SignalOfQDateTime,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQDateTime;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr160(
-        ptr: *mut crate::SlotOfIntQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr161(
-        ptr: *mut crate::SignalOfIntQBarSet,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfIntQBarSet;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr162(
-        ptr: *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant;
-
-    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant;
-
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr163(
-        ptr: *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant,
-    ) -> *mut ::qt_core::QObject;
-
-    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
-        ptr: *mut ::qt_core::QObject,
-    ) -> *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant;
-
     pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_QCandlestickSet_ptr_ptr(
         ptr: *mut ::qt_core::QObject,
     ) -> *mut crate::SlotOfBoolQCandlestickSet;
 
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr164(
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr114(
         ptr: *mut crate::SlotOfBoolQCandlestickSet,
     ) -> *mut ::qt_core::QObject;
 
@@ -17960,12 +15169,612 @@ extern "C" {
         ptr: *mut ::qt_core::QObject,
     ) -> *mut crate::SignalOfBoolQCandlestickSet;
 
-    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr165(
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr115(
         ptr: *mut crate::SignalOfBoolQCandlestickSet,
     ) -> *mut ::qt_core::QObject;
 
     pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_QCandlestickSet_ptr_ptr(
         ptr: *mut ::qt_core::QObject,
     ) -> *mut crate::SignalOfBoolQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr116(
+        ptr: *mut crate::SlotOfQListOfInt,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_int_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr117(
+        ptr: *mut crate::SignalOfQListOfInt,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_int_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfInt;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_double_double_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfDoubleDouble;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr118(
+        ptr: *mut crate::SlotOfDoubleDouble,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_double_double_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfDoubleDouble;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_double_double_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfDoubleDouble;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr119(
+        ptr: *mut crate::SignalOfDoubleDouble,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_double_double_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfDoubleDouble;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr120(
+        ptr: *mut crate::SlotOfQPieSliceBool,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr121(
+        ptr: *mut crate::SignalOfQPieSliceBool,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPieSliceBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr122(
+        ptr: *mut crate::SlotOfQListOfQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QBarSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr123(
+        ptr: *mut crate::SignalOfQListOfQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QBarSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr124(
+        ptr: *mut crate::SlotOfQListOfQCandlestickSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr125(
+        ptr: *mut crate::SignalOfQListOfQCandlestickSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QCandlestickSet_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQCandlestickSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr126(
+        ptr: *mut crate::SlotOfQListOfQPieSlice,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr127(
+        ptr: *mut crate::SignalOfQListOfQPieSlice,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QList_QPieSlice_ptr_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQListOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr128(
+        ptr: *mut crate::SlotOfIntQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr129(
+        ptr: *mut crate::SignalOfIntQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr130(
+        ptr: *mut crate::SlotOfQPieSlice,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPieSlice_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr131(
+        ptr: *mut crate::SignalOfQPieSlice,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPieSlice_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPieSlice;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QFont_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQFont;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr132(
+        ptr: *mut crate::SlotOfQFont,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QFont_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQFont;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QFont_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQFont;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr133(
+        ptr: *mut crate::SignalOfQFont,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QFont_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQFont;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr134(
+        ptr: *mut crate::SlotOfBoolQBoxSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr135(
+        ptr: *mut crate::SignalOfBoolQBoxSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfBoolQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr136(
+        ptr: *mut crate::SlotOfQLinearGradient,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QLinearGradient_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr137(
+        ptr: *mut crate::SignalOfQLinearGradient,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QLinearGradient_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQLinearGradient;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfTickType;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr138(
+        ptr: *mut crate::SlotOfTickType,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QValueAxis_TickType_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfTickType;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QValueAxis_TickType_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfTickType;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr139(
+        ptr: *mut crate::SignalOfTickType,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QValueAxis_TickType_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfTickType;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQDateTimeQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr140(
+        ptr: *mut crate::SlotOfQDateTimeQDateTime,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQDateTimeQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQDateTimeQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr141(
+        ptr: *mut crate::SignalOfQDateTimeQDateTime,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQDateTimeQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr142(
+        ptr: *mut crate::SlotOfQBoxSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr143(
+        ptr: *mut crate::SignalOfQBoxSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QBoxSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQBoxSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfMarkerShape;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr144(
+        ptr: *mut crate::SlotOfMarkerShape,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QScatterSeries_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfMarkerShape;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfMarkerShape;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr145(
+        ptr: *mut crate::SignalOfMarkerShape,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QScatterSeries_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfMarkerShape;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfBoolIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr146(
+        ptr: *mut crate::SlotOfBoolIntQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_bool_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfBoolIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfBoolIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr147(
+        ptr: *mut crate::SignalOfBoolIntQBarSet,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_bool_int_QBarSet_ptr_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfBoolIntQBarSet;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPointFBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr148(
+        ptr: *mut crate::SlotOfQPointFBool,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QPointF_const_ref_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQPointFBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QPointF_const_ref_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPointFBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr149(
+        ptr: *mut crate::SignalOfQPointFBool,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QPointF_const_ref_bool_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQPointFBool;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQImage;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr150(
+        ptr: *mut crate::SlotOfQImage,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QImage_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQImage;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQImage;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr151(
+        ptr: *mut crate::SignalOfQImage,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QImage_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQImage;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr152(
+        ptr: *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQHashOfIntQHashOfPointConfigurationQVariant;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr153(
+        ptr: *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QHash_int_QHash_QXYSeries_PointConfiguration_QVariant_const_ref_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQHashOfIntQHashOfPointConfigurationQVariant;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfMarkerShape2;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr154(
+        ptr: *mut crate::SlotOfMarkerShape2,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QLegend_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfMarkerShape2;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfMarkerShape2;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr155(
+        ptr: *mut crate::SignalOfMarkerShape2,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QLegend_MarkerShape_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfMarkerShape2;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr156(
+        ptr: *mut crate::SlotOfQDateTime,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr157(
+        ptr: *mut crate::SignalOfQDateTime,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QDateTime_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQDateTime;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QColor_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQColor;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr158(
+        ptr: *mut crate::SlotOfQColor,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QColor_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQColor;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QColor_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQColor;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr159(
+        ptr: *mut crate::SignalOfQColor,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QColor_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQColor;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr160(
+        ptr: *mut crate::SlotOfLabelsPosition,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr161(
+        ptr: *mut crate::SignalOfLabelsPosition,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QAbstractBarSeries_LabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr162(
+        ptr: *mut crate::SlotOfAxisLabelsPosition,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr163(
+        ptr: *mut crate::SignalOfAxisLabelsPosition,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QCategoryAxis_AxisLabelsPosition_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfAxisLabelsPosition;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_slot_wrapper_QString_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQString;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr164(
+        ptr: *mut crate::SlotOfQString,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_slot_wrapper_QString_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SlotOfQString;
+
+    pub fn ctr_qt_charts_ffi_static_cast_ctr_qt_charts_ffi_signal_wrapper_QString_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQString;
+
+    pub fn ctr_qt_charts_ffi_static_cast_QObject_ptr165(
+        ptr: *mut crate::SignalOfQString,
+    ) -> *mut ::qt_core::QObject;
+
+    pub fn ctr_qt_charts_ffi_dynamic_cast_ctr_qt_charts_ffi_signal_wrapper_QString_ptr(
+        ptr: *mut ::qt_core::QObject,
+    ) -> *mut crate::SignalOfQString;
 
 }

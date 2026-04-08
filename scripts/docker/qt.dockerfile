@@ -1,24 +1,32 @@
-FROM debian:buster as qt_downloader
-RUN apt-get update
-RUN apt-get install -y python3-bs4 p7zip-full
-RUN mkdir -p /opt/qt
-WORKDIR /opt/qt
-COPY scripts/install_qt.py /
-RUN /install_qt.py 5.9.7 linux_x64 gcc_64 && \
-    /install_qt.py 5.9.7 --docs && \
-    /install_qt.py 5.11.3 linux_x64 gcc_64 && \
-    /install_qt.py 5.11.3 --docs && \
-    /install_qt.py 5.12.2 linux_x64 gcc_64 && \
-    /install_qt.py 5.12.2 --docs && \
-    /install_qt.py 5.13.0 linux_x64 gcc_64 && \
-    /install_qt.py 5.13.0 --docs && \
-    /install_qt.py 5.14.0 linux_x64 gcc_64 && \
-    /install_qt.py 5.14.0 --docs
+FROM ubuntu:24.04 AS qt_downloader
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip pipx && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install aqtinstall for downloading Qt
+RUN pipx install aqtinstall && pipx ensurepath
+ENV PATH=/root/.local/bin:$PATH
+
+# Download Qt 6.10.0 for linux desktop (gcc_64)
+RUN mkdir -p /opt/qt && cd /opt/qt && \
+    aqt install-qt linux desktop 6.10.0 linux_gcc_64 \
+        -m qtcharts qt3d qtquick3d qtshadertools
 
 FROM ritual_builder
-COPY --from=qt_downloader /opt/qt /opt/qt
-COPY scripts/qt_env.sh /bin/qt_env
+COPY --from=qt_downloader /opt/qt/6.10.0 /opt/qt/6.10.0
 
-RUN apt-get install -y libxrender1 libfontconfig libxkbcommon-x11-0 mesa-common-dev xvfb
+# Set Qt6 environment so qmake6 is in PATH
+ENV PATH=/opt/qt/6.10.0/gcc_64/bin:$PATH
+ENV LD_LIBRARY_PATH=/opt/qt/6.10.0/gcc_64/lib:$LD_LIBRARY_PATH
+ENV QT_QPA_PLATFORM_PLUGIN_PATH=/opt/qt/6.10.0/gcc_64/plugins
+ENV CMAKE_PREFIX_PATH=/opt/qt/6.10.0/gcc_64/lib/cmake
+
+RUN apt-get update && \
+    apt-get install -y libxrender1 libfontconfig1 libxkbcommon-x11-0 \
+                       mesa-common-dev xvfb libxcb-cursor0 && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN mkdir /tmp/run && chmod 0700 /tmp/run
 ENV XDG_RUNTIME_DIR=/tmp/run

@@ -1,13 +1,17 @@
-FROM debian:buster as ritual_builder
-ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
+FROM ubuntu:24.04 AS ritual_builder
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && \
-    apt-get install -y build-essential mesa-common-dev libgl1-mesa-glx \
-                       cmake curl software-properties-common libssl-dev pkg-config && \
-    curl https://apt.llvm.org/llvm-snapshot.gpg.key -sSf | apt-key add - && \
-    add-apt-repository "deb http://apt.llvm.org/buster/ llvm-toolchain-buster main" && \
-    apt-get update && \
-    apt-get install -y libsqlite3-dev libclang-6.0-dev
-ENV LIBCLANG_PATH=/usr/lib/llvm-6.0/lib
+    apt-get install -y build-essential mesa-common-dev libgl1-mesa-dev \
+                       cmake curl software-properties-common libssl-dev pkg-config \
+                       libsqlite3-dev libclang-dev clang llvm \
+                       libxkbcommon-dev libxkbcommon-x11-0 \
+                       libfontconfig1-dev libfreetype-dev \
+                       libxrender-dev libxcb-xinerama0 libxcb-cursor0 && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set libclang path for ritual's bindgen/clang-sys
+ENV LIBCLANG_PATH=/usr/lib/llvm-18/lib
 
 COPY rust-toolchain /tmp/rust-toolchain
 RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $(cat /tmp/rust-toolchain) -y
@@ -18,4 +22,3 @@ ENV RUST_BACKTRACE=1
 ENV CARGO_HOME=/build/cargo_home
 ENV CARGO_TARGET_DIR=/build/target
 ENV RITUAL_WORKSPACE_TARGET_DIR=/build/workspace_target
-ENV RITUAL_STD_HEADERS=/usr/include/c++/8

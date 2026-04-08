@@ -53,7 +53,12 @@ echo "Building qt_ritual (release)..."
 cargo build --release -p qt_ritual
 echo ""
 
-QT_RITUAL="${SCRIPT_DIR}/target/release/qt_ritual"
+# Check CARGO_TARGET_DIR first (set in Docker), then default location
+if [ -n "${CARGO_TARGET_DIR:-}" ] && [ -f "${CARGO_TARGET_DIR}/release/qt_ritual" ]; then
+    QT_RITUAL="${CARGO_TARGET_DIR}/release/qt_ritual"
+else
+    QT_RITUAL="${SCRIPT_DIR}/target/release/qt_ritual"
+fi
 
 # Map crate names to Qt6 module header directories.
 # Crates are listed in dependency order.

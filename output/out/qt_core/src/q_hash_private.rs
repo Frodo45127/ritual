@@ -21,13 +21,13 @@ impl SpanConstants {
 
     /// Returns the value of the <span style='color: green;'>```LocalBucketMask```</span> field.
     #[inline(always)]
-    pub unsafe fn local_bucket_mask() -> usize {
+    pub unsafe fn local_bucket_mask() -> ::std::os::raw::c_ulong {
         crate::__ffi::ctr_qt_core_ffi_QHashPrivate_SpanConstants_LocalBucketMask()
     }
 
     /// Returns the value of the <span style='color: green;'>```NEntries```</span> field.
     #[inline(always)]
-    pub unsafe fn n_entries() -> usize {
+    pub unsafe fn n_entries() -> ::std::os::raw::c_ulong {
         crate::__ffi::ctr_qt_core_ffi_QHashPrivate_SpanConstants_NEntries()
     }
 
@@ -52,13 +52,13 @@ impl SpanConstants {
 
     /// Returns the value of the <span style='color: green;'>```SpanShift```</span> field.
     #[inline(always)]
-    pub unsafe fn span_shift() -> usize {
+    pub unsafe fn span_shift() -> ::std::os::raw::c_ulong {
         crate::__ffi::ctr_qt_core_ffi_QHashPrivate_SpanConstants_SpanShift()
     }
 
     /// Returns the value of the <span style='color: green;'>```UnusedEntry```</span> field.
     #[inline(always)]
-    pub unsafe fn unused_entry() -> usize {
+    pub unsafe fn unused_entry() -> ::std::os::raw::c_ulong {
         crate::__ffi::ctr_qt_core_ffi_QHashPrivate_SpanConstants_UnusedEntry()
     }
 }
@@ -75,8 +75,11 @@ impl ::cpp_core::CppDeletable for crate::q_hash_private::SpanConstants {
     }
 }
 
-/// Calls C++ function: <span style='color: green;'>```size_t QHashPrivate::hash(size_t key, size_t seed)```</span>.
+/// Calls C++ function: <span style='color: green;'>```unsigned long QHashPrivate::hash(unsigned long key, unsigned long seed)```</span>.
 #[inline(always)]
-pub unsafe fn hash(key: usize, seed: usize) -> usize {
+pub unsafe fn hash(
+    key: ::std::os::raw::c_ulong,
+    seed: ::std::os::raw::c_ulong,
+) -> ::std::os::raw::c_ulong {
     crate::__ffi::ctr_qt_core_ffi_QHashPrivate_hash(key, seed)
 }
