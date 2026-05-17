@@ -13,3 +13,4 @@ perf.data*
 /output/db/
 /output/tmp/
 ritual_db_v2.bin
+/target_docker/

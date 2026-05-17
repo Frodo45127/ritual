@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y build-essential mesa-common-dev libgl1-mesa-dev \
-                       cmake curl software-properties-common libssl-dev pkg-config \
+                       cmake ninja-build curl software-properties-common libssl-dev pkg-config \
                        libsqlite3-dev libclang-dev clang llvm \
                        libxkbcommon-dev libxkbcommon-x11-0 \
                        libfontconfig1-dev libfreetype-dev \

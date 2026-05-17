@@ -10,7 +10,19 @@ use serde_derive::{Deserialize, Serialize};
 use std::env;
 use std::fmt::Display;
 use std::path::{Path, PathBuf};
-use std::process::Command;
+use std::process::{Command, Stdio};
+
+/// Returns `true` if a `ninja` binary is reachable on the current `PATH`.
+/// Used to opt cmake into the Ninja generator only when it actually exists.
+fn ninja_available() -> bool {
+    Command::new("ninja")
+        .arg("--version")
+        .stdout(Stdio::null())
+        .stderr(Stdio::null())
+        .status()
+        .map(|s| s.success())
+        .unwrap_or(false)
+}
 
 /// A CMake variable with a name and a value.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -137,6 +149,12 @@ impl CppLibBuilder {
                     }
                     _ => {}
                 }
+            } else if ninja_available() {
+                // Ninja schedules dependencies better than make and emits more
+                // accurate dep info, which matters once `file1.cpp` is split
+                // across many shards. Detected at runtime so toolchains that
+                // lack ninja keep falling back to the default Makefiles.
+                cmake_command.arg("-G").arg("Ninja");
             }
             let mut actual_cmake_vars = self.cmake_vars.clone();
             actual_cmake_vars.push(CMakeVar::new(

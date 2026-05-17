@@ -120,4 +120,15 @@ for crate in "${AVAILABLE_CRATES[@]}"; do
     echo ""
 done
 
+# Split the per-crate `file1.cpp` translation units into shards so the C++
+# wrapper compiles in parallel. Override the shard count with
+# RITUAL_CPP_SHARDS=<n> if desired. Honors --min-fns, so small crates
+# like qt_ui_tools are left untouched.
+SHARDS="${RITUAL_CPP_SHARDS:-8}"
+echo "--- Splitting generated C++ wrappers (shards=${SHARDS}) ---"
+python3 "${SCRIPT_DIR}/scripts/split_generated_cpp.py" \
+    --shards "${SHARDS}" \
+    "${AVAILABLE_CRATES[@]}"
+echo ""
+
 echo "=== Done ==="

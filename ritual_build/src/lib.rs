@@ -168,8 +168,12 @@ impl Config {
             },
             capture_output: false,
             skip_cmake: false,
-            skip_cmake_after_first_run: false,
-            skip_clean: false,
+            // Skip cmake reconfigure and the forced `make clean` on subsequent
+            // builds. Cargo only re-runs this build script when the manifest
+            // dir actually changes, so re-cleaning the giant single TU every
+            // time was pure waste.
+            skip_cmake_after_first_run: true,
+            skip_clean: true,
         }
         .run()?;
         {
