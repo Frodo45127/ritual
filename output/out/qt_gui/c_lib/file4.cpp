@@ -2516,56 +2516,6 @@ RITUAL_EXPORT QAccessible::State * ctr_qt_gui_ffi_QAccessible_State_operator_(QA
 }
 
 
-RITUAL_EXPORT QAccessibleInterface * ctr_qt_gui_ffi_QAccessibleInterface_operator_(QAccessibleInterface * this_ptr, QAccessibleInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleTextInterface * ctr_qt_gui_ffi_QAccessibleTextInterface_operator_(QAccessibleTextInterface * this_ptr, QAccessibleTextInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleEditableTextInterface * ctr_qt_gui_ffi_QAccessibleEditableTextInterface_operator_(QAccessibleEditableTextInterface * this_ptr, QAccessibleEditableTextInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleValueInterface * ctr_qt_gui_ffi_QAccessibleValueInterface_operator_(QAccessibleValueInterface * this_ptr, QAccessibleValueInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleTableCellInterface * ctr_qt_gui_ffi_QAccessibleTableCellInterface_operator_(QAccessibleTableCellInterface * this_ptr, QAccessibleTableCellInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleTableInterface * ctr_qt_gui_ffi_QAccessibleTableInterface_operator_(QAccessibleTableInterface * this_ptr, QAccessibleTableInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleActionInterface * ctr_qt_gui_ffi_QAccessibleActionInterface_operator_(QAccessibleActionInterface * this_ptr, QAccessibleActionInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleHyperlinkInterface * ctr_qt_gui_ffi_QAccessibleHyperlinkInterface_operator_(QAccessibleHyperlinkInterface * this_ptr, QAccessibleHyperlinkInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleSelectionInterface * ctr_qt_gui_ffi_QAccessibleSelectionInterface_operator_(QAccessibleSelectionInterface * this_ptr, QAccessibleSelectionInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
-RITUAL_EXPORT QAccessibleAttributesInterface * ctr_qt_gui_ffi_QAccessibleAttributesInterface_operator_(QAccessibleAttributesInterface * this_ptr, QAccessibleAttributesInterface const * other) {
-  return &this_ptr->operator=(*other);
-}
-
-
 RITUAL_EXPORT QAction * ctr_qt_gui_ffi_QAction_QAction3() {
   return new QAction();
 }

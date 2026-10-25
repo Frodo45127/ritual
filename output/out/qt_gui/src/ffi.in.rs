@@ -24489,56 +24489,6 @@ extern "C" {
         other: *const crate::q_accessible::State,
     ) -> *mut crate::q_accessible::State;
 
-    pub fn ctr_qt_gui_ffi_QAccessibleInterface_operator_(
-        this_ptr: *mut crate::QAccessibleInterface,
-        other: *const crate::QAccessibleInterface,
-    ) -> *mut crate::QAccessibleInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleTextInterface_operator_(
-        this_ptr: *mut crate::QAccessibleTextInterface,
-        other: *const crate::QAccessibleTextInterface,
-    ) -> *mut crate::QAccessibleTextInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleEditableTextInterface_operator_(
-        this_ptr: *mut crate::QAccessibleEditableTextInterface,
-        other: *const crate::QAccessibleEditableTextInterface,
-    ) -> *mut crate::QAccessibleEditableTextInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleValueInterface_operator_(
-        this_ptr: *mut crate::QAccessibleValueInterface,
-        other: *const crate::QAccessibleValueInterface,
-    ) -> *mut crate::QAccessibleValueInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleTableCellInterface_operator_(
-        this_ptr: *mut crate::QAccessibleTableCellInterface,
-        other: *const crate::QAccessibleTableCellInterface,
-    ) -> *mut crate::QAccessibleTableCellInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleTableInterface_operator_(
-        this_ptr: *mut crate::QAccessibleTableInterface,
-        other: *const crate::QAccessibleTableInterface,
-    ) -> *mut crate::QAccessibleTableInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleActionInterface_operator_(
-        this_ptr: *mut crate::QAccessibleActionInterface,
-        other: *const crate::QAccessibleActionInterface,
-    ) -> *mut crate::QAccessibleActionInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleHyperlinkInterface_operator_(
-        this_ptr: *mut crate::QAccessibleHyperlinkInterface,
-        other: *const crate::QAccessibleHyperlinkInterface,
-    ) -> *mut crate::QAccessibleHyperlinkInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleSelectionInterface_operator_(
-        this_ptr: *mut crate::QAccessibleSelectionInterface,
-        other: *const crate::QAccessibleSelectionInterface,
-    ) -> *mut crate::QAccessibleSelectionInterface;
-
-    pub fn ctr_qt_gui_ffi_QAccessibleAttributesInterface_operator_(
-        this_ptr: *mut crate::QAccessibleAttributesInterface,
-        other: *const crate::QAccessibleAttributesInterface,
-    ) -> *mut crate::QAccessibleAttributesInterface;
-
     pub fn ctr_qt_gui_ffi_QAction_QAction3() -> *mut crate::QAction;
 
     pub fn ctr_qt_gui_ffi_QSurface_operator_(

@@ -37014,24 +37014,6 @@ impl QAccessibleInterface {
         )
     }
 
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleInterface& QAccessibleInterface::operator=(const QAccessibleInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleInterface_operator_(
-                self as *const crate::QAccessibleInterface as *mut crate::QAccessibleInterface,
-                ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleInterface>>::cast_into(
-                    other,
-                )
-                .as_raw_ptr(),
-            )
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
-    }
-
     /// Calls C++ function: <span style='color: green;'>```QAccessibleEditableTextInterface* QAccessibleInterface::editableTextInterface()```</span>.
     #[inline(always)]
     pub unsafe fn editable_text_interface(
@@ -37338,18 +37320,6 @@ impl QAccessibleTextInterface {
         ::cpp_core::CppBox::from_raw(ffi_result).expect("attempted to construct a null CppBox")
     }
 
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleTextInterface& QAccessibleTextInterface::operator=(const QAccessibleTextInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleTextInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleTextInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleTextInterface_operator_(self as *const crate::QAccessibleTextInterface as *mut crate::QAccessibleTextInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleTextInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
-    }
-
     /// Calls C++ function: <span style='color: green;'>```pure virtual int QAccessibleTextInterface::cursorPosition() const```</span>.
     #[inline(always)]
     pub unsafe fn cursor_position(&self) -> ::std::os::raw::c_int {
@@ -37530,18 +37500,6 @@ pub struct QAccessibleEditableTextInterface {
     _unused: u8,
 }
 impl QAccessibleEditableTextInterface {
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleEditableTextInterface& QAccessibleEditableTextInterface::operator=(const QAccessibleEditableTextInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleEditableTextInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleEditableTextInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleEditableTextInterface_operator_(self as *const crate::QAccessibleEditableTextInterface as *mut crate::QAccessibleEditableTextInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleEditableTextInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
-    }
-
     /// Calls C++ function: <span style='color: green;'>```pure virtual void QAccessibleEditableTextInterface::deleteText(int startOffset, int endOffset)```</span>.
     #[inline(always)]
     pub unsafe fn delete_text(
@@ -37598,18 +37556,6 @@ pub struct QAccessibleValueInterface {
     _unused: u8,
 }
 impl QAccessibleValueInterface {
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleValueInterface& QAccessibleValueInterface::operator=(const QAccessibleValueInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleValueInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleValueInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleValueInterface_operator_(self as *const crate::QAccessibleValueInterface as *mut crate::QAccessibleValueInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleValueInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
-    }
-
     /// Calls C++ function: <span style='color: green;'>```pure virtual QVariant QAccessibleValueInterface::currentValue() const```</span>.
     #[inline(always)]
     pub unsafe fn current_value(&self) -> ::cpp_core::CppBox<::qt_core::QVariant> {
@@ -37702,18 +37648,6 @@ impl QAccessibleTableCellInterface {
         crate::__ffi::ctr_qt_gui_ffi_QAccessibleTableCellInterface_columnIndex(
             self as *const crate::QAccessibleTableCellInterface,
         )
-    }
-
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleTableCellInterface& QAccessibleTableCellInterface::operator=(const QAccessibleTableCellInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleTableCellInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleTableCellInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleTableCellInterface_operator_(self as *const crate::QAccessibleTableCellInterface as *mut crate::QAccessibleTableCellInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleTableCellInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
     }
 
     /// Calls C++ function: <span style='color: green;'>```pure virtual bool QAccessibleTableCellInterface::isSelected() const```</span>.
@@ -37820,18 +37754,6 @@ impl QAccessibleTableInterface {
             )
         };
         ::cpp_core::CppBox::from_raw(ffi_result).expect("attempted to construct a null CppBox")
-    }
-
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleTableInterface& QAccessibleTableInterface::operator=(const QAccessibleTableInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleTableInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleTableInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleTableInterface_operator_(self as *const crate::QAccessibleTableInterface as *mut crate::QAccessibleTableInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleTableInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
     }
 
     /// Calls C++ function: <span style='color: green;'>```pure virtual bool QAccessibleTableInterface::isColumnSelected(int column) const```</span>.
@@ -38008,18 +37930,6 @@ impl QAccessibleActionInterface {
             )
         };
         ::cpp_core::CppBox::from_raw(ffi_result).expect("attempted to construct a null CppBox")
-    }
-
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleActionInterface& QAccessibleActionInterface::operator=(const QAccessibleActionInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleActionInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleActionInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleActionInterface_operator_(self as *const crate::QAccessibleActionInterface as *mut crate::QAccessibleActionInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleActionInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
     }
 
     /// Calls C++ function: <span style='color: green;'>```static const QString& QAccessibleActionInterface::decreaseAction()```</span>.
@@ -38230,18 +38140,6 @@ impl QAccessibleHyperlinkInterface {
         ::cpp_core::CppBox::from_raw(ffi_result).expect("attempted to construct a null CppBox")
     }
 
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleHyperlinkInterface& QAccessibleHyperlinkInterface::operator=(const QAccessibleHyperlinkInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleHyperlinkInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleHyperlinkInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleHyperlinkInterface_operator_(self as *const crate::QAccessibleHyperlinkInterface as *mut crate::QAccessibleHyperlinkInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleHyperlinkInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
-    }
-
     /// Calls C++ function: <span style='color: green;'>```pure virtual int QAccessibleHyperlinkInterface::endIndex() const```</span>.
     #[inline(always)]
     pub unsafe fn end_index(&self) -> ::std::os::raw::c_int {
@@ -38280,18 +38178,6 @@ impl QAccessibleSelectionInterface {
             self as *const crate::QAccessibleSelectionInterface
                 as *mut crate::QAccessibleSelectionInterface,
         )
-    }
-
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleSelectionInterface& QAccessibleSelectionInterface::operator=(const QAccessibleSelectionInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleSelectionInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleSelectionInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleSelectionInterface_operator_(self as *const crate::QAccessibleSelectionInterface as *mut crate::QAccessibleSelectionInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleSelectionInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
     }
 
     /// Calls C++ function: <span style='color: green;'>```virtual bool QAccessibleSelectionInterface::isSelected(QAccessibleInterface* childItem) const```</span>.
@@ -38415,18 +38301,6 @@ impl QAccessibleAttributesInterface {
             )
         };
         ::cpp_core::CppBox::from_raw(ffi_result).expect("attempted to construct a null CppBox")
-    }
-
-    /// Calls C++ function: <span style='color: green;'>```QAccessibleAttributesInterface& QAccessibleAttributesInterface::operator=(const QAccessibleAttributesInterface& other)```</span>.
-    #[inline(always)]
-    pub unsafe fn copy_from(
-        &self,
-        other: impl ::cpp_core::CastInto<::cpp_core::Ref<crate::QAccessibleAttributesInterface>>,
-    ) -> ::cpp_core::Ref<crate::QAccessibleAttributesInterface> {
-        let ffi_result = {
-            crate::__ffi::ctr_qt_gui_ffi_QAccessibleAttributesInterface_operator_(self as *const crate::QAccessibleAttributesInterface as *mut crate::QAccessibleAttributesInterface, ::cpp_core::CastInto::<::cpp_core::Ref<crate::QAccessibleAttributesInterface>>::cast_into(other).as_raw_ptr())
-        };
-        ::cpp_core::Ref::from_raw(ffi_result).expect("attempted to construct a null Ref")
     }
 }
 
