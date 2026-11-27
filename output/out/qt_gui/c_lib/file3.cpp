@@ -2166,7 +2166,7 @@ RITUAL_EXPORT QDebug * ctr_qt_gui_ffi_operator__71(QDebug const * debug, QOpenGL
 }
 
 
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__APPLE__)
 RITUAL_EXPORT QOpenGLContext * ctr_qt_gui_ffi_QNativeInterface_QEGLContext_fromNative(void * context, void * display, QOpenGLContext * shareContext) {
   return QNativeInterface::QEGLContext::fromNative(context, display, shareContext);
 }
@@ -3298,7 +3298,7 @@ RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glDrawElementsInstanced(
 }
 
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(__APPLE__)
 RITUAL_EXPORT void ctr_qt_gui_ffi_QOpenGLExtraFunctions_glGetInteger64v(QOpenGLExtraFunctions * this_ptr, unsigned int pname, long * data) {
   this_ptr->glGetInteger64v(pname, reinterpret_cast<GLint64 *>(data));
 }

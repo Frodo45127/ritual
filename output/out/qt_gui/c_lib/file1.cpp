@@ -5451,7 +5451,7 @@ RITUAL_EXPORT void ctr_qt_gui_ffi_QGuiApplication_sync() {
 }
 
 
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__APPLE__)
 RITUAL_EXPORT unsigned int ctr_qt_gui_ffi_QNativeInterface_QWaylandApplication_lastInputSerial(QNativeInterface::QWaylandApplication const * this_ptr) {
   return this_ptr->lastInputSerial();
 }

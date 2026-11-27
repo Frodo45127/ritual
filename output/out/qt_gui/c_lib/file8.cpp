@@ -321,7 +321,7 @@ RITUAL_EXPORT QOffscreenSurface * ctr_qt_gui_ffi_QOffscreenSurface_QOffscreenSur
 }
 
 
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__APPLE__)
 RITUAL_EXPORT QOpenGLContext * ctr_qt_gui_ffi_QNativeInterface_QEGLContext_fromNative1(void * context, void * display) {
   return QNativeInterface::QEGLContext::fromNative(context, display);
 }
